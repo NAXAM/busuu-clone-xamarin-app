@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:orientation="vertical"
+    android:background="#000000"
+    >
+  <android.support.v7.widget.Toolbar
+       android:id="@+id/toolbar"
+       android:layout_width="match_parent"
+       android:layout_height="56dp"
+       android:elevation="2dp"
+       android:background="@drawable/background_toolbar_reply"
+       android:theme="@style/ToolbarReply"> 
+  </android.support.v7.widget.Toolbar>
+  <FrameLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+       android:background="#ffffff"
+      >
+    <LinearLayout
+       
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff">
+ 
+      <EditText
+          android:id="@+id/edtMessage"
+          android:layout_margin="16dp"
+          android:gravity="top"
+          android:background="@android:color/transparent"
+          android:textColor="#000000" 
+          android:textColorHint="#A7B0B7"
+          android:layout_weight="1"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          app:MvxBind="Text Message;Hint FeedBack.User.Name, Converter = FormatString, ConverterParameter = 'Reply to {0}'"
+          /> 
+      <FrameLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+        <ProgressBar
+            android:visibility="invisible"
+            android:id="@+id/mProgressBar"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:progressDrawable="@drawable/custom_progressbar"
+            android:scrollbarSize="64dp"
+            android:layout_width="match_parent"
+            android:layout_height="64dp" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/btnSend"
+            android:src="@drawable/ic_mic"
+            app:backgroundTint="#33AAFA"
+            android:background="#33AAFA"
+            android:layout_marginRight="24dp"
+            android:layout_marginBottom="24dp"
+            android:layout_gravity="end"
+            android:layout_width="64dp"
+            android:layout_height="64dp" />
+
+        <TextView
+            android:id="@+id/txtSwipe"
+            android:visibility="gone"
+            android:gravity="center"
+            android:textColor="#33AAFA"
+            android:text="Swipe to cancle"
+            android:layout_width="match_parent"
+            android:layout_height="64dp" />
+
+
+      </FrameLayout>
+
+    </LinearLayout>
+    <ProgressBar
+        android:id="@+id/circleProgressbar"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:layout_width="64dp"
+        android:layout_height="64dp" />
+
+  </FrameLayout>
+
+</LinearLayout>

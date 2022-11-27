@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Naxam.Busuu.Droid.Learning.Control.LessonHeaderBackground
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:background="#ffffff"
+  app:MvxBind="BackgroundColor Color"
+  android:layout_height="96dp"
+  >
+
+  <ImageView
+      android:layout_width="80dp"
+      android:layout_height="80dp"
+      android:layout_marginLeft="16dp" 
+      android:background="@drawable/background_circle_white"
+      android:layout_gravity="center_vertical"
+      android:scaleType="fitXY"
+      app:MvxBind="Source Icon;"
+        />
+
+  <com.github.lzyzsd.circleprogress.CircleProgress
+    android:id="@+id/circle_progress"
+    android:layout_marginLeft="16dp"
+    android:layout_gravity="center_vertical"
+    android:layout_width="80dp"
+    android:layout_height="80dp"
+    app:MvxBind="Progress Percent;BorderColor Color;FinishColor Color"
+    app:circle_text_color="@android:color/transparent"
+    app:circle_unfinished_color="@android:color/transparent"
+    />
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center_vertical"
+      android:layout_marginLeft="112dp"
+      android:orientation="vertical"
+        >
+    <TextView
+         android:id="@+id/txtLessonNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+         app:MvxBind="Text LessonNumber"
+          android:textColor="#3791CE"
+            />
+    <TextView
+        android:id="@+id/txtLessonName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#3791CE"
+        android:textSize="18sp"
+        app:MvxBind="Text LessonName"
+            />
+  </LinearLayout>
+  <ImageView
+      android:id="@+id/btnDownload"
+      android:layout_width="20dp"
+      android:layout_height="20dp"
+      android:layout_gravity="center_vertical|right"
+      android:layout_marginRight="16dp"
+      android:src="@drawable/ic_download" 
+        />
+</Naxam.Busuu.Droid.Learning.Control.LessonHeaderBackground>

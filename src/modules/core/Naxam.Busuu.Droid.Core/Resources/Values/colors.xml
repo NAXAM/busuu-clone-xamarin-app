@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#38A9F6</color>
+    <color name="colorPrimaryDark">#226594</color>
+    <color name="colorAccent">#38A9F6</color>
+    <color name="colorButtonEnable">#38A9F6</color>
+    <color name="colorButtonDisable">#D6DEE6</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorTextPrimary">#3E3E3E</color>
+    <color name="colorTextSecondary">#AEAEAE</color>
+    <color name="colorHintEditText">#A7B0B7</color>
+    <color name="colorNormalBtn">#D6DFE6</color>
+    <color name="colorHoverBtn">#A9B0B8</color>
+    <color name="colorEnable">#FFFFFF</color>
+    <color name="colorDiable">#CFEAFC</color>
+    <color name="black_semi_transparent">#B2000000</color>
+    <color name="background">#e5e5e5</color>
+    <color name="half_black">#808080</color>
+    <color name="white">#fafafa</color>
+    <color name="white_pressed">#f1f1f1</color>
+    <color name="pink">#e91e63</color>
+    <color name="pink_pressed">#ec407a</color>
+    <color name="blue_semi_transparent">#805677fc</color>
+    <color name="blue_semi_transparent_pressed">#80738ffe</color>
+</resources>

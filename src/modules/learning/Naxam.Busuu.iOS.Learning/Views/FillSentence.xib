@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1" customClass="FillSentenceView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HPf-Lg-68j">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="anime-wallpaper-art-pc (18).jpg" translatesAutoresizingMaskIntoConstraints="NO" id="qRg-Vn-bA9">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="167"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="qRg-Vn-bA9" secondAttribute="height" multiplier="2.25:1" id="LWn-q3-Ego"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select the correct response to the question." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JXF-Qb-X5h">
+                            <rect key="frame" x="20" y="199" width="336" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.22352941179999999" green="0.66274509800000003" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A: How's it going? B: _____" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QOY-QE-f3P" userLabel="lblQuestion">
+                            <rect key="frame" x="24" y="228" width="327" height="18"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" red="0.65769702196121216" green="0.6938520073890686" blue="0.71889191865921021" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rb1-R1-5ve" userLabel="ViewAnswers">
+                            <rect key="frame" x="37.5" y="268" width="300" height="383"/>
+                            <color key="backgroundColor" red="0.94856339690000002" green="0.96067076920000005" blue="0.97304874659999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="300" id="5EA-DJ-jMv"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.94856339690000002" green="0.96067076920000005" blue="0.97304874659999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="qRg-Vn-bA9" secondAttribute="trailing" id="2vw-fN-pQE"/>
+                        <constraint firstAttribute="trailing" secondItem="QOY-QE-f3P" secondAttribute="trailing" constant="24" id="3wg-hx-n7t"/>
+                        <constraint firstAttribute="bottom" secondItem="Rb1-R1-5ve" secondAttribute="bottom" constant="16" id="B7e-oB-QWa"/>
+                        <constraint firstItem="Rb1-R1-5ve" firstAttribute="centerX" secondItem="HPf-Lg-68j" secondAttribute="centerX" id="Cp0-q4-lfQ"/>
+                        <constraint firstItem="Rb1-R1-5ve" firstAttribute="top" secondItem="QOY-QE-f3P" secondAttribute="bottom" constant="22" id="DeV-g4-tsz"/>
+                        <constraint firstItem="QOY-QE-f3P" firstAttribute="centerX" secondItem="HPf-Lg-68j" secondAttribute="centerX" id="EoO-IU-aQs"/>
+                        <constraint firstItem="QOY-QE-f3P" firstAttribute="top" secondItem="JXF-Qb-X5h" secondAttribute="bottom" constant="8" id="JF8-Eo-0EG"/>
+                        <constraint firstItem="qRg-Vn-bA9" firstAttribute="top" secondItem="HPf-Lg-68j" secondAttribute="top" id="LYc-KT-tEM"/>
+                        <constraint firstItem="qRg-Vn-bA9" firstAttribute="leading" secondItem="HPf-Lg-68j" secondAttribute="leading" id="OGW-1x-TSB"/>
+                        <constraint firstItem="JXF-Qb-X5h" firstAttribute="top" secondItem="qRg-Vn-bA9" secondAttribute="bottom" constant="32" id="dDj-sF-5q4"/>
+                        <constraint firstItem="QOY-QE-f3P" firstAttribute="leading" secondItem="HPf-Lg-68j" secondAttribute="leading" constant="24" id="goM-aw-oam"/>
+                        <constraint firstItem="JXF-Qb-X5h" firstAttribute="centerX" secondItem="HPf-Lg-68j" secondAttribute="centerX" id="iAd-Ib-WX6"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="HPf-Lg-68j" secondAttribute="trailing" id="2tx-la-vFp"/>
+                <constraint firstAttribute="bottom" secondItem="HPf-Lg-68j" secondAttribute="bottom" id="5Y0-zq-JNA"/>
+                <constraint firstItem="HPf-Lg-68j" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="QVP-Ox-o5G"/>
+                <constraint firstItem="HPf-Lg-68j" firstAttribute="top" secondItem="1" secondAttribute="top" id="yJJ-pU-mNY"/>
+            </constraints>
+            <connections>
+                <outlet property="ViewAnswers" destination="Rb1-R1-5ve" id="X2u-HI-dZ3"/>
+                <outlet property="imgFillSentence" destination="qRg-Vn-bA9" id="m8T-EO-aeB"/>
+                <outlet property="lblQuestion" destination="QOY-QE-f3P" id="uEn-m1-xU7"/>
+                <outlet property="lblTitle" destination="JXF-Qb-X5h" id="Y6R-le-MK6"/>
+                <outlet property="viewAnswersWidthContraint" destination="5EA-DJ-jMv" id="8Ri-hd-YKn"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="anime-wallpaper-art-pc (18).jpg" width="16" height="16"/>
+    </resources>
+</document>

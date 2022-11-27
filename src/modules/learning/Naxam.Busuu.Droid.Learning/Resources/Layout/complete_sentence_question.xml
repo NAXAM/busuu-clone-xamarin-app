@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+  <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+      <FrameLayout
+          android:id="@+id/layout_complete_sentence_description"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_alignParentTop="true">
+
+        <ImageView
+            android:id="@+id/img_complete_sentence_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            app:MvxBind="SourceNormal Image;Hidden Image, Converter = StringEmptyToBool"
+            android:scaleType="fitXY" />
+
+        <Naxam.Busuu.Droid.Learning.Control.NXPlayButton
+            android:id="@+id/btn_complete_sentence_play"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_gravity="bottom|center_horizontal"
+            app:MvxBind="Hidden Audio, Converter = StringEmptyToBool"
+            android:layout_marginTop="8dp" />
+      </FrameLayout>
+
+      <TextView
+          android:id="@+id/txt_compelte_sentence_title"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/layout_complete_sentence_description"
+          android:layout_marginBottom="16dp"
+          android:gravity="center"
+          android:padding="16dp"
+          app:MvxBind="Text Item.Title"
+          android:textColor="#38A9F6"
+          style="@style/StyleTextQuestion"/>
+
+      <TextView
+          android:id="@+id/txt_compelte_sentence_question"
+          android:layout_width="match_parent"
+          android:layout_height="40dp"
+          android:layout_below="@id/txt_compelte_sentence_title"
+          android:gravity="center"
+          android:text="_______ are your from?"
+          style="@style/StyleTextInput"/>
+      <EditText
+          android:id="@+id/edt_compelte_sentence_question"
+          android:layout_width="0dp"
+          android:layout_height="0dp"
+          android:layout_below="@id/txt_compelte_sentence_title"
+          android:gravity="center"/>
+
+      <TextView
+          android:id="@+id/txt_compelte_sentence_true_answer"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/txt_compelte_sentence_question"
+          android:gravity="center"
+          android:padding="16dp"
+          android:text="Where are you from?"
+          android:textColor="#74B826"
+          style="@style/StyleTextAnswer"/>
+    </RelativeLayout>
+  </ScrollView>
+
+  <Button
+      android:id="@+id/bt_complete_sentence_continue"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      android:layout_marginBottom="16dp"
+      android:layout_marginLeft="24dp"
+      android:layout_marginRight="24dp"
+      style="@style/StyleNextButton"
+      android:text="TIẾP TỤC" 
+      android:textColor="#ffffff" />
+</RelativeLayout>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_item_feedback" >
+
+  <ImageView
+      android:id="@+id/imgAvatar"
+      android:layout_width="36dp"
+      android:layout_height="36dp"
+      android:layout_marginLeft="28dp"
+      android:layout_marginRight="16dp"
+      android:layout_marginTop="16dp" />
+
+  <TextView
+      android:id="@+id/txtName"
+      style="@style/StyleTextNormalBold"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="16dp"
+      android:layout_toRightOf="@id/imgAvatar"
+      android:textSize="14sp" />
+
+  <TextView
+      android:id="@+id/txtLocation"
+      style="@style/styleTextSmall"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/txtName"
+      android:layout_toRightOf="@id/imgAvatar"
+    />
+
+  <ImageView
+         android:id="@+id/btnReport"
+         android:layout_width="36dp"
+         android:layout_height="36dp"
+         android:src="@drawable/three_dots"
+         android:layout_alignParentRight="true"
+         android:layout_marginLeft="4dp"
+         android:layout_marginRight="16dp"
+         android:layout_marginTop="16dp"
+         android:gravity="center"
+        />
+
+  <Naxam.Busuu.Droid.Social.Controls.AddFriendButton
+   android:id="@+id/btnAddUser"
+  android:layout_width="48dp"
+       android:layout_height="36dp"
+   android:layout_marginTop="16dp"
+     android:layout_toLeftOf="@id/btnReport"
+  />
+
+
+  <TextView
+      android:id="@+id/txtContent"
+      style="@style/styleTextNormal"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/imgAvatar"
+      android:layout_marginLeft="28dp"
+      android:layout_marginTop="8dp" />
+
+  <TextView
+      android:id="@+id/txtPosted"
+      style="@style/styleTextSmall"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/txtContent"
+      android:layout_marginLeft="28dp"
+      android:layout_marginTop="4dp"
+      android:text="Posted" />
+
+  <Naxam.Busuu.Droid.Social.Controls.LikeButton
+      android:id="@+id/btnLike"
+      android:layout_width="72dp"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/txtPosted"
+      android:layout_marginLeft="24dp"
+      android:layout_marginTop="12dp"
+      app:lb_icon="@drawable/ic_comment_thumbsup"/>
+
+  <Naxam.Busuu.Droid.Social.Controls.LikeButton
+      android:id="@+id/btnUnlike"
+      android:layout_width="72dp"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/txtPosted"
+      android:layout_toRightOf="@id/btnLike"
+      android:layout_marginLeft="12dp"
+      android:layout_marginTop="12dp"
+      app:lb_icon="@drawable/ic_comment_thumbsdown"/>
+
+  <ImageView
+      android:id="@+id/btnReply"
+      android:layout_below="@id/txtPosted"
+      android:padding="8dp"
+      android:layout_marginLeft="16dp"
+      android:layout_marginTop="16dp"
+      android:layout_toRightOf="@id/btnUnlike"
+      android:layout_width="64dp"
+      android:layout_height="28dp"
+      android:background="@drawable/background_reply"
+      android:src="@drawable/ic_comment_reply_arrow" />
+
+  <View
+      android:id="@+id/viewSeparator"
+      android:layout_width="match_parent"
+      android:layout_height="1dp"
+      android:layout_below="@id/btnLike"
+      android:layout_marginTop="16dp"
+      android:background="#D6DEE6" />
+</RelativeLayout>

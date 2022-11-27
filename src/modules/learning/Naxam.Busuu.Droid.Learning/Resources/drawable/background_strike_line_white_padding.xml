@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/background_strike_line_white" android:right="12dp" android:left="12dp"/>
+</layer-list>

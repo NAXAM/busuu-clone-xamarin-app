@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"  >
+
+  <FrameLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+        >
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/imgImage"
+        android:scaleType="fitXY"
+        android:layout_marginBottom="32dp"  />
+    <Naxam.Busuu.Droid.Learning.Control.NXPlayButton
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="8dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:id="@+id/btnPlay"
+            />
+  </FrameLayout>
+  <TextView
+      style="@style/StyleTextInput"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+       android:gravity="center"
+      android:layout_margin="16dp"
+      android:id="@+id/txtInput"/>
+  <FrameLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_weight="1">
+
+    <TextView
+        android:id="@+id/txtTitle"
+        style="@style/StyleTextQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1"
+        android:text="This sentence needs a question mark."
+        android:gravity="center"  />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="3"
+        android:orientation="horizontal">
+
+      <Button
+          android:id="@+id/bt_right"
+          android:layout_width="104dp"
+          android:layout_height="104dp"
+          android:layout_marginRight="56dp"
+          android:layout_marginLeft="16dp"
+          android:layout_marginTop="16dp"
+          android:layout_marginBottom="16dp"
+          android:elevation="2dp"
+          android:background="@drawable/corner_button_white"
+          android:text="TRUE"/>
+
+      <Button
+          android:id="@+id/bt_wrong"
+          android:layout_width="104dp"
+          android:layout_height="104dp"
+          android:elevation="2dp"
+          android:background="@drawable/corner_button_white"
+          android:text="FALSE"
+          android:layout_margin="16dp"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bt_continue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_margin="16dp"
+        android:background="@drawable/corner_button_green"
+        android:text="CONTINUE"
+        android:textColor="#ffffff"/>
+  </FrameLayout>
+</LinearLayout>

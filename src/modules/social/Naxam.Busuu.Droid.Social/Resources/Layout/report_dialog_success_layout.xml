@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="24dp"
+    android:background="#ffff"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:layout_marginTop="32dp"
+        style="@style/StyleTextTitleBold"
+        android:textSize="22sp"
+        android:text="Thank you" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        style="@style/styleTextNormal"
+        android:textColor="#80888E"
+        android:text="Your report has been sent to our Customer Service team" />
+
+
+    <Button
+        android:id="@+id/btnOk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right|center_vertical"
+        android:paddingRight="24dp"
+        android:background="@android:color/transparent"
+        android:textColor="?attr/colorPrimary"
+        android:text="Ok Thanks"
+        android:layout_marginBottom="16dp"
+        />
+</LinearLayout>

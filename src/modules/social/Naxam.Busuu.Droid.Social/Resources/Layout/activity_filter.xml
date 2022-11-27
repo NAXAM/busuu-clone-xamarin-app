@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="#ffff"
+    android:layout_height="match_parent">
+  <android.support.v7.widget.Toolbar
+      android:id="@+id/toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="?attr/colorPrimary"
+      android:elevation="2dp"
+      android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+      app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        >
+    <TextView
+        android:id="@+id/txtDone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/margin_filter"
+        android:textSize="18sp"
+        android:layout_gravity="right"
+        android:textColor="#ffff"
+        android:textStyle="bold"
+        android:text="Done"
+        app:MvxBind="Click DoneCommand;Visible VisibilyDoneButton"
+        />
+  </android.support.v7.widget.Toolbar>
+  <TextView
+      android:id="@+id/txtIntro"
+      android:layout_below="@id/toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="@dimen/margin_filter"
+      android:layout_marginRight="@dimen/margin_filter"
+      android:textSize="16sp"
+      android:textColor="#2B2F32"
+      android:layout_marginTop="@dimen/margin_filter"
+      android:text="Which language/s would you like to help people with?" />
+
+  <ImageView
+      android:id="@+id/imgFlag"
+      android:layout_width="32dp"
+      android:layout_height="32dp"
+      android:layout_below="@id/txtIntro"
+      app:MvxBind="DrawableName Flag"
+      android:layout_marginLeft="@dimen/margin_filter"
+      android:layout_marginTop="@dimen/margin_filter" />
+
+  <TextView
+      android:id="@+id/txtLanguage"
+      android:layout_width="match_parent"
+      android:layout_below="@id/txtIntro"
+      android:layout_toRightOf="@id/imgFlag"
+      android:layout_marginTop="@dimen/margin_filter"
+      style="@style/StyleTextFilter"
+      android:text="English" />
+
+  <Switch
+      android:id="@+id/swtLanguage"
+      android:layout_width="wrap_content"
+      android:layout_below="@id/txtIntro"
+      android:layout_marginTop="@dimen/margin_filter"
+      app:MvxBind="Checked FilterLanguage,Mode = TwoWay"
+      style="@style/StyleSwitchFilter"
+        />
+  <View
+      android:layout_marginTop="@dimen/margin_filter"
+      android:layout_width="match_parent"
+      android:layout_height="1dp"
+      android:layout_marginLeft="@dimen/margin_filter"
+      android:background="#D8DDE7"
+      android:layout_below="@id/imgFlag"/>
+
+  <TextView
+      android:id="@+id/txtTypes"
+      android:layout_below="@id/swtLanguage"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="TYPES"
+      android:layout_marginTop="32dp"
+      android:layout_marginLeft="@dimen/margin_filter"
+      android:textStyle="bold"
+      android:textSize="12sp"
+      android:textColor="?attr/colorPrimary"
+        />
+
+  <TextView
+      android:id="@+id/txtShowWriting"
+      android:layout_below="@id/txtTypes"
+      android:layout_width="match_parent"
+      android:text="Show Writing Exercises"
+      android:layout_marginTop="@dimen/margin_filter"
+      style="@style/StyleTextFilter"
+        />
+  <Switch
+      android:id="@+id/swtShowWriting"
+      android:layout_width="wrap_content"
+      android:layout_below="@id/txtTypes"
+      android:layout_marginTop="@dimen/margin_filter"
+      app:MvxBind="Checked FilterWriting,Mode = TwoWay"
+      style="@style/StyleSwitchFilter"
+        />
+  <View
+      android:layout_marginTop="@dimen/margin_filter"
+      android:layout_width="match_parent"
+      android:layout_height="1dp"
+      android:background="#D8DDE7"
+      android:layout_below="@id/txtShowWriting"/>
+
+  <TextView
+      android:id="@+id/txtShowSpeaking"
+      android:layout_below="@id/txtShowWriting"
+      android:layout_width="match_parent"
+      android:text="Show Speaking Exercises"
+      android:layout_marginTop="32dp"
+      style="@style/StyleTextFilter"
+        />
+  <Switch
+      android:id="@+id/swtShowSpeaking"
+      android:layout_width="wrap_content"
+      style="@style/StyleSwitchFilter"
+      android:layout_marginTop="32dp"
+      app:MvxBind="Checked FilterSpeaking,Mode = TwoWay"
+      android:layout_below="@id/txtShowWriting"
+        />
+</RelativeLayout>

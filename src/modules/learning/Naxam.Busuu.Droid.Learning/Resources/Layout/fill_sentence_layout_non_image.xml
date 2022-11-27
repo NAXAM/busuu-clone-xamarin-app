@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+  <FrameLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentTop="true"
+      android:id="@+id/frameHeader"
+        >
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/imgImage"
+        android:scaleType="fitXY"
+        android:layout_marginBottom="32dp" 
+            />
+    <Naxam.Busuu.Droid.Learning.Control.NXPlayButton
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="8dp"
+        android:layout_gravity="bottom|center_horizontal" 
+        android:id="@+id/btnPlay"
+            />
+  </FrameLayout>
+
+  <TextView
+      android:id="@+id/txtQuestion"
+      android:layout_below="@id/frameHeader"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:layout_marginLeft="8dp"
+      android:layout_marginRight="8dp"
+      style="@style/StyleTextQuestion" 
+        />
+  <TextView
+      android:id="@+id/txtInput"
+      android:layout_below="@id/txtQuestion"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:layout_marginLeft="16dp"
+      android:layout_marginRight="16dp"
+      style="@style/StyleTextInput"
+        />
+  <ScrollView
+      android:layout_below="@id/txtInput"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent" 
+        >
+    <com.google.android.flexbox.FlexboxLayout
+        android:id="@+id/flexAnswer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp" 
+        app:alignContent="flex_start"
+        app:alignItems="flex_start"
+        app:flexWrap="wrap"
+        android:scrollbars="vertical"
+        app:justifyContent="center">
+    </com.google.android.flexbox.FlexboxLayout>
+
+  </ScrollView>
+
+  <Button
+      android:id="@+id/btnNext"
+      android:layout_alignParentBottom="true"
+      style="@style/StyleNextButton"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="16dp"
+      android:layout_marginRight="16dp"
+      android:layout_marginBottom="16dp"
+      android:text="Next" />
+</RelativeLayout>

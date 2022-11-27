@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+  <android.support.v7.widget.Toolbar
+      android:id="@+id/toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="56dp" 
+      android:elevation="2dp"
+      android:background="?attr/colorPrimary"
+      android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+      android:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+      >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Friends"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        app:MvxBind="Visible VisibleButtonSearch"
+            />
+    <EditText
+        android:id="@+id/txtSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:hint="Search"
+        app:MvxBind="Text SearchText;Visible VisibleTextSearch"
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/colorWhite"  />
+
+    <ImageView
+        android:id="@+id/imgSearch"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="right|center_vertical"
+        android:padding="12dp"
+        android:src="@drawable/ic_search_white"
+        app:MvxBind="Click SearchCommand;Visible VisibleButtonSearch"
+            />
+    <ImageView
+        android:id="@+id/imgClose"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="right|center_vertical"
+        android:padding="16dp"
+        app:MvxBind="Click CloseCommand;Visible VisibleCloseButton"
+        android:src="@drawable/x"
+            />
+  </android.support.v7.widget.Toolbar>
+  <MvvmCross.Droid.Support.V7.RecyclerView.MvxRecyclerView
+      android:id="@+id/recyclerView"
+      android:layout_below="@id/toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent" 
+      app:MvxBind="ItemsSource Friends;ItemClick SelectedUserCommand"
+      android:background="#C3C6CA"      /> 
+</RelativeLayout>

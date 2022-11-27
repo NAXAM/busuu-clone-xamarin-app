@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
+                        <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oi4-6a-3ST">
+                                <rect key="frame" x="155.5" y="284.5" width="64" height="99"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nx_logo_white.png" translatesAutoresizingMaskIntoConstraints="NO" id="HPM-43-4KV">
+                                        <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="64" id="KMa-W7-LAP"/>
+                                            <constraint firstAttribute="width" constant="64" id="P4x-0F-NQH"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="HPM-43-4KV" secondAttribute="trailing" id="OOf-xT-PIb"/>
+                                    <constraint firstItem="HPM-43-4KV" firstAttribute="top" secondItem="Oi4-6a-3ST" secondAttribute="top" id="d8v-sr-i3j"/>
+                                    <constraint firstItem="HPM-43-4KV" firstAttribute="leading" secondItem="Oi4-6a-3ST" secondAttribute="leading" id="h3a-YT-K49"/>
+                                    <constraint firstItem="HPM-43-4KV" firstAttribute="centerX" secondItem="Oi4-6a-3ST" secondAttribute="centerX" id="k7w-I7-78f"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NAXAM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCt-LY-o9Q">
+                                <rect key="frame" x="151.5" y="360.5" width="71.5" height="23"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.37459421157836914" green="0.66794115304946899" blue="0.30736663937568665" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Oi4-6a-3ST" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="19h-2D-Rdc"/>
+                            <constraint firstItem="CCt-LY-o9Q" firstAttribute="top" secondItem="HPM-43-4KV" secondAttribute="bottom" constant="12" id="6Ez-iF-MRq"/>
+                            <constraint firstItem="Oi4-6a-3ST" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Eeu-3c-S9g"/>
+                            <constraint firstItem="CCt-LY-o9Q" firstAttribute="centerX" secondItem="HPM-43-4KV" secondAttribute="centerX" id="Z5P-nU-V8i"/>
+                            <constraint firstItem="CCt-LY-o9Q" firstAttribute="bottom" secondItem="Oi4-6a-3ST" secondAttribute="bottom" id="ZXL-ZN-eqz"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="nx_logo_white.png" width="640" height="790"/>
+    </resources>
+</document>

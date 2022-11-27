@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+            android:background="@color/colorWhite"
+    android:layout_height="match_parent">
+  <LinearLayout
+       
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:gravity="center_horizontal"
+      android:orientation="vertical"
+      android:padding="24dp" >
+
+    <LinearLayout
+        android:id="@+id/layoutSocial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        android:gravity="center_horizontal"
+            >
+      <Button
+          android:layout_width="match_parent"
+          style="@style/StyleButtonFacebook"
+          android:text="Connect with facebook"
+                />
+
+      <Button
+          android:layout_width="match_parent"
+          android:layout_marginTop="16dp"
+          style="@style/StyleButtonGoogle"
+          android:text="Connect with google"
+                />
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="24dp"
+          android:layout_marginBottom="16dp"
+          style="@style/StyleTextTitle"
+          android:text="Or" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:padding="0dp"
+        android:layout_width="match_parent"
+        android:clipChildren="true"
+        android:layout_height="48dp">
+      <EditText
+          android:id="@+id/edtEmail"
+          style="@style/StyleEditText"
+          android:layout_width="match_parent"
+          android:visibility="gone"
+          app:MvxBind="Text Email"
+          android:hint="Email" />
+      <LinearLayout
+          android:id="@+id/layoutPhone"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_marginLeft="4dp"
+          android:layout_marginRight="4dp"
+          android:layout_marginBottom="6dp"
+          android:clipChildren="true"
+          android:orientation="horizontal" >
+        <EditText
+            android:id="@+id/edtPhoneCode"
+            style="@style/StyleEditText"
+            android:drawableRight="@drawable/ic_expand_arrow_20_20"
+            android:layout_width="wrap_content"
+            android:editable="false"
+            android:background="@android:color/transparent"
+            app:MvxBind="Text PhoneCode;Click PhoneCodeCommand" />
+        <EditText
+            android:id="@+id/edtPhone"
+            style="@style/StyleEditText"
+            android:paddingLeft="16dp"
+            android:layout_marginLeft="-16dp"
+            android:layout_width="match_parent"
+            android:background="@android:color/transparent"
+            app:MvxBind="Text Phone"
+            android:hint="Phone Number" />
+      </LinearLayout>
+    </FrameLayout>
+
+    <EditText
+        android:id="@+id/edtUserName"
+        style="@style/StyleEditText"
+        android:layout_width="match_parent"
+        app:MvxBind="Text UserName"
+        android:hint="UserName" />
+
+    <EditText
+        android:id="@+id/edtPassword"
+        style="@style/StyleEditText"
+        android:layout_width="match_parent"
+        android:hint="Password"
+        android:layout_marginBottom="16dp"
+        app:MvxBind="Text Password"
+            />
+
+    <Button
+        android:id="@+id/btnButtonUsePhoneEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/StyleButtonConfirmDialog"
+        android:text="Use Phone Number" />
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="match_parent"
+        android:layout_marginTop="16dp"
+        style="@style/StyleEnableButton"
+        android:text="Sign Up"  />
+    <TextView
+        android:id="@+id/txtPolicy"
+        android:autoLink="web"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textAlignment="gravity"
+        android:textSize="12sp"
+        android:textColor="@color/colorHintEditText"
+        app:MvxBind="Text Policy"
+            />
+  </LinearLayout>
+
+</ScrollView>

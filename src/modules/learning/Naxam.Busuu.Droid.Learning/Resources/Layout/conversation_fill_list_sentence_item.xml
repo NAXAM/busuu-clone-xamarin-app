@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/imgAvatar"
+        android:layout_width="36dp"
+        android:layout_height="36dp" 
+        android:layout_margin="16dp"
+        android:layout_centerVertical="true"
+           >
+
+    </ImageView>
+    <TextView
+        android:id="@+id/txtName"
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Binh"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/imgAvatar"
+         />
+
+    <TextView
+        android:id="@+id/txtInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="4dp" 
+        android:paddingBottom="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="8dp" 
+        android:text="mot hai ba bont 5 mot hai ba bont 5 mot hai ba bont 5 mot hai ba bont 5 mot hai ba bont 5 mot hai ba bont 5 mot hai ba bont 5"
+        android:layout_below="@+id/txtName"
+        android:layout_toEndOf="@+id/imgAvatar"
+        android:layout_alignParentEnd="true" />
+
+    <View
+        android:layout_width="match_parent"
+        android:background="#D6DEE6"
+        android:layout_toEndOf="@+id/imgAvatar"
+        android:layout_marginTop="8dp"
+        android:layout_below="@+id/txtInput"
+        android:layout_height="1dp"/>
+
+</RelativeLayout>

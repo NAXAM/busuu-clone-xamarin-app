@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <dimen name="textSizeTitle">18sp</dimen>
+  <dimen name="textSizeSubTitle">16sp</dimen>
+  <dimen name="buttonHeightDefault">48dp</dimen>
+  <dimen name="image_width">88dp</dimen>
+  <dimen name="image_final_width">32dp</dimen>
+  <dimen name="spacing_normal">16dp</dimen>
+</resources>

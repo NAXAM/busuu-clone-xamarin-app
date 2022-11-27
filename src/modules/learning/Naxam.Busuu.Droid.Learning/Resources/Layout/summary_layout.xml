@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#38A9F6"
+
+    >
+  <TextView
+      android:id="@+id/txtStatus"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Rất Tốt"
+      android:gravity="center"
+      android:textColor="#ffffffff"
+      android:layout_marginTop="24dp"
+      android:textSize="28sp"
+      app:MvxBind="Text Status"
+        
+        />
+  <RelativeLayout
+      android:id="@+id/layoutMark"
+      android:layout_below="@id/txtStatus"
+      android:layout_width="120dp"
+      android:layout_height="120dp"
+      android:layout_marginTop="16dp"
+      android:layout_centerHorizontal="true"
+      android:background="@drawable/background_mark"
+        >
+    <LinearLayout
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+            >
+      <TextView
+          android:id="@+id/txtMark"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="3"
+          android:layout_alignParentTop="true"
+          android:gravity="center_horizontal"
+          android:layout_centerHorizontal="true"
+          android:layout_centerVertical="true"
+          android:textColor="#ffffffff"
+          android:textSize="32sp"
+                />
+      <TextView
+          android:id="@+id/txtTotal"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/txtMark"
+          android:gravity="center_horizontal"
+          android:textColor="#AAD0EB"
+          android:textSize="14sp"
+          app:MvxBind="Text Total, Converter = FormatString, ConverterParameter = 'Trên {0}'"
+                />
+    </LinearLayout>
+  </RelativeLayout>
+  <TextView
+      android:id="@+id/txtResult"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/layoutMark"
+      android:layout_marginTop="16dp"
+      android:text="Bạn cần làm cái gì đó để vượt qua"
+      android:gravity="center_horizontal"
+      android:textColor="#ffffffff"
+      android:textSize="18sp"
+      app:MvxBind="Text ResultText"
+        />
+
+
+  <LinearLayout
+      android:id="@+id/layoutTip"
+      android:padding="16dp"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      android:orientation="horizontal"
+      android:background="#2E8CCC"
+        >
+    <ImageView
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:src="@drawable/ic_book_course"
+            />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layoutMark"
+        android:layout_marginLeft="16dp"
+        android:text="Bạn cần làm cái gì đó để vượt qua àm cái gì đó để vượt qua"
+        android:layout_gravity="center_vertical"
+        android:textColor="#ffffffff"
+        android:textSize="18sp"
+            />
+  </LinearLayout>
+  <Button
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/btnTryAgain"
+          android:background="@android:color/transparent"
+          android:layout_above="@id/layoutTip"
+          android:textColor="#ffffffff"
+          android:layout_marginBottom="24dp"
+          android:layout_marginLeft="24dp"
+          android:layout_marginRight="24dp"
+          app:MvxBind="Click TryAgainCommand;Hidden IsCompleted"
+          android:text="Thử Lại"
+        />
+  <Button
+       android:id="@+id/btnNext"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:background="@drawable/background_button_next"
+       android:layout_above="@id/btnTryAgain"
+       android:textColor="#38A9F6"
+       android:layout_marginBottom="24dp"
+       android:layout_marginLeft="24dp"
+       android:layout_marginRight="24dp"
+       app:MvxBind="Click NextCommand"
+       android:text="Tiếp Tục"
+        />
+</RelativeLayout>

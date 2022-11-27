@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="2"
+    android:background="#FFFFFF"
+    android:elevation="6dp"
+    android:layout_marginBottom="32dp"
+    android:layout_marginTop="32dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp">
+<!--landcape-->
+    <FrameLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:src="@drawable/beach"
+            android:scaleType="fitXY"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <ImageView
+            android:id="@+id/imgPlayBtn"
+            android:padding="8dp"
+            android:layout_marginBottom="32dp"
+            android:src="@drawable/ic_play_btn"
+            android:background="@drawable/circle_drwable"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_width="56dp"
+            android:layout_height="56dp" />
+        <ImageView
+            android:id="@+id/imgStar"
+            android:layout_gravity="right"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_width="32dp"
+            android:layout_height="32dp" />
+    </FrameLayout>
+    <LinearLayout
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:text="hello"
+            android:textColor="#38A7F6"
+            android:layout_marginTop="8dp"
+            android:textSize="24dp"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="xin chào"
+            android:layout_marginTop="8dp"
+            android:textColor="#7C8081"
+            android:textSize="24dp"
+            android:elevation="10dp"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

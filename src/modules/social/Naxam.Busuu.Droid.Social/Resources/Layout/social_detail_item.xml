@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:elevation="3dp">
+
+    <ImageView
+        android:id="@+id/imgAvatar"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/txtName"
+        style="@style/StyleTextNormalBold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_toRightOf="@id/imgAvatar"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/txtLocation"
+        style="@style/styleTextSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtName"
+        android:layout_toRightOf="@id/imgAvatar" />
+
+  <ImageView
+      android:id="@+id/btnReport"
+      android:layout_width="36dp"
+      android:layout_height="36dp"
+      android:src="@drawable/three_dots"
+      android:layout_alignParentRight="true"
+      android:layout_marginLeft="4dp"
+      android:layout_marginRight="16dp"
+      android:layout_marginTop="16dp"
+      android:gravity="center"
+        />
+
+  <Naxam.Busuu.Droid.Social.Controls.AddFriendButton
+   android:id="@+id/btnAddUser"
+  android:layout_width="48dp"
+       android:layout_height="36dp"
+   android:layout_marginTop="16dp"
+     android:layout_toLeftOf="@id/btnReport"
+  />
+
+    <ImageView
+        android:id="@+id/imgExercise"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/imgAvatar"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/txtExercise"
+        style="@style/styleTextSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgExercise"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="1dp" 
+        android:background="@drawable/background_exercise"
+        android:padding="8dp" />
+
+    <Naxam.Busuu.Droid.Core.Controls.PlayerSocial 
+        android:id="@+id/btnPlayer"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/txtExercise"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+        app:MvxBind="Visible SocialDetailData.Type, Converter = TypeSocialToBool, ConverterParameter= false" />
+
+    <TextView
+        android:id="@+id/txtContent"
+        style="@style/styleTextNormal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnPlayer"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp" />
+
+
+    <TextView
+        android:id="@+id/txtPosted"
+        style="@style/styleTextSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtContent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="4dp"
+        android:text="Posted" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/txtPosted"
+        android:layout_marginTop="16dp"
+        android:background="#D6DEE6" />
+
+    <TextView
+        android:id="@+id/txtFeedBack"
+        style="@style/StyleTextNormalBold"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:layout_below="@id/txtPosted"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:gravity="left|center_vertical"
+        android:text="Give Feedback"
+        android:textAllCaps="true"
+        android:textColor="?attr/colorPrimary"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/txtNumberRate"
+        style="@style/styleTextSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/txtPosted"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center_vertical"
+        android:textSize="12sp" />
+
+    <com.iarcuschin.simpleratingbar.SimpleRatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:layout_below="@id/txtPosted"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_toLeftOf="@id/txtNumberRate"
+        app:MvxBind="Rating Rating"
+        app:srb_drawBorderEnabled="false"
+        app:srb_fillColor="#FEAB35"
+        app:srb_isIndicator="true"
+        app:srb_numberOfStars="5"
+        app:srb_starBackgroundColor="#D6DEE6"
+        app:srb_starCornerRadius="13"
+        app:srb_starSize="20dp"
+        app:srb_stepSize="0.5" />
+</RelativeLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="zTq-bL-kAi" customClass="BuyPremiumCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TKw-TZ-LgL">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rgb-hW-qSO" userLabel="rippleView">
+                            <rect key="frame" x="0.0" y="310" width="375" height="48"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="48" id="reH-r0-nS7"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50% off Premium!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="08A-Dc-Tci">
+                            <rect key="frame" x="16" y="325" width="150" height="18"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="150" id="aF7-Og-Vy7"/>
+                                <constraint firstAttribute="height" constant="18" id="hUt-rX-xMk"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" clipsSubviews="YES" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fwv-AI-dFe">
+                            <rect key="frame" x="279" y="319" width="80" height="30"/>
+                            <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="80" id="C0C-PI-uEe"/>
+                                <constraint firstAttribute="height" constant="30" id="saE-q4-dTD"/>
+                            </constraints>
+                            <state key="normal" title="GO">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="fwv-AI-dFe" firstAttribute="centerY" secondItem="TKw-TZ-LgL" secondAttribute="centerY" id="JHb-oH-gjn"/>
+                        <constraint firstAttribute="trailing" secondItem="fwv-AI-dFe" secondAttribute="trailing" constant="16" id="M84-aD-msx"/>
+                        <constraint firstItem="08A-Dc-Tci" firstAttribute="centerY" secondItem="TKw-TZ-LgL" secondAttribute="centerY" id="Wd2-9y-Nuo"/>
+                        <constraint firstItem="rgb-hW-qSO" firstAttribute="leading" secondItem="TKw-TZ-LgL" secondAttribute="leading" id="bcs-uV-tFj"/>
+                        <constraint firstItem="rgb-hW-qSO" firstAttribute="centerY" secondItem="08A-Dc-Tci" secondAttribute="centerY" id="gfT-la-9zf"/>
+                        <constraint firstItem="rgb-hW-qSO" firstAttribute="width" secondItem="TKw-TZ-LgL" secondAttribute="width" id="hQr-d9-ifH"/>
+                        <constraint firstAttribute="trailing" secondItem="rgb-hW-qSO" secondAttribute="trailing" id="hgB-mI-z4n"/>
+                        <constraint firstItem="08A-Dc-Tci" firstAttribute="leading" secondItem="TKw-TZ-LgL" secondAttribute="leading" constant="16" id="z9x-17-diU"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="TKw-TZ-LgL" firstAttribute="leading" secondItem="zTq-bL-kAi" secondAttribute="leading" id="FAi-UI-Cww"/>
+                <constraint firstItem="TKw-TZ-LgL" firstAttribute="height" secondItem="zTq-bL-kAi" secondAttribute="height" id="Lto-CM-scg"/>
+                <constraint firstItem="TKw-TZ-LgL" firstAttribute="centerY" secondItem="zTq-bL-kAi" secondAttribute="centerY" id="ROp-Qn-Ygz"/>
+                <constraint firstItem="TKw-TZ-LgL" firstAttribute="width" secondItem="zTq-bL-kAi" secondAttribute="width" id="x7t-4v-6fQ"/>
+            </constraints>
+            <connections>
+                <outlet property="btnGo" destination="fwv-AI-dFe" id="5ak-bC-Ty0"/>
+                <outlet property="contentView" destination="TKw-TZ-LgL" id="UAq-DZ-fNl"/>
+                <outlet property="lbPR" destination="08A-Dc-Tci" id="XbB-V4-1rX"/>
+                <outlet property="viewRipple" destination="rgb-hW-qSO" id="Bzh-Tp-Xza"/>
+            </connections>
+        </view>
+    </objects>
+</document>

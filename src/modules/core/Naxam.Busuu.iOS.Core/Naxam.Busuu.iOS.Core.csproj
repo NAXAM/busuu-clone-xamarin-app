@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B18CE05B-DA11-45F4-BEF8-6945AE895FA2}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Naxam.Busuu.iOS.Core</RootNamespace>
+    <AssemblyName>Naxam.Busuu.iOS.Core</AssemblyName>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchFastDev>true</MtouchFastDev>
+    <IOSDebuggerPort>46774</IOSDebuggerPort>
+    <DeviceSpecificBuild>false</DeviceSpecificBuild>
+    <MtouchLink></MtouchLink>
+    <MtouchHttpClientHandler></MtouchHttpClientHandler>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <DefineConstants></DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchHttpClientHandler></MtouchHttpClientHandler>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug-Reveal|iPhoneSimulator' ">
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug-Reveal</OutputPath>
+    <DefineConstants></DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <DeviceSpecificBuild>true</DeviceSpecificBuild>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>i386, x86_64</MtouchArch>
+  </PropertyGroup>  
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="MaterialControls" Version="1.2.2" />
+    <PackageReference Include="MvvmCross" Version="5.4.0" />
+    <PackageReference Include="MvvmCross.Binding" Version="5.4.0" />
+    <PackageReference Include="MvvmCross.Core" Version="5.4.0" />
+    <PackageReference Include="MvvmCross.Platform" Version="5.4.0" />
+    <PackageReference Include="MvvmCross.Plugin.Messenger" Version="5.4.0" />
+    <PackageReference Include="MvvmCross.Plugin.Color" Version="5.4.0" />
+    <PackageReference Include="WebP.Touch" Version="1.0.4" />
+    <PackageReference Include="Xamarin.FFImageLoading" Version="2.2.22" />
+    <PackageReference Include="Naxam.KVOController.iOS" Version="1.2.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="Views\" />
+    <Folder Include="FloatyButton\" />
+    <Folder Include="Assets.xcassets\" />
+    <Folder Include="Assets.xcassets\" />
+    <Folder Include="CustomBindings\" />
+    <Folder Include="Converter\" />
+    <Folder Include="CustomControls\" />
+    <Folder Include="Common\" />
+    <Folder Include="Extensions\" />
+    <Folder Include="Cells\" />
+    <Folder Include="Converter\LanguageSpeakCell\" />
+    <Folder Include="Converter\ReviewTableViewCell\" />
+    <Folder Include="Controls\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\BuyPremiumCell.cs" />
+    <Compile Include="Views\BuyPremiumCell.designer.cs">
+      <DependentUpon>BuyPremiumCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RippleLayer.cs" />
+    <Compile Include="FloatyButton\ActionButton.cs" />
+    <Compile Include="FloatyButton\ActionButtonItem.cs" />
+    <Compile Include="CustomBindings\AttributedTextTargetBinding.cs" />
+    <Compile Include="Converter\ImageUriConverter.cs" />
+    <Compile Include="Converter\NotifyTextToFormattedTextConverter.cs" />
+    <Compile Include="Converter\NotifyToColorConverter.cs" />
+    <Compile Include="Converter\SocialTypeToBoolFalseConverter.cs" />
+    <Compile Include="Converter\FeedbackCountConverter.cs" />
+    <Compile Include="Converter\HowDidTextConverter.cs" />
+    <Compile Include="CustomControls\MaterialTabBar.cs" />
+    <Compile Include="Common\LinkerPleaseInclude.cs" />
+    <Compile Include="CustomBindings\ColorTargetBinding.cs" />
+    <Compile Include="Converter\HexToUIColorValueConverter.cs" />
+    <Compile Include="CustomBindings\RippleColorTargetBinding.cs" />
+    <Compile Include="Extensions\CGColorExtensions.cs" />
+    <Compile Include="CustomBindings\LayerColorTargetBinding.cs" />
+    <Compile Include="Converter\HexToBrighterUIColorValueConverter.cs" />
+    <Compile Include="Converter\StarDoubleConverter.cs" />
+    <Compile Include="Converter\SocialTypeToBoolConverter.cs" />
+    <Compile Include="Converter\VisibilityToHideConverter.cs" />
+    <Compile Include="Converter\StarDoubleTextConverter.cs" />
+    <Compile Include="Views\BuyPremium.cs" />
+    <Compile Include="Views\BuyPremium.designer.cs">
+      <DependentUpon>BuyPremium.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PremiumView.cs" />
+    <Compile Include="Views\PremiumView.designer.cs">
+      <DependentUpon>PremiumView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cells\FeatureCell.cs" />
+    <Compile Include="Cells\FeatureCell.designer.cs">
+      <DependentUpon>FeatureCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Converter\AddMinutesValueConverter.cs" />
+    <Compile Include="Converter\LanguageSpeakCell\lblLeverTopConverter.cs" />
+    <Compile Include="Converter\LanguageSpeakCell\lblLeverHeightConverter.cs" />
+    <Compile Include="Converter\ReviewTableViewCell\StrengthLevelToImageConverter.cs" />
+    <Compile Include="Converter\ReviewTableViewCell\IsFavoriteToImageStarConverter.cs" />
+    <Compile Include="Converter\ReviewTableViewCell\IsCheckToViewSampleHeithConverter.cs" />
+    <Compile Include="Converter\ReviewTableViewCell\IsCheckToViewSampleTopConverter.cs" />
+    <Compile Include="Controls\CircularProgress.cs" />
+    <Compile Include="Bootstrap\ColorPluginBootstrap.cs" />
+    <Compile Include="Bootstrap\MessengerPluginBootstrap.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="Views\BuyPremiumCell.xib" />
+    <InterfaceDefinition Include="Core.storyboard" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Naxam.Busuu.Core\Naxam.Busuu.Core.csproj">
+      <Project>{A9928524-DB7A-4812-9C3A-81FE280939EF}</Project>
+      <Name>Naxam.Busuu.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+</Project>

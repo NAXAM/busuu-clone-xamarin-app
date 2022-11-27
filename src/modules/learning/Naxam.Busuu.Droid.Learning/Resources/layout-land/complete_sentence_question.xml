@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+  <FrameLayout
+      android:id="@+id/layout_complete_sentence_description"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentTop="true"
+      android:layout_weight="1">
+
+    <ImageView
+        android:id="@+id/img_complete_sentence_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        app:MvxBind="SourceNormal Image;Hidden Image, Converter = StringEmptyToBool"
+        android:scaleType="fitXY" />
+
+    <Naxam.Busuu.Droid.Learning.Control.NXPlayButton
+       android:id="@+id/btn_complete_sentence_play"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_gravity="bottom|center_horizontal"
+         app:MvxBind="Hidden Audio, Converter = StringEmptyToBool"
+        android:layout_marginTop="8dp" />
+    <Button
+        android:id="@+id/bt_complete_sentence_continue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:background="@drawable/background_circle_green"
+        android:text="TIẾP TỤC"
+        android:textColor="#ffffff" />
+  </FrameLayout>
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_weight="1">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txt_compelte_sentence_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            android:padding="16dp"
+            app:MvxBind="Text Item.Title"
+            android:textColor="#38A9F6" />
+
+        <TextView
+            android:id="@+id/txt_compelte_sentence_question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_compelte_sentence_title"
+            android:gravity="center"
+            android:padding="16dp"
+            style="@style/StyleTextInput"
+            android:text="_______ are your from?" />
+        <EditText
+                  android:id="@+id/edt_compelte_sentence_question"
+                  android:layout_width="0dp"
+                  android:layout_height="0dp"
+                  android:layout_below="@id/txt_compelte_sentence_title"
+                  android:gravity="center"/>
+        <TextView
+            android:id="@+id/txt_compelte_sentence_true_answer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_compelte_sentence_question"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="Where are you from?"
+             style="@style/StyleTextAnswer"
+            android:textColor="#74B826" />
+      </RelativeLayout>
+    </ScrollView>
+
+    
+  </RelativeLayout>
+</LinearLayout>

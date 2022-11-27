@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <Naxam.Busuu.Droid.Learning.Control.LessonHeaderBackground
+        android:id="@+id/lessonHeaderBackground"
+        android:layout_width="match_parent"
+        android:background="#ffffff"
+        android:layout_height="96dp">
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="16dp"
+            android:layout_gravity="center_vertical"
+            android:scaleType="fitXY" />
+        <com.github.lzyzsd.circleprogress.CircleProgress
+            android:id="@+id/circle_progress"
+            android:layout_marginLeft="16dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            app:circle_text_color="@android:color/transparent"
+            app:circle_unfinished_color="@android:color/transparent" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="112dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/txtLesson"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#3791CE" />
+            <TextView
+                android:id="@+id/txtTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#3791CE"
+                android:textSize="18sp" />
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/btnDownload"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/ic_download" />
+    </Naxam.Busuu.Droid.Learning.Control.LessonHeaderBackground>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:background="#456654"
+        android:layout_height="wrap_content" />
+</LinearLayout>

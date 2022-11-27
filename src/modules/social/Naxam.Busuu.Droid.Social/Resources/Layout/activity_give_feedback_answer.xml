@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+  <android.support.v7.widget.Toolbar
+         android:id="@+id/toolbar"
+         android:layout_width="match_parent"
+         android:layout_height="56dp"
+         android:elevation="2dp"
+         android:background="@color/colorPrimary"
+         android:theme="@style/ToolbarColoredBackArrow">
+
+    <ImageView
+        app:MvxBind="Click SendCmd;"
+        android:layout_gravity="right|center_vertical"
+        android:src="@drawable/send_btn"
+        android:layout_width="56dp"
+        android:padding="16dp"
+        android:layout_height="56dp" />
+  </android.support.v7.widget.Toolbar>
+
+  <ScrollView
+      android:layout_below="@id/toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp" >
+
+      <ImageView
+          android:id="@+id/img_cover_culture"
+          app:MvxBind="GlideUrl Feedback.UrlImage,Mode=TwoWay;"
+          android:layout_width="match_parent"
+          android:layout_height="150dp"
+          android:layout_marginTop="16dp"
+          android:scaleType="fitXY"
+          android:src="@drawable/ic_culture_cover" />
+
+      <TextView
+          android:id="@+id/txtQuestion"
+           app:MvxBind="Text Feedback.Question;"
+          android:layout_width="match_parent"
+          android:textSize="16dp"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/img_cover_culture"
+          android:background="#FFFFFF"
+          android:elevation="2dp"
+          android:padding="16dp"
+          android:textColor="#000000" />
+
+      <TextView
+          android:id="@+id/txtHint"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/txtQuestion"
+          android:layout_centerHorizontal="true"
+          android:layout_marginBottom="16dp"
+          android:layout_marginTop="16dp"
+          android:text="Tap on the text to correct it"
+          android:textSize="20dp" />
+
+      <EditText
+          android:id="@+id/edtAnswer"
+          app:MvxBind="Text Feedback.Answer;"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/txtHint"
+          android:background="#E2E8EB"
+          android:padding="8dp"
+                />
+
+      <TextView
+          android:id="@+id/txtSurvey"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/edtAnswer"
+          android:layout_centerHorizontal="true"
+          android:layout_marginBottom="16dp"
+          android:layout_marginTop="16dp"
+          android:text="How did Elena Gorbikeova do?"
+          android:textSize="20dp" />
+
+      <com.iarcuschin.simpleratingbar.SimpleRatingBar
+          android:id="@+id/ratingBar"
+          app:MvxBind="Rating Feedback.Rating, Mode=TwoWay;"
+          android:layout_centerHorizontal="true"
+          android:layout_width="wrap_content"
+          android:layout_marginBottom="16dp"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/txtSurvey"
+          app:srb_drawBorderEnabled="false"
+          app:srb_starsSeparation="16dp"
+          app:srb_fillColor="#FFAA30"
+          app:srb_isIndicator="false"
+          app:srb_numberOfStars="5"
+          app:srb_starBackgroundColor="#D6DFE6"
+          app:srb_starCornerRadius="100"
+          app:srb_starSize="32dp"
+          app:srb_stepSize="1" />
+
+      <EditText
+          android:id="@+id/edtComment"
+          app:MvxBind="Text Feedback.Comment;"
+          android:layout_marginBottom="32dp"
+          android:layout_width="match_parent"
+          android:layout_height="80dp"
+          android:layout_below="@id/ratingBar"
+          android:background="#E5E8ED"
+          android:gravity="start"
+          android:hint="Leave a comment"
+          android:padding="8dp" />
+    </RelativeLayout>
+  </ScrollView>
+
+</RelativeLayout>

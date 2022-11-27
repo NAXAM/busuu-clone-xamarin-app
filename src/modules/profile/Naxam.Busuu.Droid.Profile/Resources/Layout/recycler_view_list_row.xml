@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relativelayout"
+    android:clickable="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/button"
+        android:clickable="false"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center">
+
+        <View
+            android:clickable="false"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:background="@drawable/triangle" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:textSize="18dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:textColor="#000000"
+        android:clickable="false"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@id/button"
+         />
+
+    <com.github.aakira.expandablelayout.ExpandableLinearLayout
+        android:id="@+id/expandableLayout"
+        android:clickable="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtTitle"
+        android:orientation="vertical"
+        app:ael_duration="0"
+        app:ael_expanded="false">
+
+        <TextView
+            android:id="@+id/txtdescription"
+            android:layout_width="match_parent"
+            android:clickable="false"
+            android:textSize="16dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="16dp"
+            android:text="Vi thao dep trai"
+            />
+    </com.github.aakira.expandablelayout.ExpandableLinearLayout>
+</RelativeLayout>

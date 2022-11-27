@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\core\Naxam.Busuu.Core\Naxam.Busuu.Core.csproj">
+      <Project>{A9928524-DB7A-4812-9C3A-81FE280939EF}</Project>
+      <Name>Naxam.Busuu.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Acr.UserDialogs" Version="6.5.1"/>
+    <PackageReference Include="MvvmCross" Version="5.4.0"/>
+    <PackageReference Include="MvvmCross.Binding" Version="5.4.0"/>
+    <PackageReference Include="MvvmCross.Core" Version="5.4.0"/>
+    <PackageReference Include="MvvmCross.Platform" Version="5.4.0"/>
+    <PackageReference Include="MvvmCross.Plugin.Messenger" Version="5.4.0"/>
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3"/>
+    <PackageReference Include="Splat" Version="2.0.0"/>
+    <PackageReference Include="Xam.Plugins.Settings" Version="3.1.1"/>
+  </ItemGroup>
+</Project>

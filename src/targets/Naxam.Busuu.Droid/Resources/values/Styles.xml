@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<style name="AppTheme.Premium" parent="Theme.AppCompat.Light.DarkActionBar">
+		<!-- Customize your theme here. -->
+		<item name="colorPrimary">#FEAB35</item>
+		<item name="colorPrimaryDark">#D38E2C</item>
+		<item name="colorAccent">@color/colorAccent</item>
+		<item name="android:textColorSecondary">@color/colorHintEditText</item>
+	</style>
+	<!-- Base application theme. -->
+	<style name="AppTheme.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+		<item name="colorPrimary">@color/colorPrimary</item>
+		<item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    <item name="android:textColorSecondary">#ffffff</item>
+	</style>
+	<style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+		<!-- Customize your theme here. -->
+		<item name="colorPrimary">@color/colorPrimary</item>
+		<item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+		<item name="colorAccent">@color/colorAccent</item>
+   
+  </style>
+
+  <style name="ThemeCustomHintTextColor" parent="Theme.AppCompat.Light.DarkActionBar"> 
+    <item name="android:textColorSecondary">@color/colorHintEditText</item>
+  </style>
+	<style name="NoActionBarTheme" parent="Theme.AppCompat.Light.NoActionBar">
+		<!-- Customize your theme here. -->
+		<item name="colorPrimary">@color/colorPrimary</item>
+		<item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+		<item name="colorAccent">@color/colorAccent</item>
+		<item name="android:textColorSecondary">@color/colorHintEditText</item>
+	</style>
+	<style name="AppTheme.Splash" parent="AppTheme">
+		<item name="android:statusBarColor">@color/colorPrimaryDark</item>
+	</style>
+</resources>

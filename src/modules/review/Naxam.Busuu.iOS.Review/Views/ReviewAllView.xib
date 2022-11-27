@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReviewAllView">
+            <connections>
+                <outlet property="ReviewTableView" destination="Ykp-e7-LZI" id="j37-su-Pj2"/>
+                <outlet property="btnDiscovery" destination="wuZ-4n-nbV" id="wJ1-Xg-Nid"/>
+                <outlet property="btnFriends" destination="kpV-88-ehK" id="Hxv-gL-KjN"/>
+                <outlet property="lbButtonClicked" destination="qD6-7p-2d2" id="wnc-JQ-a8j"/>
+                <outlet property="searchBar" destination="lQM-WR-vpU" id="iBA-UV-bFK"/>
+                <outlet property="uiViewButton" destination="4Hd-er-ofV" id="xJw-vG-YbD"/>
+                <outlet property="uiViewSlide" destination="GUU-JN-R4f" id="FCS-Mi-Jel"/>
+                <outlet property="view" destination="2" id="RRd-Eg-VrN"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" contentMode="scaleToFill" id="4Hd-er-ofV">
+            <rect key="frame" x="0.0" y="0.0" width="240" height="28"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wuZ-4n-nbV">
+                    <rect key="frame" x="0.0" y="0.0" width="120" height="28"/>
+                    <color key="backgroundColor" red="0.33725490200000002" green="0.61176470589999998" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="Discovery">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnDiscovery_TouchUpInside:" destination="-1" eventType="touchUpInside" id="n0e-tS-X5a"/>
+                    </connections>
+                </button>
+                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kpV-88-ehK">
+                    <rect key="frame" x="120" y="0.0" width="120" height="28"/>
+                    <color key="backgroundColor" red="0.33725490200000002" green="0.61176470589999998" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="Friends">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnFriends_TouchUpInside:" destination="-1" eventType="touchUpInside" id="k8T-PF-4Qq"/>
+                    </connections>
+                </button>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GUU-JN-R4f">
+                    <rect key="frame" x="0.0" y="-0.5" width="120" height="28"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Discovery" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qD6-7p-2d2">
+                            <rect key="frame" x="-0.5" y="0.0" width="120" height="28"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="qD6-7p-2d2" firstAttribute="centerY" secondItem="GUU-JN-R4f" secondAttribute="centerY" id="CCK-fS-ZmF"/>
+                        <constraint firstItem="qD6-7p-2d2" firstAttribute="width" secondItem="GUU-JN-R4f" secondAttribute="width" id="Qzd-XC-pPi"/>
+                        <constraint firstItem="qD6-7p-2d2" firstAttribute="centerX" secondItem="GUU-JN-R4f" secondAttribute="centerX" id="cRS-cj-wMP"/>
+                        <constraint firstItem="qD6-7p-2d2" firstAttribute="height" secondItem="GUU-JN-R4f" secondAttribute="height" id="vxM-vh-srH"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="kpV-88-ehK" secondAttribute="trailing" id="3Nc-Fx-29l"/>
+                <constraint firstItem="GUU-JN-R4f" firstAttribute="height" secondItem="wuZ-4n-nbV" secondAttribute="height" id="7bh-zw-dGo"/>
+                <constraint firstItem="wuZ-4n-nbV" firstAttribute="width" secondItem="4Hd-er-ofV" secondAttribute="width" multiplier="1/2" id="ITU-Ee-cHl"/>
+                <constraint firstItem="GUU-JN-R4f" firstAttribute="centerY" secondItem="wuZ-4n-nbV" secondAttribute="centerY" id="LaB-di-ECX"/>
+                <constraint firstItem="kpV-88-ehK" firstAttribute="width" secondItem="4Hd-er-ofV" secondAttribute="width" multiplier="1/2" id="Mhf-on-9l8"/>
+                <constraint firstItem="wuZ-4n-nbV" firstAttribute="leading" secondItem="4Hd-er-ofV" secondAttribute="leading" id="SMu-e8-gl4"/>
+                <constraint firstItem="kpV-88-ehK" firstAttribute="centerY" secondItem="4Hd-er-ofV" secondAttribute="centerY" id="W0T-xw-t0j"/>
+                <constraint firstItem="kpV-88-ehK" firstAttribute="height" secondItem="4Hd-er-ofV" secondAttribute="height" id="eX2-hJ-e9t"/>
+                <constraint firstItem="GUU-JN-R4f" firstAttribute="leading" secondItem="wuZ-4n-nbV" secondAttribute="leading" id="kgi-yJ-CsY"/>
+                <constraint firstItem="wuZ-4n-nbV" firstAttribute="centerY" secondItem="4Hd-er-ofV" secondAttribute="centerY" id="sGb-O6-xGO"/>
+                <constraint firstItem="GUU-JN-R4f" firstAttribute="width" secondItem="wuZ-4n-nbV" secondAttribute="width" id="tJx-wH-hh1"/>
+                <constraint firstItem="wuZ-4n-nbV" firstAttribute="height" secondItem="4Hd-er-ofV" secondAttribute="height" id="ueI-wd-yE6"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="33" y="-402"/>
+        </view>
+        <view contentMode="scaleToFill" id="2">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <searchBar clipsSubviews="YES" contentMode="redraw" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="lQM-WR-vpU">
+                    <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="TBb-eF-BOj"/>
+                    </constraints>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Ykp-e7-LZI">
+                    <rect key="frame" x="0.0" y="108" width="375" height="559"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="559" id="iLJ-cV-gxR"/>
+                    </constraints>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Ykp-e7-LZI" firstAttribute="top" secondItem="lQM-WR-vpU" secondAttribute="bottom" id="Dkx-7D-kkw"/>
+                <constraint firstItem="lQM-WR-vpU" firstAttribute="leading" secondItem="2" secondAttribute="leading" id="EBi-lP-pxq"/>
+                <constraint firstAttribute="trailing" secondItem="Ykp-e7-LZI" secondAttribute="trailing" id="WVd-ai-s4d"/>
+                <constraint firstAttribute="bottom" secondItem="Ykp-e7-LZI" secondAttribute="bottom" id="cVe-cp-2Gv"/>
+                <constraint firstItem="Ykp-e7-LZI" firstAttribute="leading" secondItem="2" secondAttribute="leading" id="iIf-vc-xCS"/>
+                <constraint firstAttribute="trailing" secondItem="lQM-WR-vpU" secondAttribute="trailing" id="pB3-K4-UMA"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

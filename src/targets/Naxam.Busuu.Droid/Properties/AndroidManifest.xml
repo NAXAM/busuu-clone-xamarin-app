@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="Naxam.Busuu.Droid.Naxam.Busuu.Droid" android:versionCode="1" android:versionName="1.0" android:installLocation="auto">
+	<uses-sdk android:minSdkVersion="19" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.ACCESS_CHECKIN_PROPERTIES" />
+	<uses-permission android:name="android.permission.CAMERA" />
+	<application android:label="c" android:theme="@style/AppTheme" android:icon="@drawable/bussu_icon">
+		<meta-data android:name="JW_LICENSE_KEY" android:value="upydWUEcObEN/YtMOAIsdPoVbf6vbabPu2vPiw==" />
+	</application>
+</manifest>

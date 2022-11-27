@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{701B6C86-B033-45D2-89EE-0E11499DCA7E}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Naxam.Busuu.iOS.Profile</RootNamespace>
+    <AssemblyName>Naxam.Busuu.iOS.Profile</AssemblyName>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchFastDev>true</MtouchFastDev>
+    <IOSDebuggerPort>37112</IOSDebuggerPort>
+    <DeviceSpecificBuild>false</DeviceSpecificBuild>
+    <MtouchLink></MtouchLink>
+    <MtouchHttpClientHandler></MtouchHttpClientHandler>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <DefineConstants></DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchHttpClientHandler></MtouchHttpClientHandler>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug-Reveal|iPhoneSimulator' ">
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug-Reveal</OutputPath>
+    <DefineConstants></DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <DeviceSpecificBuild>true</DeviceSpecificBuild>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>i386, x86_64</MtouchArch>
+  </PropertyGroup>  
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="PDRating">
+      <HintPath>..\..\social\Naxam.Busuu.iOS.Social\Controls\PDRating.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="MaterialControls" version="1.2.2" />
+    <PackageReference Include="MvvmCross" version="5.4.0" />
+    <PackageReference Include="MvvmCross.Binding" version="5.4.0" />
+    <PackageReference Include="MvvmCross.Core" version="5.4.0" />
+    <PackageReference Include="MvvmCross.Platform" version="5.4.0" />
+    <PackageReference Include="MvvmCross.Plugin.Messenger" version="5.4.0" />
+    <PackageReference Include="WebP.Touch" version="1.0.4" />
+    <PackageReference Include="Xamarin.FFImageLoading" version="2.2.22" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="Views\" />
+    <Folder Include="Cells\" />
+    <Folder Include="Common\" />
+    <Folder Include="Controls\" />
+    <Folder Include="Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\ProfileView.cs" />
+    <Compile Include="Views\ProfileView.designer.cs">
+      <DependentUpon>ProfileView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ProfileTableViewSource.cs" />
+    <Compile Include="Cells\ProfileStaticCell.cs" />
+    <Compile Include="Cells\ProfileStaticCell.designer.cs">
+      <DependentUpon>ProfileStaticCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PreferencesView.cs" />
+    <Compile Include="Views\PreferencesView.designer.cs">
+      <DependentUpon>PreferencesView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\MyRadioButton.cs" />
+    <Compile Include="Views\NotificationSettingView.cs" />
+    <Compile Include="Views\NotificationSettingView.designer.cs">
+      <DependentUpon>NotificationSettingView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ContactUsView.cs" />
+    <Compile Include="Views\ContactUsView.designer.cs">
+      <DependentUpon>ContactUsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ItWorksView.cs" />
+    <Compile Include="Views\ItWorksView.designer.cs">
+      <DependentUpon>ItWorksView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cells\CountryTableViewCell.cs" />
+    <Compile Include="Cells\CountryTableViewCell.designer.cs">
+      <DependentUpon>CountryTableViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SettingCountryView.cs" />
+    <Compile Include="Views\SettingCountryView.designer.cs">
+      <DependentUpon>SettingCountryView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\CountryTableViewSource.cs" />
+    <Compile Include="Views\SettingInterfaceLanguageView.cs" />
+    <Compile Include="Views\SettingInterfaceLanguageView.designer.cs">
+      <DependentUpon>SettingInterfaceLanguageView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cells\InterfaceLanguageCell.cs" />
+    <Compile Include="Cells\InterfaceLanguageCell.designer.cs">
+      <DependentUpon>InterfaceLanguageCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\InterfaceLanguageTableViewSource.cs" />
+    <Compile Include="Views\SettingLanguageSpeakView.cs" />
+    <Compile Include="Views\SettingLanguageSpeakView.designer.cs">
+      <DependentUpon>SettingLanguageSpeakView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cells\LanguageSpeakCell.cs" />
+    <Compile Include="Cells\LanguageSpeakCell.designer.cs">
+      <DependentUpon>LanguageSpeakCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\LanguageSpeakTableViewSource.cs" />
+    <Compile Include="Services\DialogProfileService.cs" />
+    <Compile Include="Cells\FriendListCell.cs" />
+    <Compile Include="Cells\FriendListCell.designer.cs">
+      <DependentUpon>FriendListCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FriendListView.cs" />
+    <Compile Include="Views\FriendListView.designer.cs">
+      <DependentUpon>FriendListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\FriendListTableViewSource.cs" />
+    <Compile Include="Views\ShowUserAvatarView.cs" />
+    <Compile Include="Views\ShowUserAvatarView.designer.cs">
+      <DependentUpon>ShowUserAvatarView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bootstrap\MessengerPluginBootstrap.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="Profile.storyboard" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Naxam.Busuu.Profile\Naxam.Busuu.Profile.csproj">
+      <Project>{B6F89F5C-B669-40B1-BCE1-C72089933F2F}</Project>
+      <Name>Naxam.Busuu.Profile</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\core\Naxam.Busuu.Core\Naxam.Busuu.Core.csproj">
+      <Project>{A9928524-DB7A-4812-9C3A-81FE280939EF}</Project>
+      <Name>Naxam.Busuu.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\core\Naxam.Busuu.iOS.Core\Naxam.Busuu.iOS.Core.csproj">
+      <Project>{B18CE05B-DA11-45F4-BEF8-6945AE895FA2}</Project>
+      <Name>Naxam.Busuu.iOS.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Controls\PDRating.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+</Project>

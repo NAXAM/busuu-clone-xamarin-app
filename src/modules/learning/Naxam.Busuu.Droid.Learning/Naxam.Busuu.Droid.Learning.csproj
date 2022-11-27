@@ -1,0 +1,763 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\..\packages\Xamarin.Build.Download.0.4.7\build\Xamarin.Build.Download.props" Condition="Exists('..\..\..\packages\Xamarin.Build.Download.0.4.7\build\Xamarin.Build.Download.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DD07F5A3-ACA2-4CDF-B4BA-591A395175F9}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Naxam.Busuu.Droid.Learning</RootNamespace>
+    <AssemblyName>Naxam.Busuu.Droid.Learning</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug-Reveal|AnyCPU' ">
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug-Reveal</OutputPath>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Mono.Android" />
+    <Reference Include="Mono.Android.Export" />
+    <Reference Include="mscorlib" />    
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Acr.Support" Version="2.1.0" />
+    <PackageReference Include="Acr.UserDialogs" Version="6.5.1" />
+    <PackageReference Include="AndHUD" Version="1.2.0" />
+    <PackageReference Include="Glide.Xamarin" Version="4.1.1" />
+    <PackageReference Include="MvvmCross" Version="5.1.1" />
+    <PackageReference Include="MvvmCross.Binding" Version="5.1.1" />
+    <PackageReference Include="MvvmCross.Core" Version="5.1.1" />
+    <PackageReference Include="MvvmCross.Droid.Shared" Version="5.1.1" />
+    <PackageReference Include="MvvmCross.Droid.Support.Core.UI" Version="5.1.1" />
+    <PackageReference Include="MvvmCross.Droid.Support.Fragment" Version="5.1.1" />
+    <PackageReference Include="MvvmCross.Droid.Support.V7.AppCompat" Version="5.1.1" />
+    <PackageReference Include="MvvmCross.Droid.Support.V7.RecyclerView" Version="5.1.1" />
+    <PackageReference Include="MvvmCross.Platform" Version="5.1.1" />
+    <PackageReference Include="Naxam.CirclerProgress.Droid" Version="1.2.1.1" />
+    <PackageReference Include="Naxam.Flexbox.Droid" Version="0.3.0" />
+    <PackageReference Include="Naxam.Ittianyu.BottomNavExtension" Version="1.2.2" />
+    <PackageReference Include="Naxam.JWPlayerCommon.Droid" Version="2.7.4.3" />
+    <PackageReference Include="Naxam.JWPlayerCore.Droid" Version="2.7.4.3" />
+    <PackageReference Include="Naxam.TargetTooltip.Droid" Version="1.3.15" />
+    <PackageReference Include="Splat" Version="2.0.0" />
+    <PackageReference Include="Xam.Plugins.Android.ExoPlayer" Version="2.5.3" />
+    <PackageReference Include="Xam.Plugins.Android.ExoPlayer.Core" Version="2.5.3" />
+    <PackageReference Include="Xam.Plugins.Android.ExoPlayer.Dash" Version="2.5.3" />
+    <PackageReference Include="Xam.Plugins.Android.ExoPlayer.Hls" Version="2.5.3" />
+    <PackageReference Include="Xam.Plugins.Android.ExoPlayer.SmoothStreaming" Version="2.5.3" />
+    <PackageReference Include="Xam.Plugins.Android.ExoPlayer.UI" Version="2.5.3" />
+    <PackageReference Include="Xam.Plugins.Settings" Version="3.1.1" />
+    <PackageReference Include="Xamarin.Android.Arch.Core.Common" Version="1.0.0" />
+    <PackageReference Include="Xamarin.Android.Arch.Lifecycle.Common" Version="1.0.1" />
+    <PackageReference Include="Xamarin.Android.Arch.Lifecycle.Runtime" Version="1.0.0" />
+    <PackageReference Include="Xamarin.Android.Support.Animated.Vector.Drawable" Version="26.1.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.Annotations" Version="26.1.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.Compat" Version="26.1.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.Core.UI" Version="26.1.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.Core.Utils" Version="26.1.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.Design" Version="26.1.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.Fragment" Version="26.1.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.Media.Compat" Version="26.1.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.Percent" Version="26.1.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.Transition" Version="26.1.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.v4" Version="26.1.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="26.1.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.v7.RecyclerView" Version="26.1.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.Vector.Drawable" Version="26.1.0.1" />
+    <PackageReference Include="Xamarin.Build.Download" Version="0.4.7" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Adapters\MemoViewPagerAdapter.cs" />
+    <Compile Include="Adapters\SelectWordImageRecyclerViewAdapter.cs" />
+    <Compile Include="Control\BaseFragment.cs" />
+    <Compile Include="Control\Dialogue\DialogueNormalListSentenceFragment.cs" />
+    <Compile Include="Control\Dialogue\DialogueFillListSentenceFragment.cs" />
+    <Compile Include="Control\Dialogue\DialogueListNormalAdapter.cs" />
+    <Compile Include="Control\Dialogue\DialogueListAdapter.cs" />
+    <Compile Include="Control\MemoriseBodyView.cs" />
+    <Compile Include="Control\Memo\ChooseWordView.cs" />
+    <Compile Include="Control\Memo\FillSentenceView.cs" />
+    <Compile Include="Control\Memo\MatchingSentenceView.cs" />
+    <Compile Include="Control\Memo\MemoBaseView.cs" />
+    <Compile Include="Control\Memo\CompleteSentenceView.cs" />
+    <Compile Include="Control\Memo\MemoConversationSentence.cs" />
+    <Compile Include="Control\Memo\OrderWordView.cs" />
+    <Compile Include="Control\Memo\SelectWordView.cs" />
+    <Compile Include="Control\Memo\SelectWordImageView.cs" />
+    <Compile Include="Control\Memo\TrueFalseHearQuestionView.cs" />
+    <Compile Include="Converter\UnitValueToColorConverter.cs" />
+    <Compile Include="Converter\UnitValueToDrawableNameConverter.cs" />
+    <Compile Include="Views\MatchingSentenceFragment.cs" />
+    <Compile Include="Views\ConversationSentenceFragment.cs" />
+    <Compile Include="Views\OrderWordFragment.cs" />
+    <Compile Include="Views\SummaryView.cs" />
+    <Compile Include="Control\RecorderButton.cs" />
+    <Compile Include="Control\Vocabulary\TipFragment.cs" />
+    <Compile Include="Control\Vocabulary\VocabularyViewPagerFragment.cs" />
+    <Compile Include="Control\ExerciesView.cs" />
+    <Compile Include="Control\LessonHeader.cs" />
+    <Compile Include="Control\NXMvxExpandableListView.cs" />
+    <Compile Include="Adapters\NXMvxExpandableListAdapter.cs" />
+    <Compile Include="Control\NXExpandableListView.cs" />
+    <Compile Include="Control\NXPlayButton.cs" />
+    <Compile Include="Converter\AlphaColorConverter.cs" />
+    <Compile Include="Converter\ExerciseTypeToDrawableConverter.cs" />
+    <Compile Include="Converter\NumberToStringConverter.cs" />
+    <Compile Include="Converter\ReverseBoolConverter.cs" />
+    <Compile Include="Converter\ReverseColorConverter.cs" />
+    <Compile Include="Dialogs\DownloadDialog.cs" />
+    <Compile Include="TargetBinding\BackgroundColorTargetBinding.cs" />
+    <Compile Include="TargetBinding\BackgroundTargetBinding.cs" />
+    <Compile Include="TargetBinding\BorderTargetBinding.cs" />
+    <Compile Include="TargetBinding\ImageResourceTargetBinding.cs" />
+    <Compile Include="Transformers\CircleTranform.cs" />
+    <Compile Include="TargetBinding\DownloadCommandTargetBinding.cs" />
+    <Compile Include="TargetBinding\ExerciesColorTargetBinding.cs" />
+    <Compile Include="TargetBinding\ExerciesItemsSourceTargetBinding.cs" />
+    <Compile Include="TargetBinding\ExerciseClickCommandTargetBinding.cs" />
+    <Compile Include="TargetBinding\ImageSourceTargetBinding.cs" />
+    <Compile Include="TargetBinding\LessonHeaderTargetBinding.cs" />
+    <Compile Include="Adapters\NXExpandableListAdapter.cs" />
+    <Compile Include="Control\NXRecyclerView.cs" />
+    <Compile Include="Adapters\VocabularyPagerAdapter.cs" />
+    <Compile Include="Control\VocabularyViewPager.cs" />
+    <Compile Include="Control\Vocabulary\HearAndRepeatFragment.cs" />
+    <Compile Include="Control\Vocabulary\PreparePronounceView.cs" />
+    <Compile Include="Resources\Resource.Designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TargetBinding\FinishColorTargetBinding.cs" />
+    <Compile Include="TargetBinding\MemoriseTargetBinding.cs" />
+    <Compile Include="TargetBinding\PercentTargetBinding.cs" />
+    <Compile Include="TargetBinding\TintColorTargetBinding.cs" />
+    <Compile Include="Util\ClickableSpanNoUnderline.cs" />
+    <Compile Include="Util\DrawBackgroundSpan.cs" />
+    <Compile Include="Util\JWEventHandler.cs" />
+    <Compile Include="Util\Util.cs" />
+    <Compile Include="Views\BuyPremiumView.cs" />
+    <Compile Include="Views\ChangeLanguageView.cs" />
+    <Compile Include="Views\DialogueView.cs" />
+    <Compile Include="Adapters\GridSpacingItemDecoration.cs" />
+    <Compile Include="Views\CompleteSentenceFragment.cs" />
+    <Compile Include="Views\LearnView.cs" />
+    <Compile Include="Views\MemoriseView.cs" />
+    <Compile Include="Adapters\PremiumArrayAdapter.cs" />
+    <Compile Include="Views\PremiumView.cs" />
+    <Compile Include="Transformers\ForegroundToBackgroundTransformer.cs" />
+    <Compile Include="Views\TipDialog.cs" />
+    <Compile Include="Views\VocabularyView.cs" />
+    <Compile Include="Helpers\Settings.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fonts\awesome.ttf" />
+    <AndroidAsset Include="Assets\fonts\museo_sans300.otf" />
+    <AndroidAsset Include="Assets\fonts\roboto_medium.ttf" />
+    <None Include="Resources\AboutResources.txt" />
+    <AndroidResource Include="Resources\Layout\LearnActivity.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Layout\ChangeLanguageActivity.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Layout\MainActivity.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Layout\HearAndRepeat.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Layout\PreparePronounce.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout-land\PreparePronounce.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout-land\HearAndRepeat.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Layout\ListPractice.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Layout\matching_sentence_layout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Values\Strings.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\selector_item_gray_color.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_menu_social.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_menu_review.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_menu_profile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_menu_learn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\menu\menu_bottom.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Values\styles.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Values\Colors.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\learn_border_image.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\learn_background_button_go.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\buy_premium_list_item.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\buy_premium_page.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\premium_page.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\subscription_image_c_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\subscription_image_c_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\subscription_image_c_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\subscription_image_c_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\subscription_image_c_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\yellow_star_d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\vocab_trainer_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\corner_button.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\gradient_bottom_background.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\change_language_item.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\certificate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_lock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\premium_card_background.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\background_facebook_button.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\background_google_button.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\background_progress_percent.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\change_language_border_image.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\choose_language_background_listview.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\circle_drawble_download.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\flag_arabic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\flag_chinese.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\flag_english.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\flag_french.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\flag_german.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\flag_italian.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\flag_japanese.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\flag_polish.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\flag_portuguese.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\flag_russian.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\flag_spanish.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\flag_turkish.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_expand_arrow_20_20.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_indicator_selected.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_indicator_unselected.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\icdownload.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\icon_google_drawble_transparent.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\rounded_image.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\scrollbar_handle_holo_dark.9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\scrollbar_handle_holo_light.9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\underline_background_focus.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\underline_background_normal.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\background_strike_line_white.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\background_circle_white.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\layout_exercise_item.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\layout_topic_item.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_component_memorise.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\background_strike_line_white_padding.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\layout_lesson_header.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\core\Naxam.Busuu.Core\Naxam.Busuu.Core.csproj">
+      <Project>{A9928524-DB7A-4812-9C3A-81FE280939EF}</Project>
+      <Name>Naxam.Busuu.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\core\Naxam.Busuu.Droid.Core\Naxam.Busuu.Droid.Core.csproj">
+      <Project>{FE265042-A31B-44CE-8E0C-2260A89B2B12}</Project>
+      <Name>Naxam.Busuu.Droid.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Naxam.Busuu.Learning\Naxam.Busuu.Learning.csproj">
+      <Project>{e1334ff3-bc22-4f7c-b363-a01de69429f8}</Project>
+      <Name>Naxam.Busuu.Learning</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Values\Attrs.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_download_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\icon_book_search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\icon_book_side.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\icon_book_tick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\icon_bubbles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\icon_cloud_tick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\icon_dialogue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\icon_lightning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\icon_recording.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\icon_vocabulary.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\selector_list_item.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\background_circle_green.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\background_round_4dp_green.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\background_round_4dp_red.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\select_words_layout.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\background_round_4dp_blue.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout-land\fill_sentence_layout.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\fill_sentence_layout.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_play_arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_pause.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\hear_true_false_question.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\corner_button_red.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\corner_button_green.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\corner_button_white.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_wrong.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_right.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\tall_short_couble.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\vocabulary_question.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout-land\vocabulary_question.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout-land\select_words_layout.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\conversation_fill_list_sentence_layout.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\conversation_fill_list_sentence_item.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\listview_selector.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\select_words_layout_non_image.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\fill_sentence_layout_non_image.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout-land\conversation_fill_list_sentence_layout.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\memorise_layout.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\memorise_activity.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\circle_drwable.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\star_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\beach.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\ic_mic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\ic_play_btn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Anim\activity_picture_and_audio.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Anim\zoom_in_btn.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Anim\zoom_out_btn.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Anim\fade_in.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Anim\roteanim.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Anim\roteanimback.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Anim\zoom_in.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\ic_pause_btn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\ic_yellow_star.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\background_progressbar.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\progress_progressbar.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_book_course.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\summary_layout.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\background_mark.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\background_button_next.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\dotted.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\recorder_button.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_play_blue.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_stop.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_send.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_conversation_write.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_delete.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_conversation_speak_red.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_conversation_speak_blue.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_conversation_speak.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\complete_sentence_question.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout-land\complete_sentence_question.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\conversation_question.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout-land\conversation_question.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\select_word_with_image_item.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\select_word_with_image_layout.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\v.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout-land\select_word_with_image_item.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\dialogue_activity.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Control\Conversation\" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\tip_layout.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\lightbult.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\vocabulary_viewpager_layout.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\vocabulary_activity.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\tip_dialog_layout.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\order_word_layout.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\download_dialog.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout-land\conversation_normal_list_sentence_layout.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\conversation_normal_list_sentence_item.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\conversation_normal_list_sentence_layout.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\beatvn.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\select_words_layout_land.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout-land\order_word_layout.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout-land\hear_true_false_question.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout-land\summary_layout.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+</Project>

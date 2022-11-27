@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<PropertyGroup>
+  <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+  <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+  <ProjectGuid>{CDD7C719-30F6-46F0-BCCF-4C85974F01C1}</ProjectGuid>
+  <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+  <OutputType>Exe</OutputType>
+  <RootNamespace>Naxam.Busuu.iOS</RootNamespace>
+  <AssemblyName>Naxam.Busuu.iOS</AssemblyName>
+  <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+</PropertyGroup>
+<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+  <DebugSymbols>true</DebugSymbols>
+  <DebugType>full</DebugType>
+  <Optimize>false</Optimize>
+  <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+  <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+  <ErrorReport>prompt</ErrorReport>
+  <WarningLevel>4</WarningLevel>
+  <CodesignKey>iPhone Developer</CodesignKey>
+  <DeviceSpecificBuild>true</DeviceSpecificBuild>
+  <MtouchDebug>true</MtouchDebug>
+  <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+  <MtouchFastDev>true</MtouchFastDev>
+  <IOSDebuggerPort>15543</IOSDebuggerPort>
+  <MtouchLink>None</MtouchLink>
+  <MtouchArch>i386, x86_64</MtouchArch>
+  <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+  <IOSDebugOverWiFi>false</IOSDebugOverWiFi>
+</PropertyGroup>
+<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+  <DebugType>pdbonly</DebugType>
+  <Optimize>true</Optimize>
+  <OutputPath>bin\iPhone\Release</OutputPath>
+  <DefineConstants></DefineConstants>
+  <ErrorReport>prompt</ErrorReport>
+  <WarningLevel>4</WarningLevel>
+  <CodesignKey>iPhone Developer</CodesignKey>
+  <MtouchFloat32>true</MtouchFloat32>
+  <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  <MtouchLink>SdkOnly</MtouchLink>
+  <MtouchArch>ARMv7, ARM64</MtouchArch>
+  <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+</PropertyGroup>
+<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+  <DebugType>pdbonly</DebugType>
+  <Optimize>true</Optimize>
+  <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+  <DefineConstants></DefineConstants>
+  <ErrorReport>prompt</ErrorReport>
+  <WarningLevel>4</WarningLevel>
+  <CodesignKey>iPhone Developer</CodesignKey>
+  <DeviceSpecificBuild>true</DeviceSpecificBuild>
+  <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+  <MtouchLink>None</MtouchLink>
+  <MtouchArch>i386, x86_64</MtouchArch>
+  <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+</PropertyGroup>
+<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+  <DebugSymbols>true</DebugSymbols>
+  <DebugType>full</DebugType>
+  <Optimize>false</Optimize>
+  <OutputPath>bin\iPhone\Debug</OutputPath>
+  <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+  <ErrorReport>prompt</ErrorReport>
+  <WarningLevel>4</WarningLevel>
+  <CodesignKey>iPhone Developer</CodesignKey>
+  <DeviceSpecificBuild>true</DeviceSpecificBuild>
+  <MtouchDebug>true</MtouchDebug>
+  <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+  <MtouchFastDev>true</MtouchFastDev>
+  <MtouchFloat32>true</MtouchFloat32>
+  <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  <IOSDebuggerPort>42754</IOSDebuggerPort>
+  <MtouchLink>SdkOnly</MtouchLink>
+  <MtouchArch>ARMv7, ARM64</MtouchArch>
+  <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+  <IOSDebugOverWiFi>false</IOSDebugOverWiFi>
+</PropertyGroup>
+<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug-Reveal|iPhoneSimulator' ">
+  <DebugSymbols>true</DebugSymbols>
+  <DebugType>full</DebugType>
+  <Optimize>false</Optimize>
+  <OutputPath>bin\iPhoneSimulator\Debug-Reveal</OutputPath>
+  <DefineConstants>__UNIFIED__;__MOBILE__;__IOS__;DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+  <WarningLevel>4</WarningLevel>
+  <CodesignKey>iPhone Developer</CodesignKey>
+  <DeviceSpecificBuild>true</DeviceSpecificBuild>
+  <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+  <MtouchLink>None</MtouchLink>
+  <MtouchArch>i386, x86_64</MtouchArch>
+<MtouchDebug>true</MtouchDebug>
+<IOSDebuggerPort>15543</IOSDebuggerPort>
+<MtouchFastDev>true</MtouchFastDev>
+<MtouchExtraArgs>--framework:/Applications/Reveal.app/Contents/SharedSupport/iOS-Libraries/RevealServer.framework</MtouchExtraArgs>
+</PropertyGroup>
+<ItemGroup>
+  <Reference Include="System" />
+  <Reference Include="System.Xml" />
+  <Reference Include="System.Core" />
+  <Reference Include="Xamarin.iOS" />
+</ItemGroup>
+<ItemGroup>
+  <PackageReference Include="MaterialControls" version="1.2.2" />
+  <PackageReference Include="MvvmCross" version="5.4.0" />
+  <PackageReference Include="MvvmCross.Binding" version="5.4.0" />
+  <PackageReference Include="MvvmCross.Core" version="5.4.0" />
+  <PackageReference Include="MvvmCross.Platform" version="5.4.0" />
+  <PackageReference Include="MvvmCross.Plugin.Messenger" version="5.4.0" />
+  <PackageReference Include="WebP.Touch" version="1.0.4" />
+  <PackageReference Include="Xamarin.FFImageLoading" version="2.2.22" />
+  <PackageReference Include="MvvmCross.Plugin.DownloadCache" version="5.4.0" targetFramework="xamarinios10" />
+  <PackageReference Include="MvvmCross.Plugin.File" version="5.4.0" />
+  <PackageReference Include="Xamarin.IQKeyboardManager" version="1.4.1" />
+</ItemGroup>
+<ItemGroup>
+  <Folder Include="Resources\" />
+  <Folder Include="Views\" />
+  <Folder Include="Resources\Assets.xcassets\" />
+  <Folder Include="Assets.xcassets\" />
+  <Folder Include="Assets.xcassets\learn_tab_icon.imageset\" />
+  <Folder Include="Assets.xcassets\learn_tab_icon_selected.imageset\" />
+  <Folder Include="Assets.xcassets\onboarding_memorise.imageset\" />
+  <Folder Include="Assets.xcassets\iconBack.imageset\" />
+  <Folder Include="Assets.xcassets\play_btn2.imageset\" />
+  <Folder Include="Assets.xcassets\iconSliderLever.imageset\" />
+  <Folder Include="Assets.xcassets\ic_search_white.imageset\" />
+  <Folder Include="Resources\Assets.xcassets\dialogue_icon.imageset\" />
+  <Folder Include="Assets.xcassets\dialogue_icon.imageset\" />
+</ItemGroup>
+<ItemGroup>
+  <InterfaceDefinition Include="LaunchScreen.storyboard" />
+  <InterfaceDefinition Include="Main.storyboard" />
+</ItemGroup>
+<ItemGroup>
+  <None Include="Info.plist" />
+  <None Include="Entitlements.plist" />
+</ItemGroup>
+<ItemGroup>
+  <Compile Include="Main.cs" />
+  <Compile Include="AppDelegate.cs" />
+  <Compile Include="Setup.cs" />
+  <Compile Include="App.cs" />
+  <Compile Include="Views\MainTabBarView.cs" />
+  <Compile Include="Views\MainTabBarView.designer.cs">
+    <DependentUpon>..\modules\core\Naxam.Busuu.iOS.Core\Views\MainTabBarView.cs</DependentUpon>
+  </Compile>
+  <Compile Include="Bootstrap\FilePluginBootstrap.cs" />
+  <Compile Include="Bootstrap\MessengerPluginBootstrap.cs" />
+  <Compile Include="Bootstrap\DownloadCachePluginBootstrap.cs" />
+  <Compile Include="Helpers\Settings.cs" />
+</ItemGroup>
+<ItemGroup>
+  <ImageAsset Include="Assets.xcassets\Contents.json" />
+  <ImageAsset Include="Assets.xcassets\add_language.imageset\add_language.png" />
+  <ImageAsset Include="Assets.xcassets\add_language.imageset\add_language%402x.png" />
+  <ImageAsset Include="Assets.xcassets\add_language.imageset\Contents.json" />
+  <ImageAsset Include="Assets.xcassets\back_arrow.imageset\back_arrow.png" />
+  <ImageAsset Include="Assets.xcassets\back_arrow.imageset\back_arrow%402x.png" />
+  <ImageAsset Include="Assets.xcassets\back_arrow.imageset\Contents.json" />
+  <ImageAsset Include="Assets.xcassets\btn_activityCloseCrossButtonNew.imageset\btn_activityCloseCrossButtonNew.png" />
+  <ImageAsset Include="Assets.xcassets\btn_activityCloseCrossButtonNew.imageset\btn_activityCloseCrossButtonNew%402x.png" />
+  <ImageAsset Include="Assets.xcassets\btn_activityCloseCrossButtonNew.imageset\Contents.json" />
+  <ImageAsset Include="Assets.xcassets\btn_close.imageset\btn_activityCloseCrossButtonNew.png" />
+  <ImageAsset Include="Assets.xcassets\btn_close.imageset\btn_activityCloseCrossButtonNew%402x.png" />
+  <ImageAsset Include="Assets.xcassets\btn_close.imageset\Contents.json" />
+  <ImageAsset Include="Assets.xcassets\entity_strength_0.imageset\Contents.json" />
+  <ImageAsset Include="Assets.xcassets\entity_strength_0.imageset\entity_strength_0.png" />
+  <ImageAsset Include="Assets.xcassets\entity_strength_1.imageset\Contents.json" />
+  <ImageAsset Include="Assets.xcassets\entity_strength_1.imageset\entity_strength_1.png" />
+  <ImageAsset Include="Assets.xcassets\entity_strength_2.imageset\Contents.json" />
+  <ImageAsset Include="Assets.xcassets\entity_strength_2.imageset\entity_strength_2.png" />
+  <ImageAsset Include="Assets.xcassets\entity_strength_3.imageset\Contents.json" />
+  <ImageAsset Include="Assets.xcassets\entity_strength_3.imageset\entity_strength_3.png" />
+  <ImageAsset Include="Assets.xcassets\entity_strength_4.imageset\Contents.json" />
+  <ImageAsset Include="Assets.xcassets\entity_strength_4.imageset\entity_strength_4.png" />
+  <ImageAsset Include="Assets.xcassets\fab_menu_row_all.imageset\Contents.json" />
+  <ImageAsset Include="Assets.xcassets\fab_menu_row_all.imageset\fab_menu_row_all.png" />
+  <ImageAsset Include="Assets.xcassets\fab_menu_row_all.imageset\fab_menu_row_all%402x.png" />
+  <ImageAsset Include="Assets.xcassets\fab_menu_row_fav.imageset\Contents.json" />
+  <ImageAsset Include="Assets.xcassets\fab_menu_row_fav.imageset\fab_menu_row_fav.png" />
+  <ImageAsset Include="Assets.xcassets\fab_menu_row_fav.imageset\fab_menu_row_fav%402x.png" />
+  <ImageAsset Include="Assets.xcassets\fab_menu_row_learning.imageset\Contents.json" />
+  <ImageAsset Include="Assets.xcassets\fab_menu_row_learning.imageset\fab_menu_row_learning.png" />
+  <ImageAsset Include="Assets.xcassets\fab_menu_row_learning.imageset\fab_menu_row_learning%402x.png" />
+  <ImageAsset Include="Assets.xcassets\fab_menu_row_weak.imageset\Contents.json" />
+  <ImageAsset Include="Assets.xcassets\fab_menu_row_weak.imageset\fab_menu_row_weak.png" />
+  <ImageAsset Include="Assets.xcassets\fab_menu_row_weak.imageset\fab_menu_row_weak%402x.png" />
+  <ImageAsset Include="Assets.xcassets\greyCheck.imageset\Contents.json" />
+  <ImageAsset Include="Assets.xcassets\greyCheck.imageset\greyCheck.png" />
+  <ImageAsset Include="Assets.xcassets\greyCheck.imageset\greyCheck%402x.png" />
+  <ImageAsset Include="Assets.xcassets\greyX.imageset\Contents.json" />
+  <ImageAsset Include="Assets.xcassets\greyX.imageset\greyX.png" />
+  <ImageAsset Include="Assets.xcassets\greyX.imageset\greyX%402x.png" />
+  <ImageAsset Include="Assets.xcassets\image_placeholder.imageset\Contents.json" />
+  <ImageAsset Include="Assets.xcassets\image_placeholder.imageset\image_placeholder.png" />
+  <ImageAsset Include="Assets.xcassets\image_placeholder.imageset\image_placeholder%402x.png" />
+  <ImageAsset Include="Assets.xcassets\rating_star_gold.imageset\Contents.json" />
+  <ImageAsset Include="Assets.xcassets\rating_star_gold.imageset\rating_star_gold.png" />
+  <ImageAsset Include="Assets.xcassets\rating_star_gold.imageset\rating_star_gold%402x.png" />
+  <ImageAsset Include="Assets.xcassets\rating_star_grey.imageset\Contents.json" />
+  <ImageAsset Include="Assets.xcassets\rating_star_grey.imageset\rating_star_grey.png" />
+  <ImageAsset Include="Assets.xcassets\rating_star_grey.imageset\rating_star_grey%402x.png" />
+  <ImageAsset Include="Assets.xcassets\rounded_golden_star.imageset\Contents.json" />
+  <ImageAsset Include="Assets.xcassets\rounded_golden_star.imageset\rounded_golden_star.png" />
+  <ImageAsset Include="Assets.xcassets\rounded_golden_star.imageset\rounded_golden_star%402x.png" />
+  <ImageAsset Include="Assets.xcassets\rounded_grey_star.imageset\Contents.json" />
+  <ImageAsset Include="Assets.xcassets\rounded_grey_star.imageset\rounded_grey_star.png" />
+  <ImageAsset Include="Assets.xcassets\rounded_grey_star.imageset\rounded_grey_star%402x.png" />
+  <ImageAsset Include="Assets.xcassets\star.imageset\Contents.json" />
+  <ImageAsset Include="Assets.xcassets\star.imageset\star.png" />
+  <ImageAsset Include="Assets.xcassets\star_active.imageset\Contents.json" />
+  <ImageAsset Include="Assets.xcassets\star_active.imageset\star_active.png" />
+  <ImageAsset Include="Assets.xcassets\strength_0.imageset\Contents.json" />
+  <ImageAsset Include="Assets.xcassets\strength_0.imageset\strength_0.png" />
+  <ImageAsset Include="Assets.xcassets\strength_0.imageset\strength_0%402x.png" />
+  <ImageAsset Include="Assets.xcassets\strength_1.imageset\Contents.json" />
+  <ImageAsset Include="Assets.xcassets\strength_1.imageset\strength_1.png" />
+  <ImageAsset Include="Assets.xcassets\strength_1.imageset\strength_1%402x.png" />
+  <ImageAsset Include="Assets.xcassets\strength_2.imageset\Contents.json" />
+  <ImageAsset Include="Assets.xcassets\strength_2.imageset\strength_2.png" />
+  <ImageAsset Include="Assets.xcassets\strength_2.imageset\strength_2%402x.png" />
+  <ImageAsset Include="Assets.xcassets\strength_3.imageset\Contents.json" />
+  <ImageAsset Include="Assets.xcassets\strength_3.imageset\strength_3.png" />
+  <ImageAsset Include="Assets.xcassets\strength_3.imageset\strength_3%402x.png" />
+  <ImageAsset Include="Assets.xcassets\strength_4.imageset\Contents.json" />
+  <ImageAsset Include="Assets.xcassets\strength_4.imageset\strength_4.png" />
+  <ImageAsset Include="Assets.xcassets\strength_4.imageset\strength_4%402x.png" />
+  <ImageAsset Include="Assets.xcassets\ic_filter.imageset\Contents.json" />
+  <ImageAsset Include="Assets.xcassets\ic_filter.imageset\ic_filter%402x.png" />
+  <ImageAsset Include="Assets.xcassets\ic_filter.imageset\ic_filter%403x.png" />
+  <ImageAsset Include="Assets.xcassets\ic_send_light.imageset\Contents.json" />
+  <ImageAsset Include="Assets.xcassets\ic_send_light.imageset\ic_send_light%402x.png" />
+  <ImageAsset Include="Assets.xcassets\ic_send_light.imageset\ic_send_light%403x.png" />
+  <ImageAsset Include="Assets.xcassets\notifications_tab_icon.imageset\Contents.json" />
+  <ImageAsset Include="Assets.xcassets\notifications_tab_icon.imageset\notifications_tab_icon.png" />
+  <ImageAsset Include="Assets.xcassets\notifications_tab_icon.imageset\notifications_tab_icon%402x.png" />
+  <ImageAsset Include="Assets.xcassets\notifications_tab_icon_selected.imageset\Contents.json" />
+  <ImageAsset Include="Assets.xcassets\notifications_tab_icon_selected.imageset\notifications_tab_icon_selected.png" />
+  <ImageAsset Include="Assets.xcassets\notifications_tab_icon_selected.imageset\notifications_tab_icon_selected%402x.png" />
+  <ImageAsset Include="Assets.xcassets\play_icon_small.imageset\Contents.json" />
+  <ImageAsset Include="Assets.xcassets\play_icon_small.imageset\play_icon_small%402x.png" />
+  <ImageAsset Include="Assets.xcassets\play_icon_small.imageset\play_icon_small%403x.png" />
+  <ImageAsset Include="Assets.xcassets\profile_tab_icon.imageset\Contents.json" />
+  <ImageAsset Include="Assets.xcassets\profile_tab_icon.imageset\profile_tab_icon.png" />
+  <ImageAsset Include="Assets.xcassets\profile_tab_icon.imageset\profile_tab_icon%402x.png" />
+  <ImageAsset Include="Assets.xcassets\profile_tab_icon_selected.imageset\Contents.json" />
+  <ImageAsset Include="Assets.xcassets\profile_tab_icon_selected.imageset\profile_tab_icon_selected.png" />
+  <ImageAsset Include="Assets.xcassets\profile_tab_icon_selected.imageset\profile_tab_icon_selected%402x.png" />
+  <ImageAsset Include="Assets.xcassets\review_tab_icon.imageset\Contents.json" />
+  <ImageAsset Include="Assets.xcassets\review_tab_icon.imageset\review_tab_icon.png" />
+  <ImageAsset Include="Assets.xcassets\review_tab_icon.imageset\review_tab_icon%402x.png" />
+  <ImageAsset Include="Assets.xcassets\review_tab_icon_selected.imageset\Contents.json" />
+  <ImageAsset Include="Assets.xcassets\review_tab_icon_selected.imageset\review_tab_icon_selected.png" />
+  <ImageAsset Include="Assets.xcassets\review_tab_icon_selected.imageset\review_tab_icon_selected%402x.png" />
+  <ImageAsset Include="Assets.xcassets\social_tab_icon.imageset\Contents.json" />
+  <ImageAsset Include="Assets.xcassets\social_tab_icon.imageset\social_tab_icon.png" />
+  <ImageAsset Include="Assets.xcassets\social_tab_icon.imageset\social_tab_icon%402x.png" />
+  <ImageAsset Include="Assets.xcassets\social_tab_icon_selected.imageset\Contents.json" />
+  <ImageAsset Include="Assets.xcassets\social_tab_icon_selected.imageset\social_tab_icon_selected.png" />
+  <ImageAsset Include="Assets.xcassets\social_tab_icon_selected.imageset\social_tab_icon_selected%402x.png" />
+  <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
+  <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Contents.json" />
+  <ImageAsset Include="Resources\Assets.xcassets\subscription_image_c_1.imageset\Contents.json" />
+  <ImageAsset Include="Resources\Assets.xcassets\subscription_image_c_1.imageset\subscription_image_c_1.png" />
+  <ImageAsset Include="Resources\Assets.xcassets\subscription_image_c_2.imageset\Contents.json" />
+  <ImageAsset Include="Resources\Assets.xcassets\subscription_image_c_2.imageset\subscription_image_c_2.png" />
+  <ImageAsset Include="Resources\Assets.xcassets\subscription_image_c_3.imageset\Contents.json" />
+  <ImageAsset Include="Resources\Assets.xcassets\subscription_image_c_3.imageset\subscription_image_c_3.png" />
+  <ImageAsset Include="Resources\Assets.xcassets\subscription_image_c_4.imageset\Contents.json" />
+  <ImageAsset Include="Resources\Assets.xcassets\subscription_image_c_4.imageset\subscription_image_c_4.png" />
+  <ImageAsset Include="Resources\Assets.xcassets\subscription_image_c_5.imageset\Contents.json" />
+  <ImageAsset Include="Resources\Assets.xcassets\subscription_image_c_5.imageset\subscription_image_c_5.png" />
+  <ImageAsset Include="Resources\Assets.xcassets\grammar.imageset\Contents.json" />
+  <ImageAsset Include="Resources\Assets.xcassets\grammar.imageset\subscription_image_c_1.png" />
+  <ImageAsset Include="Resources\Assets.xcassets\correct.imageset\Contents.json" />
+  <ImageAsset Include="Resources\Assets.xcassets\correct.imageset\subscription_image_c_2.png" />
+  <ImageAsset Include="Resources\Assets.xcassets\language.imageset\Contents.json" />
+  <ImageAsset Include="Resources\Assets.xcassets\language.imageset\subscription_image_c_3.png" />
+  <ImageAsset Include="Resources\Assets.xcassets\travel.imageset\Contents.json" />
+  <ImageAsset Include="Resources\Assets.xcassets\travel.imageset\subscription_image_c_4.png" />
+  <ImageAsset Include="Resources\Assets.xcassets\test.imageset\Contents.json" />
+  <ImageAsset Include="Resources\Assets.xcassets\test.imageset\subscription_image_c_2.png" />
+  <ImageAsset Include="Resources\Assets.xcassets\correct.imageset\subscription_image_c_3.png" />
+  <ImageAsset Include="Resources\Assets.xcassets\language.imageset\subscription_image_c_5.png" />
+  <ImageAsset Include="Resources\Assets.xcassets\certificate.imageset\Contents.json" />
+  <ImageAsset Include="Resources\Assets.xcassets\certificate.imageset\certificate.png" />
+  <ImageAsset Include="Resources\Assets.xcassets\vocab_trainer_icon.imageset\Contents.json" />
+  <ImageAsset Include="Resources\Assets.xcassets\vocab_trainer_icon.imageset\vocab_trainer_icon.png" />
+  <ImageAsset Include="Assets.xcassets\download_icon.imageset\Contents.json" />
+  <ImageAsset Include="Assets.xcassets\download_icon.imageset\download_icon.png" />
+  <ImageAsset Include="Assets.xcassets\learn_tab_icon.imageset\Contents.json" />
+  <ImageAsset Include="Assets.xcassets\learn_tab_icon.imageset\learn_tab_icon.png" />
+  <ImageAsset Include="Assets.xcassets\learn_tab_icon.imageset\learn_tab_icon%402x.png" />
+  <ImageAsset Include="Assets.xcassets\learn_tab_icon_selected.imageset\Contents.json" />
+  <ImageAsset Include="Assets.xcassets\learn_tab_icon_selected.imageset\learn_tab_icon_selected.png" />
+  <ImageAsset Include="Assets.xcassets\learn_tab_icon_selected.imageset\learn_tab_icon_selected%402x.png" />
+  <ImageAsset Include="Resources\Assets.xcassets\develop_icon.imageset\Contents.json" />
+  <ImageAsset Include="Resources\Assets.xcassets\develop_icon.imageset\develop_icon.png" />
+  <ImageAsset Include="Resources\Assets.xcassets\develop_icon.imageset\develop_icon%402x.png" />
+  <ImageAsset Include="Resources\Assets.xcassets\meaning_icon.imageset\Contents.json" />
+  <ImageAsset Include="Resources\Assets.xcassets\meaning_icon.imageset\meaning_icon.png" />
+  <ImageAsset Include="Resources\Assets.xcassets\meaning_icon.imageset\meaning_icon%402x.png" />
+  <ImageAsset Include="Resources\Assets.xcassets\memorise_icon.imageset\Contents.json" />
+  <ImageAsset Include="Resources\Assets.xcassets\memorise_icon.imageset\memorise_icon.png" />
+  <ImageAsset Include="Resources\Assets.xcassets\memorise_icon.imageset\memorise_icon%402x.png" />
+  <ImageAsset Include="Resources\Assets.xcassets\practice_icon.imageset\Contents.json" />
+  <ImageAsset Include="Resources\Assets.xcassets\practice_icon.imageset\practice_icon.png" />
+  <ImageAsset Include="Resources\Assets.xcassets\practice_icon.imageset\practice_icon%402x.png" />
+  <ImageAsset Include="Resources\Assets.xcassets\review_icon.imageset\Contents.json" />
+  <ImageAsset Include="Resources\Assets.xcassets\review_icon.imageset\review_icon.png" />
+  <ImageAsset Include="Resources\Assets.xcassets\review_icon.imageset\review_icon%402x.png" />
+  <ImageAsset Include="Resources\Assets.xcassets\vocabulary_icon.imageset\Contents.json" />
+  <ImageAsset Include="Resources\Assets.xcassets\vocabulary_icon.imageset\vocabulary_icon.png" />
+  <ImageAsset Include="Resources\Assets.xcassets\vocabulary_icon.imageset\vocabulary_icon%402x.png" />
+  <ImageAsset Include="Assets.xcassets\iconBack.imageset\Contents.json" />
+  <ImageAsset Include="Assets.xcassets\iconBack.imageset\back_arrow.png" />
+  <ImageAsset Include="Assets.xcassets\iconBack.imageset\back_arrow%402x.png" />
+  <ImageAsset Include="Assets.xcassets\play_btn2.imageset\Contents.json" />
+  <ImageAsset Include="Assets.xcassets\play_btn2.imageset\play_btn.png" />
+  <ImageAsset Include="Assets.xcassets\iconSliderLever.imageset\Contents.json" />
+  <ImageAsset Include="Assets.xcassets\iconSliderLever.imageset\iconSliderLever.png" />
+  <ImageAsset Include="Assets.xcassets\iconSliderLever.imageset\Layer 0%403x.png" />
+  <ImageAsset Include="Assets.xcassets\ic_search_white.imageset\Contents.json" />
+  <ImageAsset Include="Assets.xcassets\ic_search_white.imageset\Layer 0%402x.png" />
+  <ImageAsset Include="Assets.xcassets\ic_search_white.imageset\Layer 0%403x.png" />
+  <ImageAsset Include="Resources\Assets.xcassets\dialogue_icon.imageset\Contents.json" />
+  <ImageAsset Include="Resources\Assets.xcassets\dialogue_icon.imageset\dialogue_icon.png" />
+  <ImageAsset Include="Resources\Assets.xcassets\dialogue_icon.imageset\dialogue_icon%402x.png" />
+  <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Background.png" />
+  <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\busuuffg.png" />
+  <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-20x20%402x.png" />
+  <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-20x20%403x.png" />
+  <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-29x29%402x.png" />
+  <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-29x29%403x.png" />
+  <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-40x40%402x.png" />
+  <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-40x40%403x.png" />
+  <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-60x60%402x.png" />
+  <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-60x60%403x.png" />
+  <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-20x20%401x.png" />
+  <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-29x29%401x.png" />
+  <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-40x40%401x.png" />
+  <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-76x76%401x.png" />
+  <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-76x76%402x.png" />
+</ItemGroup>
+<ItemGroup>
+  <BundleResource Include="Resources\BackgroundDetail05.jpg" />
+  <BundleResource Include="Resources\ImageMeoNo.jpg" />
+  <BundleResource Include="Resources\Nokia-tune-Nokia-tune.mp3" />
+  <BundleResource Include="Resources\add_friend_icon.png" />
+  <BundleResource Include="Resources\conversation_speaking_button.png" />
+  <BundleResource Include="Resources\conversation_speaking_button_Blue.png" />
+  <BundleResource Include="Resources\conversation_speaking_button_red.png" />
+  <BundleResource Include="Resources\conversation_speaking_play_button.png" />
+  <BundleResource Include="Resources\dots_menu.png" />
+  <BundleResource Include="Resources\flag_small_arabic.png" />
+  <BundleResource Include="Resources\flag_small_chinese.png" />
+  <BundleResource Include="Resources\flag_small_english.png" />
+  <BundleResource Include="Resources\flag_small_german.png" />
+  <BundleResource Include="Resources\flag_small_portuguese.png" />
+  <BundleResource Include="Resources\flag_small_spanish.png" />
+  <BundleResource Include="Resources\friendship_request_sent.png" />
+  <BundleResource Include="Resources\ic_delete.png" />
+  <BundleResource Include="Resources\list_flagcut_enc.png" />
+  <BundleResource Include="Resources\pause_btn.png" />
+  <BundleResource Include="Resources\play_btn.png" />
+  <BundleResource Include="Resources\profile_flag_vn.png" />
+  <BundleResource Include="Resources\social_background_pattern_image.png" />
+  <BundleResource Include="Resources\user_avatar_placeholder.png" />
+  <BundleResource Include="Resources\Stars\grey_star.png" />
+  <BundleResource Include="Resources\Stars\grey_star2.png" />
+  <BundleResource Include="Resources\Stars\yellow_star_d.png" />
+  <BundleResource Include="Resources\imgStartPage.jpg" />
+  <BundleResource Include="Resources\logoBusuuText.png" />
+  <BundleResource Include="Resources\flag_small_french.png" />
+  <BundleResource Include="Resources\flag_small_indonesia.png" />
+  <BundleResource Include="Resources\flag_small_italian.png" />
+  <BundleResource Include="Resources\flag_small_japanese.png" />
+  <BundleResource Include="Resources\flag_small_polish.png" />
+  <BundleResource Include="Resources\flag_small_russian.png" />
+  <BundleResource Include="Resources\flag_small_turkish.png" />
+  <BundleResource Include="Resources\intercom_back.png" />
+  <BundleResource Include="Resources\google_logo.png" />
+  <BundleResource Include="Resources\facebook_logo.png" />
+  <BundleResource Include="Resources\nx_logo_white.png" />
+  <BundleResource Include="Resources\triangle.png" />
+  <BundleResource Include="Resources\ic_settings.png" />
+  <BundleResource Include="Resources\159Z1.jpg" />
+  <BundleResource Include="Resources\user_profile_city_marker.png" />
+  <BundleResource Include="Resources\user_profile_gender.png" />
+  <BundleResource Include="Resources\ic_trophy.png" />
+  <BundleResource Include="Resources\ic_comment_thumbsup.png" />
+  <BundleResource Include="Resources\NhuSon22.jpg" />
+  <BundleResource Include="Resources\w-3894.jpg" />
+  <BundleResource Include="Resources\comment_bubble_normal.png" />
+  <BundleResource Include="Resources\anhdepxanhxanh.jpg" />
+  <BundleResource Include="Resources\wrong.mp3" />
+  <BundleResource Include="Resources\x.png" />
+  <BundleResource Include="Resources\v.png" />
+  <BundleResource Include="Resources\conversation_speaking_button_white.png" />
+  <BundleResource Include="Resources\anime-wallpaper-art-pc %288%29.jpg" />
+  <BundleResource Include="Resources\anime-wallpaper-art-pc %2814%29.jpg" />
+  <BundleResource Include="Resources\anime-wallpaper-art-pc %2817%29.jpg" />
+  <BundleResource Include="Resources\anime-wallpaper-art-pc %2818%29.jpg" />
+  <BundleResource Include="Resources\anime-wallpaper-art-pc %2827%29.jpg" />
+  <BundleResource Include="Resources\lightbult.png" />
+  <BundleResource Include="Resources\ic_book_course.png" />
+  <BundleResource Include="Resources\cross_black_circle.png" />
+  <BundleResource Include="Resources\cross_grey_circle.png" />
+  <BundleResource Include="Resources\tick_blue_circle.png" />
+  <BundleResource Include="Resources\tick_grey_circle.png" />
+  <BundleResource Include="Resources\efficacy_study_portrait.png" />
+  <BundleResource Include="Resources\efficacy_study_expand_arrow.png" />
+  <BundleResource Include="Resources\htmlcuatoi.html" />
+  <BundleResource Include="Resources\ic_search_white.png" />
+  <BundleResource Include="Resources\intercom_close.png" />
+  <BundleResource Include="Resources\conversation_speaking_stop_button.png" />
+  <BundleResource Include="Resources\ic_comment_reply_arrow.png" />
+  <BundleResource Include="Resources\ic_comment_thumbsdown.png" />
+  <BundleResource Include="Resources\ic_comment_thumbsdown_selected.png" />
+  <BundleResource Include="Resources\ic_comment_thumbsup_selected.png" />
+  <BundleResource Include="Resources\intercom_back_blue.png" />
+  <BundleResource Include="Resources\play_btn_dark.png" />
+  <BundleResource Include="Resources\user_avatar_placeholder2.png" />
+  <BundleResource Include="Resources\NoReview.png" />
+  <BundleResource Include="Resources\imgDialogue.jpg" />
+  <BundleResource Include="Resources\imgMemoriseStart.png" />
+  <BundleResource Include="Resources\imgVocabulary.png" />
+  <BundleResource Include="Resources\flag_arabic.png" />
+  <BundleResource Include="Resources\flag_chinese.png" />
+  <BundleResource Include="Resources\flag_english.png" />
+  <BundleResource Include="Resources\flag_french.png" />
+  <BundleResource Include="Resources\flag_german.png" />
+  <BundleResource Include="Resources\flag_italian.png" />
+  <BundleResource Include="Resources\flag_japanese.png" />
+  <BundleResource Include="Resources\flag_polish.png" />
+  <BundleResource Include="Resources\flag_portuguese.png" />
+  <BundleResource Include="Resources\flag_russian.png" />
+  <BundleResource Include="Resources\flag_spanish.png" />
+  <BundleResource Include="Resources\flag_turkish.png" />
+  <BundleResource Include="Resources\bussu_icon.png" />
+</ItemGroup>
+<ItemGroup>
+  <ITunesArtwork Include="iTunesArtwork" />
+  <ITunesArtwork Include="iTunesArtwork%402x" />
+</ItemGroup>
+<ItemGroup>
+  <ProjectReference Include="..\..\modules\startup\Naxam.Busuu.Start\Naxam.Busuu.Start.csproj">
+    <Project>{115D0C30-6675-4814-89AC-5AEF6E5EDAEC}</Project>
+    <Name>Naxam.Busuu.Start</Name>
+  </ProjectReference>
+  <ProjectReference Include="..\..\modules\social\Naxam.Busuu.Social\Naxam.Busuu.Social.csproj">
+    <Project>{6255CDA3-B742-4D16-AC6C-03E414EAC000}</Project>
+    <Name>Naxam.Busuu.Social</Name>
+  </ProjectReference>
+  <ProjectReference Include="..\..\modules\review\Naxam.Busuu.Review\Naxam.Busuu.Review.csproj">
+    <Project>{BAAA7577-3BE2-423B-A051-61B47489B015}</Project>
+    <Name>Naxam.Busuu.Review</Name>
+  </ProjectReference>
+  <ProjectReference Include="..\..\modules\profile\Naxam.Busuu.Profile\Naxam.Busuu.Profile.csproj">
+    <Project>{B6F89F5C-B669-40B1-BCE1-C72089933F2F}</Project>
+    <Name>Naxam.Busuu.Profile</Name>
+  </ProjectReference>
+  <ProjectReference Include="..\..\modules\notification\Naxam.Busuu.Notification\Naxam.Busuu.Notification.csproj">
+    <Project>{2EADB781-E679-4485-8A53-AE7A8945CD1B}</Project>
+    <Name>Naxam.Busuu.Notification</Name>
+  </ProjectReference>
+  <ProjectReference Include="..\..\modules\learning\Naxam.Busuu.Learning\Naxam.Busuu.Learning.csproj">
+    <Project>{E1334FF3-BC22-4F7C-B363-A01DE69429F8}</Project>
+    <Name>Naxam.Busuu.Learning</Name>
+  </ProjectReference>
+  <ProjectReference Include="..\..\modules\startup\Naxam.Busuu.iOS.Start\Naxam.Busuu.iOS.Start.csproj">
+    <Project>{7856BAFE-405A-4ABF-9384-A3556FA1B8DD}</Project>
+    <Name>Naxam.Busuu.iOS.Start</Name>
+  </ProjectReference>
+  <ProjectReference Include="..\..\modules\social\Naxam.Busuu.iOS.Social\Naxam.Busuu.iOS.Social.csproj">
+    <Project>{8E0D9A6F-41CF-4A78-BD78-9420A2285BEA}</Project>
+    <Name>Naxam.Busuu.iOS.Social</Name>
+  </ProjectReference>
+  <ProjectReference Include="..\..\modules\review\Naxam.Busuu.iOS.Review\Naxam.Busuu.iOS.Review.csproj">
+    <Project>{1030A24B-B42C-4076-B166-F7E3A875E071}</Project>
+    <Name>Naxam.Busuu.iOS.Review</Name>
+  </ProjectReference>
+  <ProjectReference Include="..\..\modules\profile\Naxam.Busuu.iOS.Profile\Naxam.Busuu.iOS.Profile.csproj">
+    <Project>{701B6C86-B033-45D2-89EE-0E11499DCA7E}</Project>
+    <Name>Naxam.Busuu.iOS.Profile</Name>
+  </ProjectReference>
+  <ProjectReference Include="..\..\modules\notification\Naxam.Busuu.iOS.Notification\Naxam.Busuu.iOS.Notification.csproj">
+    <Project>{3B4949AE-25B1-4F34-9243-4971FA75C107}</Project>
+    <Name>Naxam.Busuu.iOS.Notification</Name>
+  </ProjectReference>
+  <ProjectReference Include="..\..\modules\learning\Naxam.Busuu.iOS.Learning\Naxam.Busuu.iOS.Learning.csproj">
+    <Project>{A8453AAF-F6BF-433B-B268-9954240CBBF4}</Project>
+    <Name>Naxam.Busuu.iOS.Learning</Name>
+  </ProjectReference>
+  <ProjectReference Include="..\..\modules\core\Naxam.Busuu.iOS.Core\Naxam.Busuu.iOS.Core.csproj">
+    <Project>{B18CE05B-DA11-45F4-BEF8-6945AE895FA2}</Project>
+    <Name>Naxam.Busuu.iOS.Core</Name>
+  </ProjectReference>
+  <ProjectReference Include="..\..\modules\core\Naxam.Busuu.Core\Naxam.Busuu.Core.csproj">
+    <Project>{A9928524-DB7A-4812-9C3A-81FE280939EF}</Project>
+    <Name>Naxam.Busuu.Core</Name>
+  </ProjectReference>
+  <ProjectReference Include="..\..\bootstraps\Naxam.Busuu\Naxam.Busuu.csproj">
+    <Project>{60D3471E-3D82-482D-AE23-7792DBFE53AA}</Project>
+    <Name>Naxam.Busuu</Name>
+  </ProjectReference>
+</ItemGroup>
+<Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+</Project>

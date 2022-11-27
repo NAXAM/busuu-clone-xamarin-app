@@ -1,0 +1,719 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\..\packages\Xamarin.Build.Download.0.4.7\build\Xamarin.Build.Download.props" Condition="Exists('..\..\..\packages\Xamarin.Build.Download.0.4.7\build\Xamarin.Build.Download.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DFD37792-D1A1-463E-BA9F-8DD045E61178}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Naxam.Busuu.Droid.Profile</RootNamespace>
+    <AssemblyName>Naxam.Busuu.Droid.Profile</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug-Reveal|AnyCPU' ">
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug-Reveal</OutputPath>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Mono.Android" />
+    <Reference Include="Mono.Android.Export" />
+    <Reference Include="mscorlib" />    
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Acr.Support" Version="2.1.0" />
+    <PackageReference Include="Acr.UserDialogs" Version="6.5.1" />
+    <PackageReference Include="AndHUD" Version="1.2.0" />
+    <PackageReference Include="Glide.Xamarin" Version="4.1.1" />
+    <PackageReference Include="MvvmCross" Version="5.1.1" />
+    <PackageReference Include="MvvmCross.Binding" Version="5.1.1" />
+    <PackageReference Include="MvvmCross.Core" Version="5.1.1" />
+    <PackageReference Include="MvvmCross.Droid.Shared" Version="5.1.1" />
+    <PackageReference Include="MvvmCross.Droid.Support.Core.UI" Version="5.1.1" />
+    <PackageReference Include="MvvmCross.Droid.Support.Fragment" Version="5.1.1" />
+    <PackageReference Include="MvvmCross.Droid.Support.V7.AppCompat" Version="5.1.1" />
+    <PackageReference Include="MvvmCross.Droid.Support.V7.RecyclerView" Version="5.1.1" />
+    <PackageReference Include="MvvmCross.Platform" Version="5.1.1" />
+    <PackageReference Include="Naxam.CirclerProgress.Droid" Version="1.2.1.1" />
+    <PackageReference Include="Naxam.Flexbox.Droid" Version="0.3.0" />
+    <PackageReference Include="Naxam.Ittianyu.BottomNavExtension" Version="1.2.2" />
+    <PackageReference Include="Naxam.JWPlayerCommon.Droid" Version="2.7.4.3" />
+    <PackageReference Include="Naxam.JWPlayerCore.Droid" Version="2.7.4.3" />
+    <PackageReference Include="Naxam.TargetTooltip.Droid" Version="1.3.15" />
+    <PackageReference Include="Splat" Version="2.0.0" />
+    <PackageReference Include="Xam.Plugins.Android.ExoPlayer" Version="2.5.3" />
+    <PackageReference Include="Xam.Plugins.Android.ExoPlayer.Core" Version="2.5.3" />
+    <PackageReference Include="Xam.Plugins.Android.ExoPlayer.Dash" Version="2.5.3" />
+    <PackageReference Include="Xam.Plugins.Android.ExoPlayer.Hls" Version="2.5.3" />
+    <PackageReference Include="Xam.Plugins.Android.ExoPlayer.SmoothStreaming" Version="2.5.3" />
+    <PackageReference Include="Xam.Plugins.Android.ExoPlayer.UI" Version="2.5.3" />
+    <PackageReference Include="Xam.Plugins.Settings" Version="3.1.1" />
+    <PackageReference Include="Xamarin.Android.Arch.Core.Common" Version="1.0.0" />
+    <PackageReference Include="Xamarin.Android.Arch.Lifecycle.Common" Version="1.0.1" />
+    <PackageReference Include="Xamarin.Android.Arch.Lifecycle.Runtime" Version="1.0.0" />
+    <PackageReference Include="Xamarin.Android.Support.Animated.Vector.Drawable" Version="26.1.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.Annotations" Version="26.1.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.Compat" Version="26.1.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.Core.UI" Version="26.1.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.Core.Utils" Version="26.1.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.Design" Version="26.1.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.Fragment" Version="26.1.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.Media.Compat" Version="26.1.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.Percent" Version="26.1.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.Transition" Version="26.1.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.v4" Version="26.1.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="26.1.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.v7.RecyclerView" Version="26.1.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.Vector.Drawable" Version="26.1.0.1" />
+    <PackageReference Include="Xamarin.Build.Download" Version="0.4.7" />
+    <PackageReference Include="Naxam.RippleEffect.Droid" Version="1.3.0" />
+    <PackageReference Include="Naxam.expandablelayout.Droid" version="1.6.0" />
+    <PackageReference Include="Naxam.DialogPlus.Droid" version="1.11.0.2" />
+    <PackageReference Include="Naxam.ImagePicker.Droid" version="1.2.0" />
+    <PackageReference Include="Naxam.TargetTooltip.Droid" version="1.3.15" />
+    <PackageReference Include="Naxam.ViewPagerIndicator.Droid" version="2.4.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Adapter\CorrectionAdapter.cs" />
+    <Compile Include="Bootstrap\MessengerPluginBootstrap.cs" />
+    <Compile Include="Controls\SettingNotificationItem.cs" />
+    <Compile Include="DataTemplateSelectors\FriendListTemplateSelector.cs" />
+    <Compile Include="Dialogs\ChooseLanguageLevelDialog.cs" />
+    <Compile Include="Service\DialogProfileService.cs" />
+    <Compile Include="TargetBindings\SettingNotificationEnableTargetBinding.cs" />
+    <Compile Include="TargetBindings\SettingNotificationTargetBinding.cs" />
+    <Compile Include="Views\ContactUsView.cs" />
+    <Compile Include="Views\CorrectionFragment.cs" />
+    <Compile Include="Views\ExerciseFragment.cs" />
+    <Compile Include="Behavior\FriendRequestButtonBehavior.cs" />
+    <Compile Include="Behavior\LanguageBehavior.cs" />
+    <Compile Include="Behavior\AvatarBehavior.cs" />
+    <Compile Include="Behavior\ToolbarBehavior.cs" />
+    <Compile Include="Behavior\UserNameBehavior.cs" />
+    <Compile Include="Controls\FriendRequestButton.cs" />
+    <Compile Include="Controls\FriendsImageView.cs" />
+    <Compile Include="Controls\LanguagesTextView.cs" />
+    <Compile Include="Controls\MyExpandableLayout.cs" />
+    <Compile Include="Dialogs\UserPhotoDialog.cs" />
+    <Compile Include="Controls\NXIndicator.cs" />
+    <Compile Include="Models\StartPageModel.cs" />
+    <Compile Include="Resources\Resource.Designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Dialogs\MyDialog.cs" />
+    <Compile Include="Adapter\ProfileAdapter.cs" />
+    <Compile Include="TargetBindings\FriendRequestButtonTargetBinding.cs" />
+    <Compile Include="TargetBindings\FriendsImageViewTargetBinding.cs" />
+    <Compile Include="TargetBindings\LanguageTextViewTargetBinding.cs" />
+    <Compile Include="Views\ChooseCountryView.cs" />
+    <Compile Include="Views\ChooseLanguageView.cs" />
+    <Compile Include="Views\ConfirmChooseLanguageView.cs" />
+    <Compile Include="Views\DialogImagePickerAdapter.cs" />
+    <Compile Include="Views\ForgotPasswordView.cs" />
+    <Compile Include="Views\FriendListView.cs" />
+    <Compile Include="Views\ProfileFragment.cs" />
+    <Compile Include="Views\ItWorkView.cs" />
+    <Compile Include="Views\ProfileInputView.cs" />
+    <Compile Include="Views\ProfileSettingView.cs" />
+    <Compile Include="Views\RegisterView.cs" />
+    <Compile Include="Views\LoginView.cs" />
+    <Compile Include="Views\ScreenSlidePageFragment.cs" />
+    <Compile Include="Views\SettingCountryView.cs" />
+    <Compile Include="Views\SettingGenderView.cs" />
+    <Compile Include="Views\SettingInputTextView.cs" />
+    <Compile Include="Views\SettingInterfaceLanguageView.cs" />
+    <Compile Include="Views\SettingLanguageSpeakView.cs" />
+    <Compile Include="Views\SettingNotificationView.cs" />
+    <Compile Include="Views\StartPageView.cs" />
+    <Compile Include="Helpers\Settings.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AboutResources.txt" />
+    <AndroidResource Include="Resources\Layout\ForgotPasswordActivity.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Layout\choose_language_item.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Drawable\choose_language_background_listview.xml" />
+    <AndroidResource Include="Resources\Layout\ChooseCountryActivity.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Layout\LoginPage.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Layout\DownloadDialogActivity.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Layout\ChangeLanguageActivity.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Layout\StartPage.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Layout\GeneralProfileActivity.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Layout\setting_gender_item.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Layout\item_layout.axml" />
+    <AndroidResource Include="Resources\Layout\friend_list_item.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Values\Strings.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Values\Styles.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Values\Colors.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\forgot_password_button_background.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\forgot_password_button_background_disable.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\forgot_password_button_background_enable.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\ChooseLanguageActivity.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\flag_chinese.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\flag_english.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\flag_french.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\flag_german.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\flag_italian.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\flag_japanese.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\flag_polish.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\flag_portuguese.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\flag_russian.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\flag_small_arabic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\flag_small_chinese.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\flag_small_english.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\flag_small_french.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\flag_small_german.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\flag_small_indonesia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\flag_small_italian.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\flag_small_japanese.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\flag_small_polish.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\flag_small_portuguese.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\flag_small_russian.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\flag_small_spanish.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\flag_small_turkish.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\flag_spanish.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\flag_turkish.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\flag_arabic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\Assets\" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Values\dimensions.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\dialog_confirm_choose_language.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\core\Naxam.Busuu.Core\Naxam.Busuu.Core.csproj">
+      <Project>{A9928524-DB7A-4812-9C3A-81FE280939EF}</Project>
+      <Name>Naxam.Busuu.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\core\Naxam.Busuu.Droid.Core\Naxam.Busuu.Droid.Core.csproj">
+      <Project>{fe265042-a31b-44ce-8e0c-2260a89b2b12}</Project>
+      <Name>Naxam.Busuu.Droid.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\learning\Naxam.Busuu.Learning\Naxam.Busuu.Learning.csproj">
+      <Project>{e1334ff3-bc22-4f7c-b363-a01de69429f8}</Project>
+      <Name>Naxam.Busuu.Learning</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Naxam.Busuu.Profile\Naxam.Busuu.Profile.csproj">
+      <Project>{B6F89F5C-B669-40B1-BCE1-C72089933F2F}</Project>
+      <Name>Naxam.Busuu.Profile</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\social\Naxam.Busuu.Social\Naxam.Busuu.Social.csproj">
+      <Project>{6255cda3-b742-4d16-ac6c-03e414eac000}</Project>
+      <Name>Naxam.Busuu.Social</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\logo_facebook_40_40.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\logo_google_40_40.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\blank_40_40.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\blank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\background_google_button.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\background_facebook_button.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\RegisterActivity.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_expand_arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\ic_expand_arrow_20_20.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\underline_background_normal.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\underline_background_focus.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\scrollbar_handle_holo_dark.9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\scrollbar_handle_holo_light.9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\choose_country_row_item.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\choose_country_header_item.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\logo_facebook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\logo_google.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-mdpi\logo_facebook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-mdpi\logo_google.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxhdpi\logo_facebook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxhdpi\logo_google.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xhdpi\logo_facebook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xhdpi\logo_google.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_expand_arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-mdpi\ic_expand_arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\ic_expand_arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\transparent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-mdpi\transparent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xhdpi\transparent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxhdpi\transparent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxxhdpi\transparent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\icon_google_drawble_transparent.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\certificate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\corner_button.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\cornerbutton.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\gradient_bottom_background.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\premium_card_background.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\rounded_image.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\background1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\background2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\background3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\ic_lock.png" />
+    <AndroidResource Include="Resources\Layout\fragment_screen_slide_page.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\change_language_border_image.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\circle_drawble_download.xml" />
+    <AndroidResource Include="Resources\Layout\change_language_item.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Drawable\ic_indicator_selected.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\background_progress_percent.xml" />
+    <AndroidResource Include="Resources\Drawable\ic_indicator_unselected.xml" />
+    <AndroidResource Include="Resources\Drawable\icdownload.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\dotted.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\circle_drawable_continue.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\ic_play_btn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\ic_pause_btn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\rectange_drawable_text.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\circle_drwable.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Anim\zoom_in.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Anim\roteanim.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Anim\roteanimback.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\ic_camera.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\ic_gallery.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\profiles_setting.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\profile_input.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\dialog_image_picker.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Values\attrs.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\ic_settings.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\quila.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\quila2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\sea.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\vnflag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\ic_account.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\ic_heart_outline_white_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\ic_profile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\ic_profile_location.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\ic_phone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\ic_thumbnail_cmt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\ic_trophy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\landcape.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\usa_flag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\fragment_corection.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\fragment_exercise.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\image_fullscreen.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\intercom_close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Menu\menu_main.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Menu\popup_menu.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\cover_user.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_comment_thumbsup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxxhdpi\user_profile_city_marker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_trophy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxxhdpi\user_profile_gender.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\user_photo_layout.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\correction_item.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\comment_bubble_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\header_item.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\user_avatar_placeholder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\remove_user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\add_user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\request_sent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\request_friend_layout.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\setting_input_text_layout.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\activity_it_work.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\recycler_view_list_row.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\triangle.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\setting_gender_layout.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\setting_country_layout.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\setting_country_item.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\setting_interface_language_layout.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\setting_language_speak_item.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\setting_language_speak_layout.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\list_selected_item.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Menu\menu_setting_language_speak.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\choose_language_level_layout.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\background_language_level.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\shape_language_level.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\shape_language_level_selected.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\friend_list_layout.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\ic_search_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\ic_back_button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\friend_list_item_new.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\request_friend_item.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\background_circle_red.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\activity_contact_us.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\setting_notification_item.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\activity_setting_notification.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+</Project>

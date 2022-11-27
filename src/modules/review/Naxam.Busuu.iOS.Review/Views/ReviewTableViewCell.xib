@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="reviewCell" rowHeight="60" id="cxk-wN-pdQ" customClass="ReviewTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cxk-wN-pdQ" id="YTl-1W-gDM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XLB-gW-1z4">
+                        <rect key="frame" x="8" y="10" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="4lI-Bg-JhT"/>
+                            <constraint firstAttribute="height" constant="40" id="giV-VR-ZgH"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vcr-QA-t59">
+                        <rect key="frame" x="24" y="38" width="28" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="28" id="mRn-gv-jMc"/>
+                            <constraint firstAttribute="height" constant="16" id="yiM-xw-10d"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hello" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9rr-Se-1rs">
+                        <rect key="frame" x="56" y="26" width="200" height="14.5"/>
+                        <fontDescription key="fontDescription" type="italicSystem" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wmO-2n-WYz">
+                        <rect key="frame" x="258" y="18" width="24" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="24" id="RNi-RM-XHe"/>
+                            <constraint firstAttribute="height" constant="24" id="Tnx-Ux-8Hd"/>
+                        </constraints>
+                        <state key="normal" image="star">
+                            <string key="title" base64-UTF8="YES">
+CQk
+</string>
+                        </state>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zmm-hx-z9i">
+                        <rect key="frame" x="290" y="18" width="24" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="24" id="MG1-V7-xoJ"/>
+                            <constraint firstAttribute="height" constant="24" id="MRL-NZ-wWI"/>
+                        </constraints>
+                        <state key="normal" title="Button" image="play_btn"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hello" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ska-Pb-rdj">
+                        <rect key="frame" x="56" y="10" width="200" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="200" id="Y0U-ry-gj5"/>
+                            <constraint firstAttribute="height" constant="16" id="sM9-nj-tkI"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="9rr-Se-1rs" firstAttribute="width" secondItem="Ska-Pb-rdj" secondAttribute="width" id="2SA-fJ-dxl"/>
+                    <constraint firstItem="wmO-2n-WYz" firstAttribute="centerY" secondItem="YTl-1W-gDM" secondAttribute="centerY" id="6rv-4K-HDW"/>
+                    <constraint firstItem="Zmm-hx-z9i" firstAttribute="centerY" secondItem="YTl-1W-gDM" secondAttribute="centerY" id="7zc-o5-kRR"/>
+                    <constraint firstItem="9rr-Se-1rs" firstAttribute="top" secondItem="Ska-Pb-rdj" secondAttribute="bottom" id="8vm-AP-t3I"/>
+                    <constraint firstItem="9rr-Se-1rs" firstAttribute="leading" secondItem="Ska-Pb-rdj" secondAttribute="leading" id="K9L-gU-JdR"/>
+                    <constraint firstItem="Ska-Pb-rdj" firstAttribute="top" secondItem="XLB-gW-1z4" secondAttribute="top" id="RhP-l8-JKc"/>
+                    <constraint firstItem="Vcr-QA-t59" firstAttribute="top" secondItem="XLB-gW-1z4" secondAttribute="bottom" constant="-12" id="cEL-Co-gxs"/>
+                    <constraint firstItem="Vcr-QA-t59" firstAttribute="leading" secondItem="XLB-gW-1z4" secondAttribute="trailing" constant="-24" id="csB-wN-kRE"/>
+                    <constraint firstItem="XLB-gW-1z4" firstAttribute="leading" secondItem="YTl-1W-gDM" secondAttribute="leading" constant="8" id="d7c-vQ-bjt"/>
+                    <constraint firstItem="Zmm-hx-z9i" firstAttribute="leading" secondItem="wmO-2n-WYz" secondAttribute="trailing" constant="8" id="gc1-Qc-Cjb"/>
+                    <constraint firstAttribute="trailing" secondItem="Zmm-hx-z9i" secondAttribute="trailing" constant="6" id="hVe-XL-G2P"/>
+                    <constraint firstItem="XLB-gW-1z4" firstAttribute="centerY" secondItem="YTl-1W-gDM" secondAttribute="centerY" id="wGX-tG-7D7"/>
+                    <constraint firstItem="Ska-Pb-rdj" firstAttribute="leading" secondItem="XLB-gW-1z4" secondAttribute="trailing" constant="8" id="zxS-dQ-5kI"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="btnPlay" destination="Zmm-hx-z9i" id="rAl-9T-pfL"/>
+                <outlet property="btnStar" destination="wmO-2n-WYz" id="QWE-OH-LkM"/>
+                <outlet property="imgStrength" destination="Vcr-QA-t59" id="1vV-4N-qe2"/>
+                <outlet property="imgWord" destination="XLB-gW-1z4" id="QFz-ct-vx0"/>
+                <outlet property="lbSubtitle" destination="9rr-Se-1rs" id="mfG-Gi-sbM"/>
+                <outlet property="lbTitle" destination="Ska-Pb-rdj" id="0YB-f9-UJL"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="play_btn" width="112" height="112"/>
+        <image name="star" width="176" height="124"/>
+    </resources>
+</document>

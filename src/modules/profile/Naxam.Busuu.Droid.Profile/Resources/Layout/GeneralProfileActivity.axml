@@ -1,0 +1,275 @@
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="RtlHardcoded"
+    >
+  <android.support.design.widget.AppBarLayout
+      android:id="@+id/main.appbar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        >
+    <android.support.design.widget.CollapsingToolbarLayout
+        android:id="@+id/main.collapsing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffff"
+        app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+            >
+
+      <ImageView
+          android:id="@+id/main.imageview.placeholder"
+          android:layout_width="match_parent"
+          android:layout_height="160dp"
+          android:scaleType="fitXY"
+          android:layout_gravity="top"
+          android:src="@drawable/cover_user"
+          app:layout_collapseParallaxMultiplier="1"
+                />
+
+      <LinearLayout
+                android:id="@+id/main.framelayout.title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="240dp"
+                android:padding="16dp"
+                android:orientation="vertical"
+                app:layout_collapseParallaxMultiplier="1"
+
+                >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+                    >
+
+          <ImageView
+              android:id="@+id/imgLocation"
+              android:layout_width="12dp"
+              android:layout_height="12dp"
+              android:layout_gravity="center"
+              android:src="@drawable/user_profile_city_marker"
+                        />
+
+          <TextView
+              android:id="@+id/txtLocation"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="8dp"
+              android:layout_gravity="center"
+              style="@style/styleTextDescription"
+              app:MvxBind="Text User.Country.Country" />
+
+          <ImageView
+              android:id="@+id/icSex"
+              android:layout_width="12dp"
+              android:layout_gravity="center"
+              android:layout_height="12dp"
+              android:layout_marginLeft="16dp"
+              android:src="@drawable/user_profile_gender" />
+
+          <TextView
+              android:id="@+id/txtSex"
+              android:layout_gravity="center"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="8dp"
+              style="@style/styleTextDescription"
+              app:MvxBind="Text User.Gender" />
+
+        </LinearLayout>
+
+
+        <Naxam.Busuu.Droid.Profile.Controls.LanguagesTextView
+            android:id="@+id/txtSpeak"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            style="@style/styleTextNormal"
+            app:MvxBind="Languages User.SpeakLanguages"
+            
+            />
+
+        <TextView
+            android:id="@+id/txtReputation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtSpeak"
+            android:layout_marginTop="16dp"
+            style="@style/styleTextHeader"
+            android:text="Reputation" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+                    >
+          <ImageView
+              android:id="@+id/imgReputation"
+              android:layout_width="12dp"
+              android:layout_height="12dp"
+              android:src="@drawable/ic_trophy"
+              android:layout_gravity="center"
+
+                        />
+
+          <TextView
+              android:id="@+id/txtBestCorrections"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="8dp"
+              android:layout_gravity="center"
+              style="@style/styleTextDescription"
+              app:MvxBind="Text BestCorrections" />
+
+          <ImageView
+              android:id="@+id/icLike"
+              android:layout_width="12dp"
+              android:layout_height="12dp"
+              android:layout_marginLeft="16dp"
+              android:layout_gravity="center"
+              android:src="@drawable/ic_comment_thumbsup"
+                       />
+
+          <TextView
+              android:id="@+id/txtLikes"
+              android:layout_gravity="center"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="8dp"
+              style="@style/styleTextDescription"
+              app:MvxBind="Text CountLikeText" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/txtFriend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            style="@style/styleTextHeader"
+            app:MvxBind="Text User.Friends.Count, Converter = FormatString, ConverterParameter = 'Friend({0})'"  />
+        <Naxam.Busuu.Droid.Profile.Controls.FriendsImageView
+            android:id="@+id/layoutFriends"
+             android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            app:MvxBind="Friends User.Friends;Click SelectFriendCommand"
+            />
+
+      </LinearLayout>
+
+    </android.support.design.widget.CollapsingToolbarLayout>
+  </android.support.design.widget.AppBarLayout>
+
+  <android.support.v4.widget.NestedScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:scrollbars="none"
+      app:layout_behavior="@string/appbar_scrolling_view_behavior"        >
+
+    <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:orientation="vertical"
+            >
+
+      <android.support.design.widget.TabLayout
+          android:layout_marginTop="56dp"
+          android:background="#ffff"
+          app:tabIndicatorColor="#3FABF7"
+          android:id="@+id/tab_layout"
+          android:layout_width="match_parent"
+          android:layout_height="56dp"
+          app:tabSelectedTextColor="#3FABF7"
+          app:tabTextColor="#B0B7BF"
+                />
+      <android.support.v4.view.ViewPager
+          android:background="#E5E9ED"
+          android:id="@+id/view_pager"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+                />
+    </LinearLayout>
+
+
+  </android.support.v4.widget.NestedScrollView>
+
+  <android.support.v7.widget.Toolbar
+      android:id="@+id/main.toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      app:layout_anchor="@id/main.imageview.placeholder"
+      app:layout_anchorGravity="bottom"
+      app:theme="@style/ThemeOverlay.AppCompat.Dark"
+        >
+  </android.support.v7.widget.Toolbar>
+  <LinearLayout
+      android:id="@+id/backgroundToolbar"
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="56dp"
+      android:background="#38A9F6"
+      app:layout_behavior="Naxam.Busuu.Droid.Profile.Behavior.ToolbarBehavior"
+        />
+  <ImageView
+      android:id="@+id/imgAvatar"
+      android:layout_width="@dimen/image_width"
+      android:layout_height="@dimen/image_width"
+      android:layout_marginLeft="16dp"
+      android:src="@drawable/user_avatar_placeholder"
+      android:padding="2dp"
+      android:background="#ffff"
+      app:MvxBind="Source User.Photo"
+      app:layout_behavior="Naxam.Busuu.Droid.Profile.Behavior.AvatarBehavior"
+        />
+  <ImageView
+      android:id="@+id/imgLanguage"
+      android:layout_width="32dp"
+      android:layout_height="32dp"
+      app:MvxBind="DrawableName LanguageFlag"
+      android:background="#ffff"
+      android:padding="2dp"
+      app:layout_behavior="Naxam.Busuu.Droid.Profile.Behavior.LanguageBehavior"
+        />
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="32dp"
+      app:layout_behavior="Naxam.Busuu.Droid.Profile.Behavior.FriendRequestButtonBehavior"
+    >
+    <Naxam.Busuu.Droid.Profile.Controls.FriendRequestButton
+      android:layout_alignParentRight="true"
+      android:layout_marginRight="32dp"
+      android:layout_width="120dp"
+      android:layout_height="32dp"
+      app:MvxBind="State FriendState"
+      android:elevation="1dp"
+    />
+  </RelativeLayout>
+
+  <TextView
+      android:id="@+id/txtUserName"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:MvxBind="Text User.Name"
+      android:textColor="@android:color/black"
+      app:layout_behavior="Naxam.Busuu.Droid.Profile.Behavior.UserNameBehavior"
+      android:textSize="20sp"
+
+        />
+  <ImageView
+      android:id="@+id/imgSetting"
+      android:layout_width="56dp"
+      android:layout_height="56dp"
+      android:padding="12dp"
+      android:layout_gravity="right|top"
+      android:src="@drawable/ic_settings"
+      app:MvxBind="Click SettingCommand"
+        />
+</android.support.design.widget.CoordinatorLayout>

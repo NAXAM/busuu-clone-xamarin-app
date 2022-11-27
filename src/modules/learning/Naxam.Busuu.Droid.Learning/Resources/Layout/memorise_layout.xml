@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#9d9f9e"
+    >
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="48dp"
+      android:orientation="horizontal"
+      android:background="#ffffff"
+      android:elevation="4dp"
+        >
+    <ProgressBar
+        android:id="@+id/prgStep"
+        android:layout_width="wrap_content"
+        android:layout_height="4dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:progressDrawable="@color/colorPrimary"
+        android:indeterminateDrawable="@color/colorAccent"
+        android:progress="12"
+        android:max="23"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        />
+    <TextView
+          android:id="@+id/txtStep"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:layout_marginRight="16dp"
+          android:textColor="@color/colorPrimary"
+          android:text="4/6"/>
+  </LinearLayout>
+  <Naxam.Busuu.Droid.Core.Controls.NXViewPager
+      android:background="#E5E9ED"
+      android:id="@+id/view_pager"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent" />
+</LinearLayout>

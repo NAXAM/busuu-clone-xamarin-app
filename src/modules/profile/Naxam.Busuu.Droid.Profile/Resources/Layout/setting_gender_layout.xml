@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+               android:background="#ffff"
+    android:orientation="vertical">
+
+  <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#38A9F6"
+        android:elevation="1dp"
+        android:orientation="horizontal">
+
+    <Button
+        android:id="@+id/bt_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="#38A9F6"
+        android:text="CANCEL"
+        android:textColor="#ffffff"
+        app:MvxBind="Click CancelCommand" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="#ffffff" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        app:MvxBind="Visible VisibleDoneButton, Converter = ReverseBool" />
+
+    <Button
+        android:id="@+id/bt_done"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="#38A9F6"
+        android:text="DONE"
+        android:textColor="#ffffff"
+        app:MvxBind="Visible VisibleDoneButton;Click DoneCommand" />
+  </LinearLayout>
+
+  <LinearLayout
+      android:id="@+id/layout_input_gender"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="8dp"
+      android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginBottom="4dp"
+        android:background="#38A9F6" />
+
+    <MvxRadioGroup
+     android:layout_width="fill_parent"
+     android:layout_height="wrap_content"
+     android:textSize="40dp"
+     app:MvxItemTemplate="@layout/setting_gender_item"
+     app:MvxBind="ItemsSource Genders;SelectedItem Value"
+    />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="4dp"
+        android:background="#20000000" />
+  </LinearLayout>
+</LinearLayout>

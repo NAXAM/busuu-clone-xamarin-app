@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:elevation="8dp"
+    android:layout_marginBottom="32dp"
+    android:layout_marginTop="32dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    tools:context="com.example.morejump.bussu.PictureAndAudio">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp" >
+        <ImageView
+            android:src="@drawable/beach"
+            android:layout_marginBottom="28dp"
+            android:scaleType="fitXY"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <ImageView
+            android:id="@+id/imgPlayBtn"
+            android:padding="8dp"
+            android:src="@drawable/ic_play_btn"
+            android:background="@drawable/circle_drwable"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_width="56dp"
+            android:layout_height="56dp" />
+        <ImageView
+            android:layout_gravity="right"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/star_white"
+            android:layout_width="32dp"
+            android:layout_height="32dp" />
+    </FrameLayout>
+    <TextView
+        android:text="hello"
+        android:textColor="#38A7F6"
+        android:textSize="32dp"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:text="xin chào"
+        android:textColor="#7C8081"
+        android:textSize="32dp"
+        android:elevation="10dp"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="wrap_content" />
+</LinearLayout>

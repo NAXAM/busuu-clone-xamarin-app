@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="16dp"
+    android:background="#ffff"
+    >
+  <ImageView
+      android:layout_marginTop="16dp"
+      android:id="@+id/imgCover"
+      android:layout_width="40dp"
+      android:layout_height="40dp" 
+        />
+  <ImageView
+      android:id="@+id/imgStrength"
+      android:layout_width="32dp"
+      android:layout_height="32dp"
+      android:layout_marginTop="32dp"
+      android:layout_marginLeft="8dp" 
+        />
+  <TextView
+      android:layout_marginTop="16dp"
+      android:id="@+id/txtTitle"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_toRightOf="@id/imgCover"
+      android:layout_marginLeft="16dp"
+      android:textSize="14sp"
+      android:textStyle="bold"
+      android:text="fine, thanks"
+        />
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/txtSubTitle"
+      android:layout_marginTop="4dp"
+      android:layout_toRightOf="@id/imgCover"
+      android:layout_marginLeft="16dp"
+      android:layout_below="@id/txtTitle"
+      android:textSize="14sp"
+      android:text="Tôi Ổn"
+        />
+
+  <Naxam.Busuu.Droid.Core.Controls.QuickPlayButton
+      android:id="@+id/btnPlay"
+      android:layout_marginTop="8dp"
+      android:layout_width="56dp"
+      android:layout_height="56dp"
+      android:layout_marginRight="8dp"
+      app:qpb_icon="@drawable/play_btn"
+      android:layout_alignParentRight="true"
+        />
+
+  <ImageView
+      android:id="@+id/btnFavorite"
+      android:layout_marginTop="24dp"
+      android:layout_width="24dp"
+      android:layout_marginRight="16dp"
+      android:layout_height="24dp"
+      android:layout_toLeftOf="@id/btnPlay"
+      android:src="@drawable/yellow_star_d"
+        />
+
+
+  <RelativeLayout
+      android:id="@+id/relativeSample"
+      android:layout_marginTop="16dp"
+      android:layout_marginLeft="16dp"
+      android:layout_marginRight="16dp"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/imgCover"
+      android:layout_toRightOf="@id/imgCover"
+      android:elevation="2dp"
+      android:padding="16dp"
+      android:visibility="gone"
+        >
+    <TextView
+        android:id="@+id/txtTitleSample"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:text="fine, thanks"
+            />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtSubTitleSample"
+        android:layout_marginTop="4dp"
+        android:layout_below="@id/txtTitleSample"
+        android:textSize="14sp"
+        android:text="Tôi Ổn"
+            />
+    <Naxam.Busuu.Droid.Core.Controls.QuickPlayButton
+        android:id="@+id/btnPlaySample"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:qpb_icon="@drawable/play_btn_dark"
+        android:layout_alignParentRight="true"
+            />
+  </RelativeLayout>
+  <View
+      android:layout_marginTop="16dp"
+      android:layout_marginLeft="16dp"
+      android:layout_width="match_parent"
+      android:layout_height="1dp"
+      android:layout_below="@id/relativeSample"
+      android:layout_toRightOf="@id/imgCover"
+      android:background="#F2F2F2"
+        />
+</RelativeLayout>

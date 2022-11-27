@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginBottom="16dp"
+    android:gravity="center"
+    >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|top"
+        android:text="You're currently learning"
+        android:textColor="#404040"
+        android:textSize="22sp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        app:MvxBind="Visible IsCurrent"
+        />
+    <FrameLayout
+        android:layout_width="match_parent"
+
+        android:layout_height="224dp">
+          <ImageView
+            android:layout_width="136dp"
+            android:layout_height="136dp"
+            android:padding="4dp"
+            android:layout_gravity="center_horizontal|top"
+            app:MvxBind="DrawableName Flag"
+            android:background="@drawable/change_language_border_image"  />
+        <ProgressBar
+            android:layout_width="190dp"
+            android:layout_height="190dp"
+            app:MvxBind="Progress Percent"
+            android:indeterminate="false"
+            android:layout_marginTop="-28dp"
+            android:max="100"
+            android:layout_gravity="center_horizontal|top"
+            android:rotation="-90"
+            android:indeterminateOnly="false"
+            android:padding="0dp"
+            android:indeterminateDrawable="@drawable/background_progress_percent"
+            android:progressDrawable="@drawable/background_progress_percent" />
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_horizontal|top"
+            android:layout_marginLeft="48dp"
+            android:layout_marginTop="104dp"
+            android:src="@drawable/ic_lock"
+            app:MvxBind="Visible IsCurrent,Converter=Reverse"
+            />
+        <TextView
+            android:layout_gravity="center_horizontal|top"
+            android:layout_marginTop="144dp"
+            android:textSize="26sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#348FCD"
+            android:text="English"
+            app:MvxBind="Text Language"  />
+
+        <TextView
+            android:layout_gravity="center_horizontal|top"
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#348FCD"
+            android:layout_marginTop="180dp"
+            android:text="1% complete"
+            app:MvxBind="Text Percent, Converter=Format,ConverterParameter='{0}% Completed'"  />
+
+    </FrameLayout>
+
+    <TextView
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Want to learn another language?"
+        android:textColor="#404040"
+        android:textSize="22sp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="24dp"
+        app:MvxBind="Visible IsCurrent"
+        />
+</LinearLayout>

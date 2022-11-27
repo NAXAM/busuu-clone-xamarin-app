@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+  <RelativeLayout
+      android:id="@+id/normalItem"
+      android:layout_marginLeft="16dp"
+      android:layout_marginRight="16dp"
+      android:visibility="visible"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/txtTypeNotify"
+        android:textSize="18dp"
+        app:MvxBind="Text Title;"
+        android:textColor="#000000"
+        android:text="Correction recieved"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/txtExample"
+        android:layout_marginTop="32dp"
+        android:layout_below="@id/txtTypeNotify"
+        android:textSize="16dp"
+        android:text="e.g Thao has corrected your exercise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Switch
+        android:layout_alignBaseline="@id/txtTypeNotify"
+        android:layout_alignParentEnd="true"
+        android:layout_width="48dp"
+        android:layout_height="48dp" />
+
+  </RelativeLayout>
+
+  <RelativeLayout
+      android:visibility="gone"
+      android:layout_marginLeft="16dp"
+      android:layout_marginRight="16dp"
+      android:id="@+id/privateMode"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/txtFriendRequest"
+        android:textColor="#2693FF"
+        android:text="Friend Request"
+        android:textAllCaps="true"
+        android:textSize="18dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/txtPrivateMode"
+        android:layout_marginTop="48dp"
+        android:layout_below="@id/txtFriendRequest"
+        android:textSize="18dp"
+        android:textColor="#000000"
+        android:text="Private mode"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp" />
+    <Switch
+        android:layout_toRightOf="@id/txtPrivateMode"
+        android:layout_marginTop="64dp"
+        android:layout_centerVertical="true"
+        android:layout_below="@id/txtFriendRequest"
+        android:id="@+id/switchPrivateMode"
+        android:layout_alignParentEnd="true"
+        android:layout_width="48dp"
+        android:layout_height="48dp" />
+    <TextView
+        android:layout_marginTop="24dp"
+        android:layout_below="@id/txtPrivateMode"
+        android:textSize="16dp"
+        android:text="By enabling private mode, you choose not to recive friend requests form other users"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+  </RelativeLayout>
+  <RelativeLayout
+      android:visibility="gone"
+      android:id="@+id/generalNotify"
+      android:layout_marginLeft="16dp"
+      android:layout_marginRight="16dp"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/txtGeneral"
+        android:textColor="#2693FF"
+        android:text="GENERAL"
+        android:textAllCaps="true"
+        android:textSize="18dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/txtNotification"
+        android:layout_marginTop="48dp"
+        android:layout_below="@id/txtGeneral"
+        android:textSize="18dp"
+        android:textColor="#000000"
+        android:text="Notifications"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp" />
+    <Switch
+        android:layout_toRightOf="@id/txtNotification"
+        android:layout_marginTop="64dp"
+        android:layout_centerVertical="true"
+        android:layout_below="@id/txtGeneral"
+        android:id="@+id/switchGeneralNotify"
+        android:layout_alignParentEnd="true"
+        android:layout_width="48dp"
+        android:layout_height="48dp" />
+
+  </RelativeLayout>
+
+
+</RelativeLayout>

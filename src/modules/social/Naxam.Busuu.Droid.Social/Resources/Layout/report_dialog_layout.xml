@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="24dp"
+    android:background="#ffff"
+    >
+
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:paddingLeft="24dp"
+      android:paddingRight="24dp"
+      android:layout_marginTop="32dp"
+      style="@style/StyleTextTitleBold"
+      android:textSize="22sp"
+      android:text="What's your reason for reporting this post?" />
+
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="24dp"
+      style="@style/styleTextNormal"
+      android:textColor="#80888E"
+      android:text="What's your reason for reporting this post?" />
+
+  <TextView
+      android:id="@+id/txtSpam"
+      android:paddingLeft="24dp"
+      android:paddingRight="24dp"
+      android:layout_width="match_parent"
+      android:layout_height="48dp"
+      android:text="It's spam"
+      style="@style/styleTextNormal"
+      android:gravity="center_vertical"
+        />
+
+  <TextView
+      android:id="@+id/txtNotHelpfull"
+      android:paddingLeft="24dp"
+      android:paddingRight="24dp"
+      android:layout_width="match_parent"
+      android:layout_height="48dp"
+      android:text="It's not helpful"
+      style="@style/styleTextNormal"
+      android:gravity="center_vertical"
+        />
+
+  <TextView
+      android:id="@+id/txtHarmfull"
+      android:paddingLeft="24dp"
+      android:paddingRight="24dp"
+      android:layout_width="match_parent"
+      android:layout_height="48dp"
+      android:gravity="center_vertical"
+      style="@style/styleTextNormal"
+      android:text="It's abusive or harmful" />
+  <Button
+      android:id="@+id/btnCancel"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:gravity="right|center_vertical"
+      android:paddingRight="24dp"
+      android:background="@android:color/transparent"
+      android:textColor="?attr/colorPrimary"
+      android:text="cancel"
+      android:layout_marginBottom="16dp"
+        />
+</LinearLayout>

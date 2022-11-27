@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="88dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:layout_marginTop="8dp"
+    android:background="#ffffff"
+                elevation="4dp"
+    android:layout_marginBottom="8dp"
+    >
+
+  <ImageView
+      android:id="@+id/imgAnswer"
+      android:padding="1dp"
+      android:layout_width="88dp"
+      android:layout_height="88dp"
+      app:MvxBind="SourceNormal Image;"
+      android:background="#ffffff"
+        />
+  <ImageView
+      android:id="@+id/imgResult"
+      android:layout_width="88dp"
+      android:layout_height="88dp"
+      android:padding="32dp" 
+      android:layout_margin="1dp"
+      android:visibility="gone"
+      app:MvxBind="BackgroundColor Value, Converter = UnitValueToColor;DrawableName Value, Converter = UnitValueToDrawableName;"
+        />
+  <TextView
+      android:id="@+id/txtAnswer"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_toRightOf="@id/imgAnswer"
+      android:textSize="18sp"
+      android:gravity="center"
+      app:MvxBind="Text Text"
+        />
+ 
+</RelativeLayout>

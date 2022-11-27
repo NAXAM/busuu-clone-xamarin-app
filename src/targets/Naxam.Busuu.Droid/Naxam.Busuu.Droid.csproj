@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\packages\Xamarin.Build.Download.0.4.7\build\Xamarin.Build.Download.props" Condition="Exists('..\..\packages\Xamarin.Build.Download.0.4.7\build\Xamarin.Build.Download.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8FD58FE0-D792-4586-A8B0-021EE7CF5E18}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Naxam.Busuu.Droid</RootNamespace>
+    <AssemblyName>Naxam.Busuu.Droid</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <AndroidApplication>True</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <JavaMaximumHeapSize>1G</JavaMaximumHeapSize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>True</AndroidUseSharedRuntime>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <EmbedAssembliesIntoApk>False</EmbedAssembliesIntoApk>
+    <AndroidEnableMultiDex>true</AndroidEnableMultiDex>
+    <AndroidSupportedAbis />
+    <JavaMaximumHeapSize>1G</JavaMaximumHeapSize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>PdbOnly</DebugType>
+    <DebugSymbols>True</DebugSymbols>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
+    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
+    <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug-Reveal|AnyCPU' ">
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug-Reveal</OutputPath>
+    <WarningLevel>4</WarningLevel>
+    <JavaMaximumHeapSize>
+    </JavaMaximumHeapSize>
+    <AndroidSupportedAbis>arm64-v8a;armeabi;armeabi-v7a;x86</AndroidSupportedAbis>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Mono.Android" />
+    <Reference Include="Mono.Android.Export" />
+    <Reference Include="mscorlib" />    
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Acr.Support" Version="2.1.0" />
+    <PackageReference Include="Acr.UserDialogs" Version="6.5.1" />
+    <PackageReference Include="AndHUD" Version="1.2.0" />
+    <PackageReference Include="Glide.Xamarin" Version="4.1.1" />
+    <PackageReference Include="MvvmCross" Version="5.1.1" />
+    <PackageReference Include="MvvmCross.Binding" Version="5.1.1" />
+    <PackageReference Include="MvvmCross.Core" Version="5.1.1" />
+    <PackageReference Include="MvvmCross.Droid.Shared" Version="5.1.1" />
+    <PackageReference Include="MvvmCross.Droid.Support.Core.UI" Version="5.1.1" />
+    <PackageReference Include="MvvmCross.Droid.Support.Fragment" Version="5.1.1" />
+    <PackageReference Include="MvvmCross.Droid.Support.V7.AppCompat" Version="5.1.1" />
+    <PackageReference Include="MvvmCross.Droid.Support.V7.RecyclerView" Version="5.1.1" />
+    <PackageReference Include="MvvmCross.Platform" Version="5.1.1" />
+    <PackageReference Include="MvvmCross.Plugin.DownloadCache" version="5.1.1" />
+    <PackageReference Include="MvvmCross.Plugin.File" version="5.1.1" />
+    <PackageReference Include="Naxam.CirclerProgress.Droid" Version="1.2.1.1" />
+    <PackageReference Include="Naxam.Flexbox.Droid" Version="0.3.0" />
+    <PackageReference Include="Naxam.Ittianyu.BottomNavExtension" Version="1.2.2" />
+    <PackageReference Include="Naxam.JWPlayerCommon.Droid" Version="2.7.4.3" />
+    <PackageReference Include="Naxam.JWPlayerCore.Droid" Version="2.7.4.3" />
+    <PackageReference Include="Naxam.TargetTooltip.Droid" Version="1.3.15" />
+    <PackageReference Include="Splat" Version="2.0.0" />
+    <PackageReference Include="Xam.Plugins.Android.ExoPlayer" Version="2.5.3" />
+    <PackageReference Include="Xam.Plugins.Android.ExoPlayer.Core" Version="2.5.3" />
+    <PackageReference Include="Xam.Plugins.Android.ExoPlayer.Dash" Version="2.5.3" />
+    <PackageReference Include="Xam.Plugins.Android.ExoPlayer.Hls" Version="2.5.3" />
+    <PackageReference Include="Xam.Plugins.Android.ExoPlayer.SmoothStreaming" Version="2.5.3" />
+    <PackageReference Include="Xam.Plugins.Android.ExoPlayer.UI" Version="2.5.3" />
+    <PackageReference Include="Xam.Plugins.Settings" Version="3.1.1" />
+    <PackageReference Include="Xamarin.Android.Arch.Core.Common" Version="1.0.0" />
+    <PackageReference Include="Xamarin.Android.Arch.Lifecycle.Common" Version="1.0.1" />
+    <PackageReference Include="Xamarin.Android.Arch.Lifecycle.Runtime" Version="1.0.0" />
+    <PackageReference Include="Xamarin.Android.Support.Animated.Vector.Drawable" Version="26.1.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.Annotations" Version="26.1.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.Compat" Version="26.1.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.Core.UI" Version="26.1.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.Core.Utils" Version="26.1.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.Design" Version="26.1.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.Fragment" Version="26.1.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.Media.Compat" Version="26.1.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.Percent" Version="26.1.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.Transition" Version="26.1.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.v4" Version="26.1.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="26.1.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.v7.RecyclerView" Version="26.1.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.Vector.Drawable" Version="26.1.0.1" />
+    <PackageReference Include="Xamarin.Build.Download" Version="0.4.7" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Adapter\MainViewPagerAdapter.cs" />
+    <Compile Include="App.cs" />
+    <Compile Include="Bootstrap\DownloadCachePluginBootstrap.cs" />
+    <Compile Include="Bootstrap\FilePluginBootstrap.cs" />
+    <Compile Include="Bootstrap\MessengerPluginBootstrap.cs" />
+    <Compile Include="DebugTrace.cs" />
+    <Compile Include="MainView.cs" />
+    <Compile Include="Resources\Resource.Designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Setup.cs" />
+    <Compile Include="SplashView.cs" />
+    <Compile Include="Helpers\Settings.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GettingStarted.Xamarin" />
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Assets\AboutAssets.txt" />
+    <AndroidResource Include="Resources\layout\Main.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\splash_view.axml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\Strings.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\AndroidManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\Styles.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\Colors.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\selector_item_gray_color.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_menu_learn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_menu_profile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_menu_review.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_menu_social.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\menu\menu_bottom.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_menu_notification.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\bussu_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\bootstraps\Naxam.Busuu\Naxam.Busuu.csproj">
+      <Project>{60D3471E-3D82-482D-AE23-7792DBFE53AA}</Project>
+      <Name>Naxam.Busuu</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\modules\core\Naxam.Busuu.Core\Naxam.Busuu.Core.csproj">
+      <Project>{A9928524-DB7A-4812-9C3A-81FE280939EF}</Project>
+      <Name>Naxam.Busuu.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\modules\core\Naxam.Busuu.Droid.Core\Naxam.Busuu.Droid.Core.csproj">
+      <Project>{FE265042-A31B-44CE-8E0C-2260A89B2B12}</Project>
+      <Name>Naxam.Busuu.Droid.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\modules\learning\Naxam.Busuu.Droid.Learning\Naxam.Busuu.Droid.Learning.csproj">
+      <Project>{DD07F5A3-ACA2-4CDF-B4BA-591A395175F9}</Project>
+      <Name>Naxam.Busuu.Droid.Learning</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\modules\notification\Naxam.Busuu.Droid.Notification\Naxam.Busuu.Droid.Notification.csproj">
+      <Project>{5C46B5FC-23AF-4AC2-AAA3-DEACA498CDCF}</Project>
+      <Name>Naxam.Busuu.Droid.Notification</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\modules\profile\Naxam.Busuu.Droid.Profile\Naxam.Busuu.Droid.Profile.csproj">
+      <Project>{DFD37792-D1A1-463E-BA9F-8DD045E61178}</Project>
+      <Name>Naxam.Busuu.Droid.Profile</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\modules\review\Naxam.Busuu.Droid.Review\Naxam.Busuu.Droid.Review.csproj">
+      <Project>{366F8133-7207-4047-9017-DDE16DA3DFA8}</Project>
+      <Name>Naxam.Busuu.Droid.Review</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\modules\social\Naxam.Busuu.Droid.Social\Naxam.Busuu.Droid.Social.csproj">
+      <Project>{57DAE196-2D72-405B-AE3A-C18A107FDE4B}</Project>
+      <Name>Naxam.Busuu.Droid.Social</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\modules\learning\Naxam.Busuu.Learning\Naxam.Busuu.Learning.csproj">
+      <Project>{E1334FF3-BC22-4F7C-B363-A01DE69429F8}</Project>
+      <Name>Naxam.Busuu.Learning</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\modules\notification\Naxam.Busuu.Notification\Naxam.Busuu.Notification.csproj">
+      <Project>{2EADB781-E679-4485-8A53-AE7A8945CD1B}</Project>
+      <Name>Naxam.Busuu.Notification</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\modules\profile\Naxam.Busuu.Profile\Naxam.Busuu.Profile.csproj">
+      <Project>{B6F89F5C-B669-40B1-BCE1-C72089933F2F}</Project>
+      <Name>Naxam.Busuu.Profile</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\modules\review\Naxam.Busuu.Review\Naxam.Busuu.Review.csproj">
+      <Project>{BAAA7577-3BE2-423B-A051-61B47489B015}</Project>
+      <Name>Naxam.Busuu.Review</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\modules\social\Naxam.Busuu.Social\Naxam.Busuu.Social.csproj">
+      <Project>{6255CDA3-B742-4D16-AC6C-03E414EAC000}</Project>
+      <Name>Naxam.Busuu.Social</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\modules\startup\Naxam.Busuu.Start\Naxam.Busuu.Start.csproj">
+      <Project>{115D0C30-6675-4814-89AC-5AEF6E5EDAEC}</Project>
+      <Name>Naxam.Busuu.Start</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+</Project>

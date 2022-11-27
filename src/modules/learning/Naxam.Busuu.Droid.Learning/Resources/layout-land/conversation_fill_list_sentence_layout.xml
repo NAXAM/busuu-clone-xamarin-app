@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+  <ListView
+      android:id="@+id/lstView"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_above="@+id/flexAnswer"
+      android:background="#F2F5F8"
+      android:dividerHeight="0dp">
+  </ListView>
+
+  <Naxam.Busuu.Droid.Learning.Control.NXPlayButton
+      android:id="@+id/btnPlay"
+      android:layout_width="64dp"
+      android:layout_height="64dp"
+      android:layout_above="@+id/flexAnswer"
+      android:layout_alignParentRight="true"
+      android:layout_marginBottom="16dp"
+      android:layout_marginRight="24dp" />
+
+  <com.google.android.flexbox.FlexboxLayout
+      android:id="@+id/flexAnswer"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      android:background="#ffffff"
+      android:padding="8dp"
+      app:alignContent="flex_start"
+      app:alignItems="flex_start"
+      app:flexWrap="wrap"
+      app:justifyContent="flex_start">
+    <Button
+        android:id="@+id/btnNext"
+        style="@style/StyleNextButton"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:text="Next" />
+  </com.google.android.flexbox.FlexboxLayout>
+</RelativeLayout>

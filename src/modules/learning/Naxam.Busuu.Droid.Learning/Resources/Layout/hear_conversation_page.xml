@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout 
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <MvxListView
+      android:id="@+id/list_conversation"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_marginBottom="100dp"
+      android:listSelector="@drawable/listview_conversation_selector"
+      android:scrollbars="none"
+      app:MvxBind="ItemsSource Conversation"
+      app:MvxItemTemplate="@layout/conversation_sentence_list_item"/>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_gravity="bottom"
+      android:background="#ffffff"
+      android:gravity="center_horizontal">
+
+    <Button
+        android:id="@+id/bt_continue"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="56dp"
+        android:background="@drawable/light_green_button_background"
+        android:text="Continue"
+        android:textColor="#ffffff" />
+  </LinearLayout>
+
+  <FrameLayout
+        android:id="@+id/bt_play"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="80dp"
+        android:background="@drawable/light_blue_background_button">
+    <ImageView
+        android:id="@+id/im_bt_play"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:background="@drawable/ic_pause" />
+  </FrameLayout>
+</FrameLayout>

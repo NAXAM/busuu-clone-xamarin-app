@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffff"
+    android:padding="32dp"
+    android:layout_margin="32dp"
+                >
+
+    <TextView
+        android:id="@+id/txtTitle"
+        style="@style/Base.TextAppearance.AppCompat.Large"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Select your fluency level" />
+
+    <TextView
+        android:id="@+id/txtLevel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtTitle"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:text="Beginner" />
+
+    <LinearLayout
+        android:id="@+id/layLevel"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:layout_below="@id/txtLevel"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/background_language_level"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:layout_weight="1">
+            <View
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_gravity="center"
+                android:background="@drawable/shape_language_level"
+                android:id="@+id/viewBeginner"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:layout_weight="1">
+
+            <View
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_gravity="center"
+                android:id="@+id/viewIntermediate"
+                android:background="@drawable/shape_language_level" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:layout_weight="1">
+
+            <View
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_gravity="center"
+                android:id="@+id/viewAdvance"
+                android:background="@drawable/shape_language_level" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="24dp">
+
+                <View
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:id="@+id/viewNative"
+                    android:layout_gravity="right|center_vertical"
+                    android:background="@drawable/shape_language_level" />
+            </FrameLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/btnAccept"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/layLevel"
+        android:layout_marginTop="40dp"
+        android:textColor="#38A9F6"
+        android:text="accept"
+
+        android:textAllCaps="true" />
+
+    <TextView
+        android:id="@+id/btnCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layLevel"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="40dp"
+        android:layout_toLeftOf="@id/btnAccept"
+        android:text="cancel"
+        android:textColor="#38A9F6"
+        android:textAllCaps="true" />
+</RelativeLayout>

@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3B4949AE-25B1-4F34-9243-4971FA75C107}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Naxam.Busuu.iOS.Notification</RootNamespace>
+    <AssemblyName>Naxam.Busuu.iOS.Notification</AssemblyName>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchFastDev>true</MtouchFastDev>
+    <IOSDebuggerPort>43232</IOSDebuggerPort>
+    <DeviceSpecificBuild>false</DeviceSpecificBuild>
+    <MtouchLink>
+    </MtouchLink>
+    <MtouchHttpClientHandler>
+    </MtouchHttpClientHandler>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchHttpClientHandler>
+    </MtouchHttpClientHandler>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug-Reveal|iPhoneSimulator' ">
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug-Reveal</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <DeviceSpecificBuild>true</DeviceSpecificBuild>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>i386, x86_64</MtouchArch>
+  </PropertyGroup>  
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="MaterialControls" version="1.2.2" />
+    <PackageReference Include="MvvmCross" version="5.4.0" />
+    <PackageReference Include="MvvmCross.Binding" version="5.4.0" />
+    <PackageReference Include="MvvmCross.Core" version="5.4.0" />
+    <PackageReference Include="MvvmCross.Platform" version="5.4.0" />
+    <PackageReference Include="MvvmCross.Plugin.Messenger" version="5.4.0" />
+    <PackageReference Include="WebP.Touch" version="1.0.4" />
+    <PackageReference Include="Xamarin.FFImageLoading" version="2.2.22" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\NotificationView.cs" />
+    <Compile Include="Views\NotificationView.designer.cs">
+      <DependentUpon>NotificationView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cells\NotificationCell.cs" />
+    <Compile Include="Cells\NotificationCell.designer.cs">
+      <DependentUpon>NotificationCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\NotificationTableViewSource.cs" />
+    <Compile Include="Views\FriendRequestView.cs" />
+    <Compile Include="Views\FriendRequestView.designer.cs">
+      <DependentUpon>FriendRequestView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cells\FriendRequestCell.cs" />
+    <Compile Include="Cells\FriendRequestCell.designer.cs">
+      <DependentUpon>FriendRequestCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\FriendRequestTableViewSource.cs" />
+    <Compile Include="Bootstrap\MessengerPluginBootstrap.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="Notification.storyboard" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\core\Naxam.Busuu.Core\Naxam.Busuu.Core.csproj">
+      <Project>{a9928524-db7a-4812-9c3a-81fe280939ef}</Project>
+      <Name>Naxam.Busuu.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Naxam.Busuu.Notification\Naxam.Busuu.Notification.csproj">
+      <Project>{2EADB781-E679-4485-8A53-AE7A8945CD1B}</Project>
+      <Name>Naxam.Busuu.Notification</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\core\Naxam.Busuu.iOS.Core\Naxam.Busuu.iOS.Core.csproj">
+      <Project>{B18CE05B-DA11-45F4-BEF8-6945AE895FA2}</Project>
+      <Name>Naxam.Busuu.iOS.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+</Project>

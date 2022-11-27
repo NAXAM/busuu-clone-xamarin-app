@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+   xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+  <android.support.v7.widget.Toolbar
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:elevation="2dp"
+    android:translationZ="4dp"
+    android:background="@color/colorPrimary"
+    android:theme="@style/ToolbarColoredBackArrow"
+    android:popupTheme="@style/ToolbarColoredBackArrow" /> 
+  <android.support.v7.widget.RecyclerView
+          android:id="@+id/recyclerView"
+          android:layout_width="match_parent"
+          app:MvxBind="NXItemsSource SocialDetailData"
+          android:layout_height="match_parent">
+  </android.support.v7.widget.RecyclerView>
+</LinearLayout>

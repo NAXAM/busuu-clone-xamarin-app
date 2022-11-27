@@ -1,0 +1,91 @@
+using System;
+using System.Collections.Generic;
+using System.Reflection;
+using MvvmCross.Core.ViewModels;
+using MvvmCross.iOS.Platform;
+using MvvmCross.iOS.Views.Presenters;
+using Naxam.Busuu.Core.ViewModels;
+<<<<<<< HEAD
+using Naxam.Busuu.iOS.Views;
+=======
+>>>>>>> develop-ios
+using Naxam.Busuu.iOS.Notification.Views;
+using Naxam.Busuu.iOS.Profile.Views;
+using Naxam.Busuu.iOS.Review.Views;
+using Naxam.Busuu.Review.ViewModels;
+using UIKit;
+
+using Naxam.Busuu.iOS.Social.Views;
+using Naxam.Busuu.Notification.ViewModels;
+using Naxam.Busuu.Profile.ViewModel;
+using Naxam.Busuu.Social.ViewModels;
+using Naxam.Busuu.iOS.Core;
+
+namespace Naxam.Busuu.iOS
+{
+    public class Setup : MvxIosSetup
+    {
+		public Setup(MvxApplicationDelegate appDelegate, IMvxIosViewPresenter presenter) : base(appDelegate, presenter)
+		{
+		}
+
+		protected override IMvxApplication CreateApp()
+		{
+			return new App();
+		}
+
+<<<<<<< HEAD
+		protected override IEnumerable<Assembly> GetViewAssemblies()
+		{
+			var assemblies = new List<Assembly>
+			{
+=======
+
+        protected override IEnumerable<Assembly> GetViewAssemblies()
+        {
+            var assemblies = new List<Assembly>
+            {
+                //typeof(MainTabBarView).Assembly,
+>>>>>>> develop-ios
+                typeof(SocialView).Assembly,
+                typeof(NotificationView).Assembly,
+                typeof(RegisterView).Assembly,
+                typeof(ReviewAllView).Assembly,
+                typeof(PremiumView).Assembly
+            };
+			assemblies.AddRange(base.GetViewAssemblies());
+			return assemblies; 
+        }
+
+        protected override IEnumerable<Assembly> GetViewModelAssemblies()
+        {
+			var assemblies = new List<Assembly>
+			{
+<<<<<<< HEAD
+				typeof(SocialViewModel).Assembly,
+=======
+
+				//typeof(MainTabBarViewModel).Assembly,
+                typeof(ReviewViewModel).Assembly,
+                typeof(SocialViewModel).Assembly,
+>>>>>>> develop-ios
+                typeof(NotificationViewModel).Assembly,
+                typeof(RegisterViewModel).Assembly,
+                typeof(PremiumViewModel).Assembly
+			};
+
+			assemblies.AddRange(base.GetViewModelAssemblies());
+			return assemblies;
+        }
+
+        protected override void FillBindingNames(MvvmCross.Binding.BindingContext.IMvxBindingNameRegistry obj)
+        {
+            base.FillBindingNames(obj);
+        }
+
+        protected override void FillTargetFactories(MvvmCross.Binding.Bindings.Target.Construction.IMvxTargetBindingFactoryRegistry registry)
+        {
+            
+        }
+    }
+}

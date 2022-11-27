@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1" customClass="SelectWordImageView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ue4-Ab-zyJ">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jf5-9V-ugU" userLabel="btnAudio">
+                            <rect key="frame" x="303" y="24" width="56" height="56"/>
+                            <color key="backgroundColor" red="0.22352941179999999" green="0.66274509800000003" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="56" id="bjf-9y-P0K"/>
+                                <constraint firstAttribute="height" constant="56" id="neh-f4-FKp"/>
+                            </constraints>
+                            <state key="normal" image="play_btn.png">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="btnAudio_Click:" destination="1" eventType="touchUpInside" id="wT3-gV-G5Z"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d7K-KF-aMP" userLabel="lblQuestion">
+                            <rect key="frame" x="16" y="41.5" width="42" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.22352941179999999" green="0.66274509800000003" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f4y-3S-CtY" userLabel="ViewAnswers">
+                            <rect key="frame" x="16" y="104" width="343" height="547"/>
+                            <color key="backgroundColor" red="0.94901960780000005" green="0.96078431369999995" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.94901960784313721" green="0.96078431372549022" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="Jf5-9V-ugU" firstAttribute="top" secondItem="ue4-Ab-zyJ" secondAttribute="top" constant="24" id="8qz-G8-ems"/>
+                        <constraint firstItem="f4y-3S-CtY" firstAttribute="leading" secondItem="ue4-Ab-zyJ" secondAttribute="leading" constant="16" id="CpE-Ek-kqT"/>
+                        <constraint firstItem="d7K-KF-aMP" firstAttribute="centerY" secondItem="Jf5-9V-ugU" secondAttribute="centerY" id="Ep1-hv-8Nd"/>
+                        <constraint firstAttribute="trailing" secondItem="f4y-3S-CtY" secondAttribute="trailing" constant="16" id="LM9-zU-iKf"/>
+                        <constraint firstItem="f4y-3S-CtY" firstAttribute="top" secondItem="Jf5-9V-ugU" secondAttribute="bottom" constant="24" id="ZqC-Lq-2xj"/>
+                        <constraint firstAttribute="bottom" secondItem="f4y-3S-CtY" secondAttribute="bottom" constant="16" id="b3U-s8-Q74"/>
+                        <constraint firstAttribute="trailing" secondItem="Jf5-9V-ugU" secondAttribute="trailing" constant="16" id="c6o-Jt-t2w"/>
+                        <constraint firstItem="d7K-KF-aMP" firstAttribute="leading" secondItem="ue4-Ab-zyJ" secondAttribute="leading" constant="16" id="twx-DG-auT"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.94901960780000005" green="0.96078431369999995" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="ue4-Ab-zyJ" secondAttribute="bottom" id="01A-mF-g1l"/>
+                <constraint firstAttribute="trailing" secondItem="ue4-Ab-zyJ" secondAttribute="trailing" id="AsE-Nz-i6l"/>
+                <constraint firstItem="ue4-Ab-zyJ" firstAttribute="top" secondItem="1" secondAttribute="top" id="b0v-3d-rnA"/>
+                <constraint firstItem="ue4-Ab-zyJ" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="eBc-P5-ynh"/>
+            </constraints>
+            <connections>
+                <outlet property="ViewAnswers" destination="f4y-3S-CtY" id="pD6-ve-fmX"/>
+                <outlet property="btnAudio" destination="Jf5-9V-ugU" id="lR3-C1-M50"/>
+                <outlet property="lblQuestion" destination="d7K-KF-aMP" id="8ti-we-uSs"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="play_btn.png" width="16" height="16"/>
+    </resources>
+</document>

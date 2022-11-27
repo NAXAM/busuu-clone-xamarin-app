@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <declare-styleable name="QuickPlayButton">
+    <attr name="qpb_icon" format="integer"/>
+  </declare-styleable>
+</resources>

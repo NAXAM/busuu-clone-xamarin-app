@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+   xmlns:android="http://schemas.android.com/apk/res/android"
+   xmlns:app="http://schemas.android.com/apk/res-auto"
+   android:layout_width="match_parent"
+   android:layout_height="wrap_content"
+   android:background="#ffffff"
+   >
+
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_margin="16dp"
+      android:layout_marginRight="16dp"
+      android:orientation="vertical" >
+
+    <TextView
+        android:textSize="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:text="Langue learning with bussu - it works!" />
+
+    <ImageView
+        android:layout_marginTop="32dp"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/sea"  />
+
+
+    <com.andexert.library.RippleView
+       android:layout_marginTop="32dp"
+       android:id="@+id/rippleView"
+       app:rv_zoomScale="3.0"
+       app:rv_framerate="30"
+       app:rv_alpha="255"
+       rv_centered="true"
+       app:rv_color="#E2E2E2"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+            >
+
+      <LinearLayout
+          android:orientation="vertical"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+        <ImageView
+            android:background="#D9D9D9"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+        <Naxam.Busuu.Droid.Profile.Controls.MyExpandableLayout
+            android:id="@+id/expand1"
+              android:layout_weight="1"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+                    />
+      </LinearLayout>
+    </com.andexert.library.RippleView>
+
+    <com.andexert.library.RippleView
+       android:id="@+id/rippleView"
+       app:rv_zoomScale="3.0"
+       app:rv_framerate="30"
+       app:rv_alpha="255"
+       rv_centered="true"
+       app:rv_color="#E2E2E2"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+            >
+
+      <LinearLayout
+          android:orientation="vertical"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+        <ImageView
+            android:background="#D9D9D9"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+        <Naxam.Busuu.Droid.Profile.Controls.MyExpandableLayout
+            android:id="@+id/expand2"
+              android:layout_weight="1"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+                    />
+        <ImageView
+            android:background="#D9D9D9"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+      </LinearLayout>
+    </com.andexert.library.RippleView>
+
+
+    <WebView
+        android:id="@+id/myWebview"
+        android:layout_marginTop="32dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </WebView>
+    <Button
+        android:id="@+id/btnReadFull"
+        android:textAllCaps="true"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="64dp"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        app:MvxBind="Click ReadFullCommand"
+        />
+
+  </LinearLayout>
+</ScrollView>

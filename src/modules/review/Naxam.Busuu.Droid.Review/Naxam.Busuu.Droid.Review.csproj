@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\..\packages\Xamarin.Build.Download.0.4.7\build\Xamarin.Build.Download.props" Condition="Exists('..\..\..\packages\Xamarin.Build.Download.0.4.7\build\Xamarin.Build.Download.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{366F8133-7207-4047-9017-DDE16DA3DFA8}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Naxam.Busuu.Droid.Review</RootNamespace>
+    <AssemblyName>Naxam.Busuu.Droid.Review</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Mono.Android" />
+    <Reference Include="Mono.Android.Export" />
+    <Reference Include="mscorlib" />    
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Acr.Support" Version="2.1.0" />
+    <PackageReference Include="Acr.UserDialogs" Version="6.5.1" />
+    <PackageReference Include="AndHUD" Version="1.2.0" />
+    <PackageReference Include="Glide.Xamarin" Version="4.1.1" />
+    <PackageReference Include="MvvmCross" Version="5.1.1" />
+    <PackageReference Include="MvvmCross.Binding" Version="5.1.1" />
+    <PackageReference Include="MvvmCross.Core" Version="5.1.1" />
+    <PackageReference Include="MvvmCross.Droid.Shared" Version="5.1.1" />
+    <PackageReference Include="MvvmCross.Droid.Support.Core.UI" Version="5.1.1" />
+    <PackageReference Include="MvvmCross.Droid.Support.Fragment" Version="5.1.1" />
+    <PackageReference Include="MvvmCross.Droid.Support.V7.AppCompat" Version="5.1.1" />
+    <PackageReference Include="MvvmCross.Droid.Support.V7.RecyclerView" Version="5.1.1" />
+    <PackageReference Include="MvvmCross.Platform" Version="5.1.1" />
+    <PackageReference Include="Naxam.CirclerProgress.Droid" Version="1.2.1.1" />
+    <PackageReference Include="Naxam.Flexbox.Droid" Version="0.3.0" />
+    <PackageReference Include="Naxam.Ittianyu.BottomNavExtension" Version="1.2.2" />
+    <PackageReference Include="Naxam.JWPlayerCommon.Droid" Version="2.7.4.3" />
+    <PackageReference Include="Naxam.JWPlayerCore.Droid" Version="2.7.4.3" />
+    <PackageReference Include="Naxam.TargetTooltip.Droid" Version="1.3.15" />
+    <PackageReference Include="Splat" Version="2.0.0" />
+    <PackageReference Include="Xam.Plugins.Android.ExoPlayer" Version="2.5.3" />
+    <PackageReference Include="Xam.Plugins.Android.ExoPlayer.Core" Version="2.5.3" />
+    <PackageReference Include="Xam.Plugins.Android.ExoPlayer.Dash" Version="2.5.3" />
+    <PackageReference Include="Xam.Plugins.Android.ExoPlayer.Hls" Version="2.5.3" />
+    <PackageReference Include="Xam.Plugins.Android.ExoPlayer.SmoothStreaming" Version="2.5.3" />
+    <PackageReference Include="Xam.Plugins.Android.ExoPlayer.UI" Version="2.5.3" />
+    <PackageReference Include="Xam.Plugins.Settings" Version="3.1.1" />
+    <PackageReference Include="Xamarin.Android.Arch.Core.Common" Version="1.0.0" />
+    <PackageReference Include="Xamarin.Android.Arch.Lifecycle.Common" Version="1.0.1" />
+    <PackageReference Include="Xamarin.Android.Arch.Lifecycle.Runtime" Version="1.0.0" />
+    <PackageReference Include="Xamarin.Android.Support.Animated.Vector.Drawable" Version="26.1.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.Annotations" Version="26.1.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.Compat" Version="26.1.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.Core.UI" Version="26.1.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.Core.Utils" Version="26.1.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.Design" Version="26.1.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.Fragment" Version="26.1.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.Media.Compat" Version="26.1.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.Percent" Version="26.1.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.Transition" Version="26.1.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.v4" Version="26.1.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="26.1.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.v7.RecyclerView" Version="26.1.0.1" />
+    <PackageReference Include="Xamarin.Android.Support.Vector.Drawable" Version="26.1.0.1" />
+    <PackageReference Include="Xamarin.Build.Download" Version="0.4.7" />
+    <PackageReference Include="Naxam.AndroidFloatingActionButton.Droid" Version="1.10.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Adapter\ReviewListAdapter.cs" />
+    <Compile Include="Resources\Resource.Designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TargetBindings\HeaderListViewItemsSourceTargetBinding.cs" />
+    <Compile Include="Views\ReviewFragment.cs" />
+    <Compile Include="Helpers\Settings.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AboutResources.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Values\Strings.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\review_activity.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\review_header_item.xml" />
+    <AndroidResource Include="Resources\layout\review_item.xml" />
+    <AndroidResource Include="Resources\Values\colors.xml" />
+    <AndroidResource Include="Resources\Values\dimensions.xml" />
+    <AndroidResource Include="Resources\Values\Styles.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\core\Naxam.Busuu.Core\Naxam.Busuu.Core.csproj">
+      <Project>{a9928524-db7a-4812-9c3a-81fe280939ef}</Project>
+      <Name>Naxam.Busuu.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\core\Naxam.Busuu.Droid.Core\Naxam.Busuu.Droid.Core.csproj">
+      <Project>{fe265042-a31b-44ce-8e0c-2260a89b2b12}</Project>
+      <Name>Naxam.Busuu.Droid.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Naxam.Busuu.Review\Naxam.Busuu.Review.csproj">
+      <Project>{baaa7577-3be2-423b-a051-61b47489b015}</Project>
+      <Name>Naxam.Busuu.Review</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\entity_strength_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\entity_strength_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\entity_strength_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\entity_strength_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\entity_strength_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_search_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\play_btn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\yellow_star_d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\play_btn_dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_check_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\star_white_small_disabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\strength_bar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\blue_arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\background_circle.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_back_button.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+</Project>

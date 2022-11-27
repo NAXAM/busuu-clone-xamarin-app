@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A8453AAF-F6BF-433B-B268-9954240CBBF4}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Naxam.Busuu.iOS.Learning</RootNamespace>
+    <AssemblyName>Naxam.Busuu.iOS.Learning</AssemblyName>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchFastDev>true</MtouchFastDev>
+    <IOSDebuggerPort>57222</IOSDebuggerPort>
+    <DeviceSpecificBuild>false</DeviceSpecificBuild>
+    <MtouchLink></MtouchLink>
+    <MtouchHttpClientHandler></MtouchHttpClientHandler>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <DefineConstants></DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchHttpClientHandler></MtouchHttpClientHandler>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug-Reveal|iPhoneSimulator' ">
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug-Reveal</OutputPath>
+    <DefineConstants></DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <DeviceSpecificBuild>true</DeviceSpecificBuild>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>i386, x86_64</MtouchArch>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="MaterialControls" version="1.2.2" />
+    <PackageReference Include="MvvmCross" version="5.4.0" />
+    <PackageReference Include="MvvmCross.Binding" version="5.4.0" />
+    <PackageReference Include="MvvmCross.Core" version="5.4.0" />
+    <PackageReference Include="MvvmCross.Platform" version="5.4.0" />
+    <PackageReference Include="MvvmCross.Plugin.Messenger" version="5.4.0" />
+    <PackageReference Include="WebP.Touch" version="1.0.4" />
+    <PackageReference Include="Xamarin.FFImageLoading" version="2.2.22" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="Views\" />
+    <Folder Include="Resources\Assets.xcassets\" />
+    <Folder Include="Cells\" />
+    <Folder Include="CustomBindings\" />
+    <Folder Include="Controls\" />
+    <Folder Include="Common\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Cells\LessonTableViewCell.cs" />
+    <Compile Include="Cells\LessonTableViewCell.designer.cs">
+      <DependentUpon>LessonTableViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cells\SubLessonTableViewCell.cs" />
+    <Compile Include="Cells\SubLessonTableViewCell.designer.cs">
+      <DependentUpon>SubLessonTableViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cells\LessonHeader.cs" />
+    <Compile Include="Cells\LessonHeader.designer.cs">
+      <DependentUpon>LessonHeader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomBindings\ImageExcersiceTargetBinding.cs" />
+    <Compile Include="Controls\ExercisesView.cs" />
+    <Compile Include="Views\MemoriseView.cs" />
+    <Compile Include="Views\MemoriseView.designer.cs">
+      <DependentUpon>MemoriseView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MemoriseBaseView.cs" />
+    <Compile Include="Views\TrueFalseHearQuestionView.cs" />
+    <Compile Include="Views\TrueFalseHearQuestionView.designer.cs">
+      <DependentUpon>TrueFalseHearQuestionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ExerciseSpeakView.cs" />
+    <Compile Include="Views\ExerciseSpeakView.designer.cs">
+      <DependentUpon>ExerciseSpeakView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TipView.cs" />
+    <Compile Include="Views\TipView.designer.cs">
+      <DependentUpon>TipView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\IAnswerClick.cs" />
+    <Compile Include="Views\LearnView.cs" />
+    <Compile Include="Views\LearnView.designer.cs">
+      <DependentUpon>LearnView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ResultView.cs" />
+    <Compile Include="Views\ResultView.designer.cs">
+      <DependentUpon>ResultView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ShowDownloadDialogMessager.cs" />
+    <Compile Include="Views\DialogueView.cs" />
+    <Compile Include="Views\DialogueView.designer.cs">
+      <DependentUpon>DialogueView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\VocabularyView.cs" />
+    <Compile Include="Views\VocabularyView.designer.cs">
+      <DependentUpon>VocabularyView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FillSentenceView.cs" />
+    <Compile Include="Views\FillSentenceView.designer.cs">
+      <DependentUpon>FillSentenceView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CompleteSentenceView.cs" />
+    <Compile Include="Views\CompleteSentenceView.designer.cs">
+      <DependentUpon>CompleteSentenceView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ConversationSentenceView.cs" />
+    <Compile Include="Views\ConversationSentenceView.designer.cs">
+      <DependentUpon>ConversationSentenceView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\OrderWordView.cs" />
+    <Compile Include="Views\OrderWordView.designer.cs">
+      <DependentUpon>OrderWordView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SelectWordImageView.cs" />
+    <Compile Include="Views\SelectWordImageView.designer.cs">
+      <DependentUpon>SelectWordImageView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ChooseWordView.cs" />
+    <Compile Include="Views\ChooseWordView.designer.cs">
+      <DependentUpon>ChooseWordView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SelectWordView.cs" />
+    <Compile Include="Views\SelectWordView.designer.cs">
+      <DependentUpon>SelectWordView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MatchingSentenceView.cs" />
+    <Compile Include="Views\MatchingSentenceView.designer.cs">
+      <DependentUpon>MatchingSentenceView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ChangeLanguageView.cs" />
+    <Compile Include="Views\ChangeLanguageView.designer.cs">
+      <DependentUpon>ChangeLanguageView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cells\ChangeLanguageCollectionViewCell.cs" />
+    <Compile Include="Cells\ChangeLanguageCollectionViewCell.designer.cs">
+      <DependentUpon>ChangeLanguageCollectionViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ChangeLanguageDataSource.cs" />
+    <Compile Include="Bootstrap\MessengerPluginBootstrap.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\core\Naxam.Busuu.iOS.Core\Naxam.Busuu.iOS.Core.csproj">
+      <Project>{B18CE05B-DA11-45F4-BEF8-6945AE895FA2}</Project>
+      <Name>Naxam.Busuu.iOS.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Naxam.Busuu.Learning\Naxam.Busuu.Learning.csproj">
+      <Project>{E1334FF3-BC22-4F7C-B363-A01DE69429F8}</Project>
+      <Name>Naxam.Busuu.Learning</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\core\Naxam.Busuu.Core\Naxam.Busuu.Core.csproj">
+      <Project>{A9928524-DB7A-4812-9C3A-81FE280939EF}</Project>
+      <Name>Naxam.Busuu.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="Learning.storyboard" />
+    <InterfaceDefinition Include="Cells\LessonHeader.xib" />
+    <InterfaceDefinition Include="Views\ChooseWord.xib" />
+    <InterfaceDefinition Include="Views\TrueFalseHearQuestion.xib" />
+    <InterfaceDefinition Include="Views\ExerciseSpeak.xib" />
+    <InterfaceDefinition Include="Views\FillSentence.xib" />
+    <InterfaceDefinition Include="Views\Tip.xib" />
+    <InterfaceDefinition Include="Views\Result.xib" />
+    <InterfaceDefinition Include="Views\MatchingSentence.xib" />
+    <InterfaceDefinition Include="Views\ConversationSentence.xib" />
+    <InterfaceDefinition Include="Views\SelectWordImage.xib" />
+    <InterfaceDefinition Include="Views\OrderWord.xib" />
+    <InterfaceDefinition Include="Views\CompleteSentence.xib" />
+    <InterfaceDefinition Include="Views\SelectWord.xib" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+</Project>

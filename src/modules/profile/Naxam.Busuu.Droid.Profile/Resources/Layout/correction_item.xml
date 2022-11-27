@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:elevation="2dp"
+    android:layout_marginBottom="8dp"
+    >
+  <ImageView
+      android:id="@+id/imgAvatar"
+      android:layout_width="36dp"
+      android:layout_height="36dp"
+      android:layout_marginTop="16dp"
+      android:layout_marginLeft="16dp"
+      android:layout_marginRight="16dp" />
+
+  <TextView
+      android:id="@+id/txtName"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="16dp"
+      android:layout_toRightOf="@id/imgAvatar"
+      android:text="Binh"
+      style="@style/StyleTextNormalBold"
+      android:textSize="14sp"
+        />
+
+  <TextView
+      android:id="@+id/txtLocation"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/txtName"
+      android:layout_toRightOf="@id/imgAvatar"
+      style="@style/styleTextSmall"
+      android:text="Thổ Nhĩ Kỳ" />
+  <ImageView
+      android:id="@+id/imgLanguage"
+      android:layout_width="40dp"
+      android:layout_height="40dp"
+      android:layout_alignParentRight="true"  />
+  
+  <Naxam.Busuu.Droid.Core.Controls.PlayerSocial
+      android:id="@+id/btnPlayer"
+      android:layout_below="@id/imgAvatar"
+      android:layout_marginTop="8dp"
+      android:layout_width="match_parent"
+      android:layout_marginLeft="16dp"
+      android:layout_marginRight="16dp"
+      android:layout_height="42dp"
+        />
+  <TextView
+      android:id="@+id/txtContent"
+      android:layout_below="@id/btnPlayer"
+      android:layout_marginTop="8dp"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="16dp"
+      style="@style/styleTextNormal"
+      android:text="123123123132"
+        />
+  <TextView
+      android:id="@+id/txtPosted"
+      android:layout_marginTop="4dp"
+      android:layout_below="@id/txtContent"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="16dp"
+      style="@style/styleTextSmall"
+      android:text="Posted"
+        />
+  <View
+      android:layout_marginTop="16dp"
+      android:layout_below="@id/txtPosted"
+      android:layout_width="match_parent"
+      android:layout_height="1dp"
+      android:background="#D6DEE6"/>
+  <ImageView
+      android:id="@+id/imgComment"
+      android:padding="4dp"
+      android:layout_marginLeft="16dp"
+      android:layout_width="24dp"
+      android:layout_below="@id/txtPosted"
+      android:layout_marginTop="16dp"
+      android:src="@drawable/comment_bubble_normal"
+      android:layout_height="44dp" />
+
+  <TextView
+      android:id="@+id/txtFeedBack"
+      android:layout_marginTop="16dp"
+      android:layout_below="@id/txtPosted"
+      android:layout_width="wrap_content"
+      android:layout_height="44dp"
+      android:text="1 comment"
+      android:layout_marginLeft="8dp"
+      style="@style/styleTextDescription"
+      android:textSize="14sp"
+      android:layout_toRightOf="@id/imgComment"
+      android:gravity="left|center_vertical"
+        />
+  <TextView
+      android:id="@+id/txtNumberRate"
+      android:layout_alignParentRight="true"
+      android:layout_marginTop="16dp"
+      android:layout_marginRight="16dp"
+      android:layout_below="@id/txtPosted"
+      android:layout_width="wrap_content"
+      android:layout_height="44dp"
+      android:gravity="center_vertical"
+      style="@style/styleTextSmall"
+      android:textSize="12sp"
+      android:text="(2)"
+        />
+  <com.iarcuschin.simpleratingbar.SimpleRatingBar
+      android:id="@+id/ratingBar"
+      android:layout_marginTop="16dp"
+      android:layout_below="@id/txtPosted"
+      android:layout_toLeftOf="@id/txtNumberRate"
+      android:layout_width="wrap_content"
+      android:layout_height="44dp"
+      app:srb_starSize="20dp"
+      app:srb_drawBorderEnabled="false"
+      app:srb_starCornerRadius="13"
+      app:srb_numberOfStars="5"
+      app:srb_rating="3"
+      app:srb_stepSize="0.5"
+      android:layout_marginRight="8dp"
+      app:srb_starBackgroundColor="#D6DEE6"
+      app:srb_fillColor="#FEAB35" />
+</RelativeLayout>

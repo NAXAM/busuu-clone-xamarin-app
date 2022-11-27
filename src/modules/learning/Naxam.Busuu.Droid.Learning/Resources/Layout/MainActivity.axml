@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal"
+        android:elevation="4dp"
+        android:layout_height="56dp">
+      <ImageView
+          android:layout_width="32dp"
+          android:layout_height="32dp"
+          android:layout_marginLeft="16dp"
+          android:layout_marginRight="16dp"
+          android:background="@drawable/learn_border_image"
+          android:layout_gravity="start|center_vertical"
+          android:padding="2dp"
+          android:src="@drawable/flag_english"
+          app:MvxBind="Click ChangeLanguageCommand"
+            />
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_gravity="start|center_vertical"
+          android:text="Beginer A1 - 1%"
+          android:textSize="20sp"
+          android:textColor="@color/colorWhite"
+            />
+    </LinearLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/colorWhite"
+        android:elevation="2dp"
+        >
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="start|center_vertical"
+          android:layout_marginLeft="16dp"
+          android:layout_marginRight="16dp"
+          android:textColor="#262C30"
+          android:text="50% off Premium!"
+            />
+      <Button
+          android:layout_width="wrap_content"
+          android:layout_height="32dp"
+          android:layout_marginRight="16dp"
+          android:background="@drawable/learn_background_button_go"
+          android:layout_gravity="end|center_vertical"
+          android:textColor="@color/colorWhite"
+          app:MvxBind="Click GoPremiumCommand"
+          android:text="GO"/>
+    </FrameLayout>
+    <MvxExpandableListView
+        android:id="@+id/expLessons"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:dividerHeight="0dp"
+          android:choiceMode="singleChoice"
+        android:groupIndicator="@android:color/transparent"
+        app:MvxGroupItemTemplate="@layout/layout_lesson_header"
+        app:MvxItemTemplate="@layout/layout_topic_item"
+        app:MvxBind="ItemsSource Lessons;" />
+
+
+  </LinearLayout>
+  <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
+      android:id="@+id/menu_bottom"
+      android:layout_width="match_parent"
+      android:layout_height="56dp"
+      android:layout_gravity="bottom"
+      android:background="#FFFFFF"
+      app:itemIconTint="@drawable/selector_item_gray_color"
+      app:itemTextColor="@drawable/selector_item_gray_color"
+      app:menu="@menu/menu_bottom" />
+</FrameLayout>

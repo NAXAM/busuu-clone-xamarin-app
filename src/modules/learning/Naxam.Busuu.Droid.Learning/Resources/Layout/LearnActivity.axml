@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+  <android.support.v7.widget.Toolbar
+      android:id="@+id/toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="56dp"
+      android:background="@color/colorPrimary"
+      android:elevation="2dp"
+      app:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <ImageView
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_gravity="start|center_vertical"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/learn_border_image"
+        android:padding="2dp"
+        android:src="@drawable/flag_english"
+        app:MvxBind="Click ChangeLanguageCommand" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start|center_vertical"
+        android:text="Beginer A1 - 1%"
+        android:textColor="@color/colorWhite"
+        android:textSize="20sp" />
+  </android.support.v7.widget.Toolbar>
+
+  <FrameLayout
+      android:layout_width="match_parent"
+      android:layout_height="56dp"
+      android:background="@color/colorWhite"
+      android:elevation="2dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start|center_vertical"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:text="50% off Premium!"
+        android:textColor="#262C30" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_gravity="end|center_vertical"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/learn_background_button_go"
+        android:text="GO"
+        android:textColor="@color/colorWhite"
+        app:MvxBind="Click GoPremiumCommand" />
+  </FrameLayout>
+
+  <Naxam.Busuu.Droid.Learning.Control.NXMvxExpandableListView 
+      android:id="@+id/expLessons"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:divider="#00ff00"
+      android:dividerHeight="0dp"
+      android:groupIndicator="@android:color/transparent"
+      android:listSelector="@drawable/selector_list_item"
+      app:MvxBind="ItemsSource Lessons;DownloadCommand DownloadCommand;ExerciseClick ExerciseClickCommand"
+      app:MvxGroupItemTemplate="@layout/layout_lesson_header"
+      app:MvxItemTemplate="@layout/layout_topic_item" />
+</LinearLayout>
+

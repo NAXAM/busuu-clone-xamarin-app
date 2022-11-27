@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_show_photo"
+        android:orderInCategory="0"
+        android:title="Show profile picture"/>
+
+    <item
+        android:id="@+id/menu_change_photo"
+        android:orderInCategory="1"
+        android:title="Change profile picture"/>
+
+</menu>

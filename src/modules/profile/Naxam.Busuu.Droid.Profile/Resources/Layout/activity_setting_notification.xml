@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+  <LinearLayout
+      android:orientation="vertical"
+      android:background="#FEFFFF"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+        >
+    <TextView
+        android:layout_margin="16dp"
+        android:textColor="#2693FF"
+        android:text="Friend Requests"
+        android:textAllCaps="true"
+        android:textSize="16sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Naxam.Busuu.Droid.Profile.Controls.SettingNotificationItem
+        android:id="@+id/snPrivateMode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:sn_title="Private mode"
+        app:sn_description="By enabling private mode, you choose not to receive friend rquests from other users" 
+        app:MvxBind="Checked IsPrivateMode"
+        />
+    <TextView
+        android:layout_margin="16dp"
+        android:textColor="#2693FF"
+        android:text="GENERAL"
+        android:textAllCaps="true"
+        android:textSize="16sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Naxam.Busuu.Droid.Profile.Controls.SettingNotificationItem
+        android:id="@+id/snNotifications"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:sn_bold="true" 
+        app:sn_title="Notification"
+        app:MvxBind="Checked TurnOnNotification" />
+    <Naxam.Busuu.Droid.Profile.Controls.SettingNotificationItem
+        android:id="@+id/snCorectionReceived"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:sn_title="Corection received"
+        app:sn_description="e.g Alexandra has corrected your exercise"
+        app:MvxBind="Checked TurnOnCorrectionReceived;IsEnabled TurnOnNotification" />
+    <Naxam.Busuu.Droid.Profile.Controls.SettingNotificationItem
+        android:id="@+id/snCorectionAdded"
+        app:sn_title="Corection added"
+        app:sn_description="e.g Alexandra added a corrected"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:MvxBind="Checked TurnOnCorrectionAdded;IsEnabled TurnOnNotification"  />
+    <Naxam.Busuu.Droid.Profile.Controls.SettingNotificationItem
+        android:id="@+id/snReplies"
+        app:sn_title="Replies"
+        app:sn_description="e.g Alexandra has replied to your correction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:MvxBind="Checked TurnOnReplies;IsEnabled TurnOnNotification" />
+    <Naxam.Busuu.Droid.Profile.Controls.SettingNotificationItem
+        android:id="@+id/snFriendRequest"
+        app:sn_title="Friend request"
+        app:sn_description="e.g Alexandra has sent you a friend request"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:MvxBind="Checked TurnOnFriendRequests;IsEnabled TurnOnNotification" />
+    <Naxam.Busuu.Droid.Profile.Controls.SettingNotificationItem
+        android:id="@+id/snCorectionRequest"
+        app:sn_title="Corection request"
+        app:sn_description="e.g Alexandra has asked you to correct their conversation exercise"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:MvxBind="Checked TurnOnCorrectionRequest;IsEnabled TurnOnNotification" />
+  </LinearLayout>
+</ScrollView>
+

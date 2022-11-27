@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+  <android.support.v7.widget.Toolbar
+      android:id="@+id/toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="56dp"
+      android:background="@color/colorPrimary"
+      app:theme="@style/ThemeOverlay.AppCompat.Dark">
+    <ImageView
+      android:id="@+id/imgFilter"
+      app:MvxBind="Click FilterCommand"
+      android:layout_width="48dp"
+      android:layout_height="48dp"
+      android:layout_gravity="right|center_vertical"
+      android:padding="16dp"
+      android:src="@drawable/ic_filter" />
+  </android.support.v7.widget.Toolbar>
+  <android.support.design.widget.TabLayout
+      android:id="@+id/tabs"
+      android:background="#ffff"
+      android:layout_width="match_parent"
+      android:layout_height="56dp"
+      app:tabGravity="fill"
+      app:tabIndicatorColor="?attr/colorPrimary"
+      app:tabMode="fixed"
+      android:elevation="2dp"
+      app:tabSelectedTextColor="?attr/colorPrimary"
+       android:layout_below="@id/toolbar"
+      app:tabTextColor="#B0B7BF" /> 
+  <Naxam.Busuu.Droid.Core.Controls.NXViewPager
+    android:id="@+id/view_pager"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@id/tabs" />
+</RelativeLayout>

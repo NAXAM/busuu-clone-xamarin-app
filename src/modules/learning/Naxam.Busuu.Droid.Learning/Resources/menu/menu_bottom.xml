@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <item
+    android:id="@+id/menu_learn" 
+    android:icon="@drawable/ic_menu_learn"
+    android:checked="true"
+    android:title="Learn"/>
+  <item
+    android:id="@+id/menu_review" 
+    android:icon="@drawable/ic_menu_review"
+    android:title="review" />
+  <item
+    android:id="@+id/menu_social"
+    android:icon="@drawable/ic_menu_social"
+    android:title="Social" />
+  <item
+    android:id="@+id/menu_notification"
+    android:icon="@drawable/ic_menu_social"
+    android:title="Notification" />
+  <item
+    android:id="@+id/menu_profile"
+    android:icon="@drawable/ic_menu_profile"
+    android:title="Profile" />
+</menu>

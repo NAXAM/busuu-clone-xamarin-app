@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+  
+  <TextView
+      android:layout_marginTop="32dp"
+      android:layout_marginBottom="8dp"
+      android:textColor="#38A8F3"
+      android:text="Reply email address"
+      android:textAllCaps="true"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content" />
+  <EditText
+      android:id="@+id/edtEmail"
+      android:padding="16dp"
+      app:MvxBind="Text ContactUs.Email;"
+      android:background="#E4E9ED"
+      android:layout_width="match_parent"
+      android:layout_height="48dp" />
+  <TextView
+      android:layout_marginTop="32dp"
+      android:layout_marginBottom="8dp"
+      android:text="Subject line(up to 50 chacracters)"
+      android:textColor="#38A8F3"
+      android:textAllCaps="true"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content" />
+  <EditText
+      android:id="@+id/edtSubject"
+      android:padding="16dp"
+      app:MvxBind="Text ContactUs.Subject;"
+      android:background="#E4E9ED"
+      android:layout_width="match_parent"
+      android:layout_height="48dp" />
+  <TextView
+      android:layout_marginTop="32dp"
+      android:layout_marginBottom="8dp"
+      android:text="description(up to 240 chacracters)"
+      android:textColor="#38A8F3"
+      android:textAllCaps="true"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content" />
+  <EditText
+      android:id="@+id/edtDescription"
+      app:MvxBind="Text ContactUs.Description;"
+      android:gravity="start"
+      android:padding="16dp"
+      android:background="#E4E9ED"
+      android:layout_marginBottom="8dp"
+      android:layout_width="match_parent"
+      android:layout_height="128dp" />
+  <Button
+      android:id="@+id/btnSend"
+      app:MvxBind="Click SendCmd"
+      android:textColor="#FFFFFF"
+      android:text="SEND"
+      android:padding="16dp"
+      android:background="#38A8F5"
+      android:layout_marginLeft="16dp"
+      android:layout_marginRight="16dp"
+      android:layout_marginTop="16dp"
+      android:layout_gravity="center_horizontal"
+      android:layout_width="match_parent"
+      android:layout_height="48dp" />
+
+</LinearLayout>

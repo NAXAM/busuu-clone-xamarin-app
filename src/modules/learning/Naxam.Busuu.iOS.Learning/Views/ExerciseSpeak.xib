@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1" customClass="ExerciseSpeakView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zpV-06-paT">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="anime-wallpaper-art-pc (14).jpg" translatesAutoresizingMaskIntoConstraints="NO" id="GqL-cH-ntf">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="166.5"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="GqL-cH-ntf" secondAttribute="height" multiplier="2.25:1" id="FeZ-if-M59"/>
+                            </constraints>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C4q-OM-WRF" userLabel="btnPlayPasue">
+                            <rect key="frame" x="165.5" y="144.5" width="44" height="44"/>
+                            <color key="backgroundColor" red="0.22352941179999999" green="0.66274509800000003" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="44" id="eoG-jB-7eq"/>
+                                <constraint firstAttribute="height" constant="44" id="x5p-Hd-qRK"/>
+                            </constraints>
+                            <state key="normal" image="play_btn.png"/>
+                            <connections>
+                                <action selector="btnPlayPause_TouchUpInside:" destination="1" eventType="touchUpInside" id="lMR-Aa-DgI"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NBP-Hx-oCJ">
+                            <rect key="frame" x="168" y="216.5" width="40.5" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                            <color key="textColor" red="0.22352941179999999" green="0.66274509800000003" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3hs-Hc-vXg" userLabel="viewForBtnSay">
+                            <rect key="frame" x="151" y="537" width="72" height="72"/>
+                            <color key="backgroundColor" red="0.22352941179999999" green="0.66274509800000003" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="72" id="CwH-yu-SSO"/>
+                                <constraint firstAttribute="height" constant="72" id="EVh-R9-o0p"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2a0-Z0-DGK" userLabel="btnSay">
+                            <rect key="frame" x="151.5" y="537" width="72" height="72"/>
+                            <color key="backgroundColor" red="0.22352941179999999" green="0.66274509800000003" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="72" id="30j-A8-7dH"/>
+                                <constraint firstAttribute="height" constant="72" id="Wo8-eK-Wfg"/>
+                            </constraints>
+                            <state key="normal" image="conversation_speaking_button_white.png"/>
+                            <connections>
+                                <action selector="btnSay_TouchUpInside:" destination="1" eventType="touchUpInside" id="Y1r-pL-hBZ"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Listen and repeat." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ob-i2-2HV" userLabel="lblListen">
+                            <rect key="frame" x="117" y="509" width="141" height="20"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                            <color key="textColor" red="0.22352941179999999" green="0.66274509800000003" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I can't speak at the moment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WVX-l2-97g">
+                            <rect key="frame" x="102" y="621" width="172" height="30"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                            <color key="textColor" red="0.43797653913497925" green="0.47816139459609985" blue="0.50324892997741699" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mfl-D2-jDt" userLabel="btnNotSpeak">
+                            <rect key="frame" x="102" y="621" width="172" height="30"/>
+                            <connections>
+                                <action selector="btnNotSpeak_Click:" destination="1" eventType="touchUpInside" id="yDf-SK-EvP"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.94856339690000002" green="0.96067076920000005" blue="0.97304874659999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="GqL-cH-ntf" firstAttribute="leading" secondItem="zpV-06-paT" secondAttribute="leading" id="22P-mv-EV7"/>
+                        <constraint firstItem="GqL-cH-ntf" firstAttribute="top" secondItem="zpV-06-paT" secondAttribute="top" id="C03-e4-eXv"/>
+                        <constraint firstItem="WVX-l2-97g" firstAttribute="centerX" secondItem="zpV-06-paT" secondAttribute="centerX" id="GGj-3N-4k7"/>
+                        <constraint firstItem="NBP-Hx-oCJ" firstAttribute="centerX" secondItem="GqL-cH-ntf" secondAttribute="centerX" id="IzZ-Rt-PSv"/>
+                        <constraint firstItem="NBP-Hx-oCJ" firstAttribute="top" secondItem="C4q-OM-WRF" secondAttribute="bottom" constant="28" id="KTD-b1-VIp"/>
+                        <constraint firstItem="mfl-D2-jDt" firstAttribute="top" secondItem="WVX-l2-97g" secondAttribute="top" id="LKn-gY-s0D"/>
+                        <constraint firstItem="C4q-OM-WRF" firstAttribute="top" secondItem="GqL-cH-ntf" secondAttribute="bottom" constant="-22" id="LUk-OZ-Ynr"/>
+                        <constraint firstItem="8ob-i2-2HV" firstAttribute="centerX" secondItem="zpV-06-paT" secondAttribute="centerX" id="P51-wd-L6a"/>
+                        <constraint firstAttribute="trailing" secondItem="GqL-cH-ntf" secondAttribute="trailing" id="SJi-yH-CJB"/>
+                        <constraint firstItem="2a0-Z0-DGK" firstAttribute="centerX" secondItem="WVX-l2-97g" secondAttribute="centerX" id="bdh-il-nLC"/>
+                        <constraint firstAttribute="bottom" secondItem="WVX-l2-97g" secondAttribute="bottom" constant="16" id="iH5-YS-doo"/>
+                        <constraint firstItem="C4q-OM-WRF" firstAttribute="centerX" secondItem="GqL-cH-ntf" secondAttribute="centerX" id="kUQ-tI-slV"/>
+                        <constraint firstItem="mfl-D2-jDt" firstAttribute="trailing" secondItem="WVX-l2-97g" secondAttribute="trailing" id="mK2-Ag-ihw"/>
+                        <constraint firstItem="3hs-Hc-vXg" firstAttribute="centerX" secondItem="2a0-Z0-DGK" secondAttribute="centerX" id="mKf-o7-3Ru"/>
+                        <constraint firstItem="WVX-l2-97g" firstAttribute="top" secondItem="2a0-Z0-DGK" secondAttribute="bottom" constant="12" id="mW0-Tk-3Xp"/>
+                        <constraint firstItem="mfl-D2-jDt" firstAttribute="bottom" secondItem="WVX-l2-97g" secondAttribute="bottom" id="qB2-WN-i4D"/>
+                        <constraint firstItem="mfl-D2-jDt" firstAttribute="leading" secondItem="WVX-l2-97g" secondAttribute="leading" id="tjC-Hc-4vA"/>
+                        <constraint firstItem="3hs-Hc-vXg" firstAttribute="centerY" secondItem="2a0-Z0-DGK" secondAttribute="centerY" id="viL-9I-Hau"/>
+                        <constraint firstItem="2a0-Z0-DGK" firstAttribute="top" secondItem="8ob-i2-2HV" secondAttribute="bottom" constant="8" id="xyL-R5-RE3"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.94856339690000002" green="0.96067076920000005" blue="0.97304874659999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="zpV-06-paT" firstAttribute="top" secondItem="1" secondAttribute="top" id="D2z-JQ-R2f"/>
+                <constraint firstAttribute="bottom" secondItem="zpV-06-paT" secondAttribute="bottom" id="WBY-ZQ-851"/>
+                <constraint firstAttribute="trailing" secondItem="zpV-06-paT" secondAttribute="trailing" id="aa6-ob-A3T"/>
+                <constraint firstItem="zpV-06-paT" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="ujy-Xq-DOz"/>
+            </constraints>
+            <connections>
+                <outlet property="btnPlayPause" destination="C4q-OM-WRF" id="cUX-Bi-Yjb"/>
+                <outlet property="btnSay" destination="2a0-Z0-DGK" id="2e3-al-AHf"/>
+                <outlet property="iNotSpeak" destination="WVX-l2-97g" id="i6C-j7-ftq"/>
+                <outlet property="imgImage" destination="GqL-cH-ntf" id="go3-iF-myE"/>
+                <outlet property="lblListen" destination="8ob-i2-2HV" id="OP8-wt-XGs"/>
+                <outlet property="viewBossBottomConstraint" destination="WBY-ZQ-851" id="AXw-9A-Lvc"/>
+                <outlet property="viewBtnSayHeightConstraint" destination="EVh-R9-o0p" id="aVb-o3-Dtp"/>
+                <outlet property="viewBtnSayWidthConstraint" destination="CwH-yu-SSO" id="Xha-i3-DHj"/>
+                <outlet property="viewForBtnSay" destination="3hs-Hc-vXg" id="Ih5-2T-rfE"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="anime-wallpaper-art-pc (14).jpg" width="16" height="16"/>
+        <image name="conversation_speaking_button_white.png" width="16" height="16"/>
+        <image name="play_btn.png" width="16" height="16"/>
+    </resources>
+</document>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--<com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
+        android:id="@+id/menu_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_gravity="bottom"
+        android:background="#FFFFFF"
+        app:itemIconTint="@drawable/selector_item_gray_color"
+        app:itemTextColor="@drawable/selector_item_gray_color" 
+        app:menu="@menu/menu_bottom" />-->
+</FrameLayout>

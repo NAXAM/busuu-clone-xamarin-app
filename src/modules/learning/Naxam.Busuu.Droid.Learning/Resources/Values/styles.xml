@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <style name="AppTheme.Transparent" parent="Theme.AppCompat.Light.NoActionBar">
+    <item name="colorPrimary">@color/colorPrimary</item>
+    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    <item name="colorAccent">@android:color/transparent</item>
+    <item name="android:textColorSecondary">@android:color/transparent</item>
+    <item name="android:windowActionBar">false</item>
+    <item name="android:colorActivatedHighlight">@android:color/transparent</item>
+  </style>
+  <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+    <item name="colorPrimary">@color/colorPrimary</item>
+    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    <item name="colorAccent">@color/colorAccent</item>
+    <item name="android:textColorSecondary">@color/colorHintEditText</item>
+    <item name="android:windowActionBar">false</item> 
+    <item name="android:colorActivatedHighlight">@android:color/transparent</item>
+  </style>
+  <style name="StyleNextButton">
+    <item name="android:textColor">#ffffff</item> 
+    <item name="android:background">@drawable/background_circle_green</item>
+    <item name="android:textSize">18sp</item>
+  </style>
+  <style name="StyleTextQuestion">
+    <item name="android:gravity">center</item>
+    <item name="android:textColor">@color/colorQuestion</item>
+    <item name="android:textSize">22sp</item>
+  </style>
+  <style name="StyleTextInput">
+    <item name="android:gravity">center</item>
+    <item name="android:textColor">@color/colorTextInput</item>
+    <item name="android:textSize">18sp</item>
+  </style>
+  <style name="StyleTextAnswer">
+    <item name="android:gravity">center</item>
+    <item name="android:textColor">@color/colorAnswer</item>
+    <item name="android:textSize">22sp</item>
+  </style>
+  <style name="LinearProgress" parent="Theme.AppCompat.Light">
+    <item name="colorAccent">@color/colorPrimary</item>
+    <item name="android:progressBackgroundTint">#D6DEE6</item>
+  </style>
+  
+  <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+</resources>

@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffff">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:padding="16dp"
+        android:text="ACCOUNT"
+        android:textColor="#38A9F6" />
+
+    <LinearLayout
+        android:id="@+id/layout_personal_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:MvxBind="Click EditNameCommand">
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="8dp"
+          android:text="Name"
+          android:textColor="#000000" />
+
+      <TextView
+          android:id="@+id/txt_personal_name"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:MvxBind="Text User.Name" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#20000000" />
+
+    <FrameLayout
+        android:id="@+id/layout_personal_avatar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center_vertical"
+          android:text="Photo"
+          android:textColor="#000000" />
+
+      <ImageView
+          android:id="@+id/im_avatar"
+          android:layout_width="56dp"
+          android:layout_height="56dp"
+          android:layout_gravity="end|center_vertical" />
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#20000000" />
+
+    <LinearLayout
+        android:id="@+id/layout_personal_about_me"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:MvxBind="Click EditAboutMeCommand">
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="8dp"
+          android:text="About me"
+          android:textColor="#000000" />
+
+      <TextView
+          android:id="@+id/txt_personal_about_me"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:MvxBind="Text User.AboutMe" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#20000000" />
+
+    <LinearLayout
+        android:id="@+id/layout_personal_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:MvxBind="Click EditEmailCommand">
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="8dp"
+          android:text="Email"
+
+          android:textColor="#000000" />
+
+      <TextView
+          android:id="@+id/txt_personal_email"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:MvxBind="Text User.Email" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#20000000" />
+
+    <LinearLayout
+        android:id="@+id/layout_personal_country"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:MvxBind="Click EditCountryCommand">
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="8dp"
+          android:text="Country"
+          android:textColor="#000000" />
+
+      <TextView
+          android:id="@+id/txt_personal_country"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:MvxBind="Text User.Country.Country" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#20000000" />
+
+    <LinearLayout
+        android:id="@+id/layout_personal_gender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:MvxBind="Click EditGenderCommand">
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="8dp"
+          android:text="Gender"
+          android:textColor="#000000" />
+
+      <TextView
+          android:id="@+id/txt_personal_gender"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:MvxBind="Text User.Gender" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#20000000" />
+
+    <LinearLayout
+        android:id="@+id/layout_personal_ispeak"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:MvxBind="Click EditLanguageSpeakCommand">
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="8dp"
+          android:text="I Speak"
+          android:textColor="#000000" />
+
+      <TextView
+          android:id="@+id/txt_personal_ispeak"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:MvxBind="Text User.SpeakLanguages,Converter = SpeakLanguageToText;" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#20000000" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:padding="16dp"
+        android:text="GENARAL"
+        android:textColor="#38A9F6" />
+
+    <LinearLayout
+        android:id="@+id/layout_notifications_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:MvxBind="Click NotificationSettingViewCommand"
+        android:padding="16dp">
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="8dp"
+          android:text="Notifications"
+          android:textColor="#000000" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#20000000" />
+
+    <LinearLayout
+        android:id="@+id/layout_interface_language"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="8dp"
+          android:text="Interface language"
+          android:textColor="#000000" />
+
+      <TextView
+          android:id="@+id/txt_interface_language"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#20000000" />
+
+    <LinearLayout
+        android:id="@+id/layout_clear_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:MvxBind="Click ClearDataCommand"
+        >
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="8dp"
+          android:text="Clear lesson data"
+          android:textColor="#000000" />
+
+      <TextView
+          android:id="@+id/txt_clear_data"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="205.5 KB"
+          app:MvxBind="Hidden IsCleanedData"
+          />
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:MvxBind="Hidden IsCleanedData"
+          android:text="Free up storae space on your device; your lesson progress won't be lost." />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#20000000" />
+
+    <LinearLayout
+        android:id="@+id/layout_it_work"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:MvxBind="Click ItWorksViewCommand"
+        >
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="It works!"
+          android:textColor="#000000" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#20000000" />
+
+    <LinearLayout
+        android:id="@+id/layout_contact_us"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        app:MvxBind="Click ContactUsViewCommand"
+        android:padding="16dp">
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Contact Us"
+          android:textColor="#000000" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#20000000" />
+
+    <LinearLayout
+        android:id="@+id/layout_log_out"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Log out"
+          android:textColor="#E84537" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#20000000" />
+
+    <LinearLayout
+        android:id="@+id/layout_redeem_voucher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Redeem a voucher"
+          android:textColor="#000000" />
+    </LinearLayout>
+  </LinearLayout>
+</ScrollView>

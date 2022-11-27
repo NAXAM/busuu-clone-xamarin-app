@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="aC9-Dd-nYD" customClass="ChooseWordView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u9H-Kf-SUI">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UxH-1z-CHI">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="167"/>
+                            <color key="backgroundColor" red="0.65490196079999996" green="0.69019607839999997" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="167" id="IxL-T8-3Wy"/>
+                            </constraints>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ckk-Hp-r1I" userLabel="btnPlayPause">
+                            <rect key="frame" x="165" y="145" width="44" height="44"/>
+                            <color key="backgroundColor" red="0.22352941179999999" green="0.66274509800000003" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="AgS-Ku-kXP"/>
+                                <constraint firstAttribute="width" constant="44" id="kKL-4m-kpi"/>
+                            </constraints>
+                            <state key="normal" image="play_btn.png"/>
+                            <connections>
+                                <action selector="btnPlayPause_TouchUpInside:" destination="aC9-Dd-nYD" eventType="touchUpInside" id="fO9-sX-WSb"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose the phrase you can use to give your name or age" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WOJ-2B-Teo">
+                            <rect key="frame" x="32" y="199" width="311" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="jdN-14-8f5"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                            <color key="textColor" red="0.22352941179999999" green="0.66274509800000003" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8b3-aY-qnD" userLabel="ViewAnswers">
+                            <rect key="frame" x="16" y="261" width="343" height="390"/>
+                            <color key="backgroundColor" red="0.94856339693069458" green="0.96067076921463013" blue="0.97304874658584595" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.94856339693069458" green="0.96067076921463013" blue="0.97304874658584595" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="UxH-1z-CHI" firstAttribute="leading" secondItem="u9H-Kf-SUI" secondAttribute="leading" id="0J6-xh-qRc"/>
+                        <constraint firstItem="UxH-1z-CHI" firstAttribute="top" secondItem="u9H-Kf-SUI" secondAttribute="top" id="1nP-St-CdV"/>
+                        <constraint firstItem="ckk-Hp-r1I" firstAttribute="bottom" secondItem="UxH-1z-CHI" secondAttribute="bottom" constant="22" id="6hh-Hx-bzQ"/>
+                        <constraint firstItem="WOJ-2B-Teo" firstAttribute="top" secondItem="UxH-1z-CHI" secondAttribute="bottom" constant="32" id="Lig-Ox-2Z9"/>
+                        <constraint firstAttribute="trailing" secondItem="UxH-1z-CHI" secondAttribute="trailing" id="Ltq-VE-kLK"/>
+                        <constraint firstItem="8b3-aY-qnD" firstAttribute="leading" secondItem="u9H-Kf-SUI" secondAttribute="leading" constant="16" id="P0Z-yA-nUH"/>
+                        <constraint firstAttribute="trailing" secondItem="8b3-aY-qnD" secondAttribute="trailing" constant="16" id="RzK-4g-cYG"/>
+                        <constraint firstAttribute="bottom" secondItem="8b3-aY-qnD" secondAttribute="bottom" constant="16" id="UHl-ww-fNy"/>
+                        <constraint firstItem="8b3-aY-qnD" firstAttribute="top" secondItem="WOJ-2B-Teo" secondAttribute="bottom" constant="18" id="XXi-dN-3U8"/>
+                        <constraint firstAttribute="trailing" secondItem="WOJ-2B-Teo" secondAttribute="trailing" constant="32" id="Z3Q-hk-RvD"/>
+                        <constraint firstItem="WOJ-2B-Teo" firstAttribute="leading" secondItem="u9H-Kf-SUI" secondAttribute="leading" constant="32" id="a8g-Wp-N8n"/>
+                        <constraint firstItem="ckk-Hp-r1I" firstAttribute="centerX" secondItem="UxH-1z-CHI" secondAttribute="centerX" id="i8l-b9-VS3"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.94856339690000002" green="0.96067076920000005" blue="0.97304874659999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="u9H-Kf-SUI" secondAttribute="bottom" id="E1m-5u-FBY"/>
+                <constraint firstAttribute="trailing" secondItem="u9H-Kf-SUI" secondAttribute="trailing" id="IXP-b5-Xpk"/>
+                <constraint firstItem="u9H-Kf-SUI" firstAttribute="top" secondItem="aC9-Dd-nYD" secondAttribute="top" id="JPz-xR-MxF"/>
+                <constraint firstItem="u9H-Kf-SUI" firstAttribute="leading" secondItem="aC9-Dd-nYD" secondAttribute="leading" id="Sqi-uA-BDO"/>
+            </constraints>
+            <connections>
+                <outlet property="ContentView" destination="u9H-Kf-SUI" id="iBX-E4-lvl"/>
+                <outlet property="ImgImage" destination="UxH-1z-CHI" id="dlx-xY-y0R"/>
+                <outlet property="ImgImageHeightConstraint" destination="IxL-T8-3Wy" id="Z7K-c2-wgw"/>
+                <outlet property="LbQuestion" destination="WOJ-2B-Teo" id="Lly-lJ-CRj"/>
+                <outlet property="LbQuestionTopConstraint" destination="Lig-Ox-2Z9" id="6ME-HQ-Igw"/>
+                <outlet property="ViewAnswers" destination="8b3-aY-qnD" id="lbo-QH-ojD"/>
+                <outlet property="btnPlayPause" destination="ckk-Hp-r1I" id="w1d-Yc-uNN"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="play_btn.png" width="16" height="16"/>
+    </resources>
+</document>

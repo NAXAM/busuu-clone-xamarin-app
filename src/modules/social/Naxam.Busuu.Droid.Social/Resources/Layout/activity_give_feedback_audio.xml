@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+  <android.support.v7.widget.Toolbar
+      android:id="@+id/toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="56dp"
+      android:background="@color/colorPrimary"
+      android:elevation="2dp"
+      android:theme="@style/ToolbarColoredBackArrow">
+
+    <ImageView
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_gravity="right|center_vertical"
+        android:padding="16dp"
+        android:src="@drawable/send_btn"
+        app:MvxBind="Click SendCmd;" />
+  </android.support.v7.widget.Toolbar>
+
+  <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_below="@id/toolbar">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp">
+
+      <ImageView
+          android:id="@+id/img_cover_culture"
+          android:layout_width="match_parent"
+          android:layout_height="150dp"
+          android:layout_marginTop="16dp"
+          android:scaleType="fitXY"
+          android:src="@drawable/ic_culture_cover"
+          app:MvxBind="GlideUrl Feedback.UrlImage,Mode=TwoWay;" />
+
+      <TextView
+          android:id="@+id/txtQuestion"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/img_cover_culture"
+          android:background="@drawable/back"
+          android:padding="16dp"
+          android:text="What are the thing that define a culture?"
+          android:textColor="#000000"
+          android:textSize="16dp"
+          app:MvxBind="Text Feedback.Question;" />
+
+      <LinearLayout
+          android:id="@+id/layoutPlayButton"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/txtQuestion"
+          android:layout_marginBottom="32dp"
+          android:layout_marginTop="16dp"
+          android:background="@drawable/back"
+          android:padding="8dp">
+
+        <Naxam.Busuu.Droid.Core.Controls.PlayerSocial
+            android:id="@+id/playButton"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+
+                    />
+      </LinearLayout>
+
+      <TextView
+          android:id="@+id/txtHint"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/layoutPlayButton"
+          android:layout_centerHorizontal="true"
+          android:text="Hold the button to record your correction"
+          android:textSize="16dp" />
+
+      <FrameLayout
+          android:id="@+id/mFame"
+          android:layout_width="match_parent"
+          android:layout_height="200dp"
+          android:layout_below="@id/txtHint"
+          android:layout_centerHorizontal="true"
+          android:layout_gravity="center">
+
+        <ImageView
+            android:id="@+id/imgBackground"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:elevation="4dp" />
+
+        <com.dinuscxj.progressbar.CircleProgressBar
+            android:id="@+id/line_progress"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:elevation="4dp"
+            app:background_color="#FFFFFF"
+            app:draw_progress_text="false"
+            app:progress_stroke_width="2dp"
+            app:style="solid_line" />
+
+        <ImageView
+            android:id="@+id/ic_red_trash_button"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:elevation="4dp"
+            android:padding="10dp"
+            android:src="@drawable/ic_red_trash_button" />
+
+
+        <ImageView
+            android:id="@+id/imgMic"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:elevation="4dp"
+            android:src="@drawable/ic_blue_mic" />
+
+      </FrameLayout>
+
+      <TextView
+          android:id="@+id/txtSurvey"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/mFame"
+          android:layout_centerHorizontal="true"
+          android:layout_marginBottom="16dp"
+          android:layout_marginTop="16dp"
+          android:text="How did Elena Gorbikeova do?"
+          android:textSize="20dp" />
+
+      <com.iarcuschin.simpleratingbar.SimpleRatingBar
+          android:id="@+id/ratingBar"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/txtSurvey"
+          android:layout_centerHorizontal="true"
+          android:layout_marginBottom="16dp"
+          app:MvxBind="Rating Feedback.Rating, Mode=TwoWay;"
+          app:srb_drawBorderEnabled="false"
+          app:srb_fillColor="#FFAA30"
+          app:srb_isIndicator="false"
+          app:srb_numberOfStars="5"
+          app:srb_starBackgroundColor="#D6DFE6"
+          app:srb_starCornerRadius="100"
+          app:srb_starSize="32dp"
+          app:srb_starsSeparation="16dp"
+          app:srb_stepSize="1" />
+
+      <EditText
+          android:id="@+id/edtComment"
+          android:layout_width="match_parent"
+          android:layout_height="80dp"
+          android:layout_below="@id/ratingBar"
+          android:layout_marginBottom="32dp"
+          android:background="#E5E8ED"
+          android:gravity="start"
+          android:hint="Leave a comment"
+          android:padding="8dp"
+          app:MvxBind="Text Feedback.Comment;" />
+    </RelativeLayout>
+  </ScrollView>
+
+</RelativeLayout>
